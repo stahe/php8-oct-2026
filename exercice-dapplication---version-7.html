@@ -1,0 +1,1843 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Introduction au langage PHP8 par l'exemple">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/php8-oct-2026/exercice-dapplication---version-7.html">
+      
+      
+        <link rel="prev" href="exercice-dapplication---version-6.html">
+      
+      
+        <link rel="next" href="fonctions-reseau.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>15. Exercice d'application – version 7 - Introduction au langage PHP8 par l'exemple</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "Introduction au langage PHP8 par l'exemple";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#15-exercice-dapplication-version-7" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Introduction au langage PHP8 par l&#39;exemple" class="md-header__button md-logo" aria-label="Introduction au langage PHP8 par l'exemple" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introduction au langage PHP8 par l'exemple
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              15. Exercice d'application – version 7
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Passer en mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Passer en mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Passer en mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passer en mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://stahe.github.io/php8-oct-2026" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Introduction au langage PHP8 par l&#39;exemple" class="md-nav__button md-logo" aria-label="Introduction au langage PHP8 par l'exemple" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Introduction au langage PHP8 par l'exemple
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://stahe.github.io/php8-oct-2026" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accueil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="introduction.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="installation-dun-environnement-de-travail.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Installation d'un environnement de travail
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="les-bases-de-php.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Les bases de PHP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exercice-dapplication---versions-1-et-2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Exercice d'application – versions 1 et 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="les-classes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Les classes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="les-interfaces.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Les interfaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="les-exceptions-et-erreurs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Les exceptions et erreurs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exercice-dapplication---version-3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Exercice d'application – version 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="les-traits.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Les traits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="applications-en-couches.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Applications en couches
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exercice-dapplication---version-4.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Exercice d'application – version 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="utilisation-du-sgbd-mysql.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Utilisation du SGBD MySQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exercice-dapplication---version-5.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Exercice d'application – version 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exercice-dapplication---version-6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Exercice d'application – version 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. Exercice d'application – version 7
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="exercice-dapplication---version-7.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. Exercice d'application – version 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#151-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.1. Implémentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#152-tests-phpunit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.2. Tests [PHPUnit]
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15.2. Tests [PHPUnit]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1521-test-de-la-couche-dao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.2.1. Test de la couche [dao]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1522-test-de-la-couche-metier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.2.2. Test de la couche [métier]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1523-execution-des-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.2.3. Exécution des tests
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="fonctions-reseau.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16. Fonctions réseau
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="services-web.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17. Services web
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exercice-dapplication---version-8.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    18. Exercice d'application – version 8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exercice-dapplication---version-9.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19. Exercice d'application – version 9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exercice-dapplication---version-10.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    20. Exercice d'application – version 10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="traitement-de-documents-xml.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    21. Traitement de documents XML
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exercice-dapplication---version-11.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    22. Exercice d'application – version 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exercice-dapplication---version-12.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    23. Exercice d'application – version 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exercice-dapplication---version-13.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    24. Exercice d'application – version 13
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="conclusion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    25. Conclusion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="15-exercice-dapplication-version-7">15. <span style="color: #2e74b5">Exercice d&#x27;application – version 7</span></h1>
+<p>La version 7 reprend la version 6 en externalisant dans un fichier de configuration les constantes utilisées dans les scripts principaux : noms des fichiers de données et liste des fichiers PHP à charger. Comme la version 6, elle ne contient aucune nouvelle classe et utilise celles de la version 5 :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>version-07
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>├── Data
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>│   ├── config.json
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>│   ├── database-mysql.json
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>│   ├── database-pgsql.json
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>│   ├── errors.json
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>│   ├── results.json
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>│   ├── taxadmindata.json
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>│   └── taxpayersdata.json
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>├── Main
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>│   ├── MainCalculateImpotsWithTaxAdminDataInDatabase.php
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>│   └── MainTransferAdminDataFromJsonFile2Database.php
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>└── Tests
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>    ├── DaoTest.php
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>    └── MetierTest.php
+</code></pre></div></td></tr></table></div>
+<p>Le dossier <em>[Data]</em> contient les descriptions des deux bases de données <em>[dbimpots-2019]</em> : la base MySQL de la version 5 <em>[database-mysql.json]</em> et la base PostgreSQL de la version 6 <em>[database-pgsql.json]</em>. Dans ce dernier fichier, les noms des tables ne sont plus préfixés par le schéma <em>[public]</em> (<strong><em>[&quot;tableTranches&quot;: &quot;tbtranches&quot;]</em></strong>).</p>
+<h2 id="151-implementation">15.1. <span style="color: #2e74b5">Implémentation</span></h2>
+<p>Le fichier de configuration est le fichier JSON <em>[Data/config.json]</em> suivant :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span>
+<span class="normal"><a href="#__codelineno-1-20">20</a></span>
+<span class="normal"><a href="#__codelineno-1-21">21</a></span>
+<span class="normal"><a href="#__codelineno-1-22">22</a></span>
+<span class="normal"><a href="#__codelineno-1-23">23</a></span>
+<span class="normal"><a href="#__codelineno-1-24">24</a></span>
+<span class="normal"><a href="#__codelineno-1-25">25</a></span>
+<span class="normal"><a href="#__codelineno-1-26">26</a></span>
+<span class="normal"><a href="#__codelineno-1-27">27</a></span>
+<span class="normal"><a href="#__codelineno-1-28">28</a></span>
+<span class="normal"><a href="#__codelineno-1-29">29</a></span>
+<span class="normal"><a href="#__codelineno-1-30">30</a></span>
+<span class="normal"><a href="#__codelineno-1-31">31</a></span>
+<span class="normal"><a href="#__codelineno-1-32">32</a></span>
+<span class="normal"><a href="#__codelineno-1-33">33</a></span>
+<span class="normal"><a href="#__codelineno-1-34">34</a></span>
+<span class="normal"><a href="#__codelineno-1-35">35</a></span>
+<span class="normal"><a href="#__codelineno-1-36">36</a></span>
+<span class="normal"><a href="#__codelineno-1-37">37</a></span>
+<span class="normal"><a href="#__codelineno-1-38">38</a></span>
+<span class="normal"><a href="#__codelineno-1-39">39</a></span>
+<span class="normal"><a href="#__codelineno-1-40">40</a></span>
+<span class="normal"><a href="#__codelineno-1-41">41</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>{
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>    "databaseFilename": "Data/database-pgsql.json",
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>    "taxAdminDataFilename": "Data/taxadmindata.json",
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>    "taxPayersDataFilename": "Data/taxpayersdata.json",
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>    "resultsFilename": "Data/results.json",
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>    "errorsFilename": "Data/errors.json",
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>    "dependencies": {
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>        "ExceptionImpots": "../version-05/Entities/ExceptionImpots.php",
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>        "TaxAdminData": "../version-05/Entities/TaxAdminData.php",
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>        "TaxPayerData": "../version-05/Entities/TaxPayerData.php",
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>        "Database": "../version-05/Entities/Database.php",
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>        "Utilitaires": "../version-05/Utilities/Utilitaires.php",
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a>        "InterfaceDao": "../version-05/Dao/InterfaceDao.php",
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a>        "TraitDao": "../version-05/Dao/TraitDao.php",
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a>        "DaoImpotsWithTaxAdminDataInDatabase": "../version-05/Dao/DaoImpotsWithTaxAdminDataInDatabase.php",
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a>        "InterfaceDao4TransferAdminData2Database": "../version-05/Dao/InterfaceDao4TransferAdminData2Database.php",
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a>        "DaoTransferAdminDataFromJsonFile2Database": "../version-05/Dao/DaoTransferAdminDataFromJsonFile2Database.php",
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a>        "InterfaceMetier": "../version-05/Metier/InterfaceMetier.php",
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a>        "Metier": "../version-05/Metier/Metier.php"
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a>    },
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a>    "dependencies4calculate": [
+<a id="__codelineno-1-22" name="__codelineno-1-22"></a>        "ExceptionImpots",
+<a id="__codelineno-1-23" name="__codelineno-1-23"></a>        "TaxAdminData",
+<a id="__codelineno-1-24" name="__codelineno-1-24"></a>        "TaxPayerData",
+<a id="__codelineno-1-25" name="__codelineno-1-25"></a>        "Database",
+<a id="__codelineno-1-26" name="__codelineno-1-26"></a>        "Utilitaires",
+<a id="__codelineno-1-27" name="__codelineno-1-27"></a>        "InterfaceDao",
+<a id="__codelineno-1-28" name="__codelineno-1-28"></a>        "TraitDao",
+<a id="__codelineno-1-29" name="__codelineno-1-29"></a>        "DaoImpotsWithTaxAdminDataInDatabase",
+<a id="__codelineno-1-30" name="__codelineno-1-30"></a>        "InterfaceMetier",
+<a id="__codelineno-1-31" name="__codelineno-1-31"></a>        "Metier"
+<a id="__codelineno-1-32" name="__codelineno-1-32"></a>    ],
+<a id="__codelineno-1-33" name="__codelineno-1-33"></a>    "dependencies4transfer": [
+<a id="__codelineno-1-34" name="__codelineno-1-34"></a>        "ExceptionImpots",
+<a id="__codelineno-1-35" name="__codelineno-1-35"></a>        "TaxAdminData",
+<a id="__codelineno-1-36" name="__codelineno-1-36"></a>        "Database",
+<a id="__codelineno-1-37" name="__codelineno-1-37"></a>        "Utilitaires",
+<a id="__codelineno-1-38" name="__codelineno-1-38"></a>        "InterfaceDao4TransferAdminData2Database",
+<a id="__codelineno-1-39" name="__codelineno-1-39"></a>        "DaoTransferAdminDataFromJsonFile2Database"
+<a id="__codelineno-1-40" name="__codelineno-1-40"></a>    ]
+<a id="__codelineno-1-41" name="__codelineno-1-41"></a>}
+</code></pre></div></td></tr></table></div>
+<p>Dans cette configuration :</p>
+<ul>
+<li>lignes 2-6 : les chemins de tous les fichiers JSON de l&#x27;application. La base de données utilisée est la base PostgreSQL ;</li>
+<li>lignes 7-20 : les chemins de tous les fichiers PHP de l&#x27;application, sous la forme [clé =&gt; chemin]. Ce sont les fichiers de la version 5 ;</li>
+<li>lignes 21-32 : les dépendances du calcul de l&#x27;impôt sous la forme d&#x27;une liste de clés du dictionnaire <em>[dependencies]</em> ;</li>
+<li>lignes 33-40 : les dépendances du transfert en base des données du fichier JSON <em>[taxadmindata.json]</em>, sous la même forme .</li>
+</ul>
+<p>Tous les chemins sont relatifs au dossier <em>[version-07]</em>. Le cours PHP 7 ajoutait à ce fichier une clé <em>[rootDirectory]</em> donnant le chemin absolu du dossier de la version sur la machine de l&#x27;auteur (<strong><em>[&quot;C:/Data/st-2019/dev/php7/poly/scripts-console/impots/version-07&quot;]</em></strong>) : il fallait la modifier sur chaque nouvelle machine. Les scripts calculent désormais ce dossier eux-mêmes à partir de la constante <strong><em>[__DIR__]</em></strong>. Le dossier <em>[php8-oct-2026]</em> peut ainsi être placé n&#x27;importe où.</p>
+<p>Le script de transfert en base des données de l&#x27;administration fiscale <em>[Main/MainTransferAdminDataFromJsonFile2Database.php]</em> devient le suivant :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span>
+<span class="normal"><a href="#__codelineno-2-18">18</a></span>
+<span class="normal"><a href="#__codelineno-2-19">19</a></span>
+<span class="normal"><a href="#__codelineno-2-20">20</a></span>
+<span class="normal"><a href="#__codelineno-2-21">21</a></span>
+<span class="normal"><a href="#__codelineno-2-22">22</a></span>
+<span class="normal"><a href="#__codelineno-2-23">23</a></span>
+<span class="normal"><a href="#__codelineno-2-24">24</a></span>
+<span class="normal"><a href="#__codelineno-2-25">25</a></span>
+<span class="normal"><a href="#__codelineno-2-26">26</a></span>
+<span class="normal"><a href="#__codelineno-2-27">27</a></span>
+<span class="normal"><a href="#__codelineno-2-28">28</a></span>
+<span class="normal"><a href="#__codelineno-2-29">29</a></span>
+<span class="normal"><a href="#__codelineno-2-30">30</a></span>
+<span class="normal"><a href="#__codelineno-2-31">31</a></span>
+<span class="normal"><a href="#__codelineno-2-32">32</a></span>
+<span class="normal"><a href="#__codelineno-2-33">33</a></span>
+<span class="normal"><a href="#__codelineno-2-34">34</a></span>
+<span class="normal"><a href="#__codelineno-2-35">35</a></span>
+<span class="normal"><a href="#__codelineno-2-36">36</a></span>
+<span class="normal"><a href="#__codelineno-2-37">37</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="c1">// respect strict des types déclarés des paramètres et des résultats des fonctions</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="k">declare</span><span class="p">(</span><span class="nx">strict_types</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="c1">// espace de noms</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="k">namespace</span> <span class="nx">Application</span><span class="p">;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="c1">// le dossier racine de la version 7 : les chemins du fichier de configuration sont relatifs à ce dossier</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="k">const</span> <span class="no">ROOT_DIRECTORY</span> <span class="o">=</span> <span class="no">__DIR__</span> <span class="o">.</span> <span class="s2">"/.."</span><span class="p">;</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="c1">// chemin du fichier de configuration</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="k">const</span> <span class="no">CONFIG_FILENAME</span> <span class="o">=</span> <span class="nx">ROOT_DIRECTORY</span> <span class="o">.</span> <span class="s2">"/Data/config.json"</span><span class="p">;</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="c1">// on récupère la configuration</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="nv">$config</span> <span class="o">=</span> <span class="nb">json_decode</span><span class="p">(</span><span class="nb">file_get_contents</span><span class="p">(</span><span class="nx">CONFIG_FILENAME</span><span class="p">),</span> <span class="k">true</span><span class="p">,</span> <span class="nx">flags</span><span class="o">:</span> <span class="nx">JSON_THROW_ON_ERROR</span><span class="p">);</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="c1">// on inclut les dépendances nécessaires au script</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="k">foreach</span> <span class="p">(</span><span class="nv">$config</span><span class="p">[</span><span class="s2">"dependencies4transfer"</span><span class="p">]</span> <span class="k">as</span> <span class="nv">$dependency</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a>    <span class="k">require_once</span> <span class="nx">ROOT_DIRECTORY</span> <span class="o">.</span> <span class="s2">"/"</span> <span class="o">.</span> <span class="nv">$config</span><span class="p">[</span><span class="s2">"dependencies"</span><span class="p">][</span><span class="nv">$dependency</span><span class="p">];</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="p">}</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21"></a>
+<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="c1">// les chemins des fichiers de données</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="nv">$databaseFilename</span> <span class="o">=</span> <span class="nx">ROOT_DIRECTORY</span> <span class="o">.</span> <span class="s2">"/"</span> <span class="o">.</span> <span class="nv">$config</span><span class="p">[</span><span class="s2">"databaseFilename"</span><span class="p">];</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="nv">$taxAdminDataFilename</span> <span class="o">=</span> <span class="nx">ROOT_DIRECTORY</span> <span class="o">.</span> <span class="s2">"/"</span> <span class="o">.</span> <span class="nv">$config</span><span class="p">[</span><span class="s2">"taxAdminDataFilename"</span><span class="p">];</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25"></a>
+<a id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="k">try</span> <span class="p">{</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27"></a>    <span class="c1">// création de la couche [dao]</span>
+<a id="__codelineno-2-28" name="__codelineno-2-28"></a>    <span class="nv">$dao</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DaoTransferAdminDataFromJsonFile2Database</span><span class="p">(</span><span class="nv">$databaseFilename</span><span class="p">,</span> <span class="nv">$taxAdminDataFilename</span><span class="p">);</span>
+<a id="__codelineno-2-29" name="__codelineno-2-29"></a>    <span class="c1">// transfert des données dans la base</span>
+<a id="__codelineno-2-30" name="__codelineno-2-30"></a>    <span class="nv">$dao</span><span class="o">-&gt;</span><span class="na">transferAdminData2Database</span><span class="p">();</span>
+<a id="__codelineno-2-31" name="__codelineno-2-31"></a>    <span class="k">print</span> <span class="s2">"Les données de l'administration fiscale ont été transférées dans la base décrite par [</span><span class="si">{</span><span class="nv">$config</span><span class="p">[</span><span class="s2">"databaseFilename"</span><span class="p">]</span><span class="si">}</span><span class="s2">]</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+<a id="__codelineno-2-32" name="__codelineno-2-32"></a><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">ExceptionImpots</span> <span class="nv">$ex</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-2-33" name="__codelineno-2-33"></a>    <span class="c1">// on affiche l'erreur</span>
+<a id="__codelineno-2-34" name="__codelineno-2-34"></a>    <span class="k">print</span> <span class="s2">"Erreur n° </span><span class="si">{</span><span class="nv">$ex</span><span class="o">-&gt;</span><span class="na">getCode</span><span class="p">()</span><span class="si">}</span><span class="s2"> : </span><span class="si">{</span><span class="nv">$ex</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">()</span><span class="si">}</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+<a id="__codelineno-2-35" name="__codelineno-2-35"></a><span class="p">}</span>
+<a id="__codelineno-2-36" name="__codelineno-2-36"></a><span class="c1">// fin</span>
+<a id="__codelineno-2-37" name="__codelineno-2-37"></a><span class="k">print</span> <span class="s2">"Terminé</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<p>Commentaires</p>
+<p>Le code reste celui de la version 6. La seule différence est l&#x27;exploitation du fichier <em>[config.json]</em> en lieu et place des constantes :</p>
+<ul>
+<li>ligne 10 : le dossier racine de la version 7, à partir duquel sont mesurés les chemins du fichier de configuration. <strong><em>[__DIR__]</em></strong> est le dossier <em>[Main]</em> du script, <strong><em>[__DIR__ . &quot;/..&quot;]</em></strong> son dossier parent <em>[version-07]</em> ;</li>
+<li>ligne 12 : le chemin du fichier de configuration ;</li>
+<li>ligne 15 : la fonction <em>[file_get_contents]</em> transfère le fichier <em>[config.json]</em> dans une chaîne de caractères. La fonction <em>[json_decode]</em> exploite ensuite cette chaîne pour construire le tableau associatif <strong><em>[$config]</em></strong>. Le second paramètre <em>[true]</em> de la fonction <em>[json_decode]</em> indique qu&#x27;on veut un tableau associatif plutôt qu&#x27;un objet. Avec l&#x27;option <em>[JSON_THROW_ON_ERROR]</em>, une erreur de syntaxe dans le fichier lance une exception <em>[JsonException]</em>. On ne cherche pas à gérer ici les erreurs de lecture du fichier de configuration : ce fichier fait partie de l&#x27;application, et une erreur à son niveau est une erreur de programmation que PHP signale lui-même. Les erreurs de données (fichiers JSON des données, base de données) sont, elles, toujours signalées par une <em>[ExceptionImpots]</em> ;</li>
+<li>lignes 18-20 : on inclut les dépendances nécessaires au script de transfert :<ul>
+<li><strong><em>[$config[&quot;dependencies4transfer&quot;]]</em></strong> est le tableau des dépendances nécessaires au script de transfert. C&#x27;est une liste de clés ;</li>
+<li>les chemins des fichiers à inclure sont trouvés dans le dictionnaire <strong><em>[$config[&quot;dependencies&quot;]]</em></strong>, et préfixés par le dossier racine. Par exemple, la clé <em>[ExceptionImpots]</em> donne le fichier <em>[version-07/../version-05/Entities/ExceptionImpots.php]</em> ;</li>
+<li><strong><em>[require_once]</em></strong> (et non <strong><em>[require]</em></strong> comme dans le cours PHP 7) garantit qu&#x27;un fichier n&#x27;est pas chargé deux fois, ce qui provoquerait l&#x27;erreur fatale « Cannot redeclare class … (previously declared in …) » ;</li>
+</ul>
+</li>
+<li>lignes 23-24 : les chemins complets des fichiers de données. Le cours PHP 7 les mettait dans des constantes créées par la fonction <em>[define]</em>. Des variables suffisent ;</li>
+<li>ligne 31 : on affiche le nom du fichier décrivant la base de données utilisée. Dans une chaîne entre guillemets, l&#x27;élément de tableau <strong><em>[$config[&quot;databaseFilename&quot;]]</em></strong> doit être entouré d&#x27;accolades .</li>
+</ul>
+<p>Résultats :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>&gt; php MainTransferAdminDataFromJsonFile2Database.php
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>Les données de l'administration fiscale ont été transférées dans la base décrite par [Data/database-pgsql.json]
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>Terminé
+</code></pre></div></td></tr></table></div>
+<p>De la même façon, le script de calcul de l&#x27;impôt devient le suivant <em>[Main/MainCalculateImpotsWithTaxAdminDataInDatabase.php]</em> :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span>
+<span class="normal"><a href="#__codelineno-4-17">17</a></span>
+<span class="normal"><a href="#__codelineno-4-18">18</a></span>
+<span class="normal"><a href="#__codelineno-4-19">19</a></span>
+<span class="normal"><a href="#__codelineno-4-20">20</a></span>
+<span class="normal"><a href="#__codelineno-4-21">21</a></span>
+<span class="normal"><a href="#__codelineno-4-22">22</a></span>
+<span class="normal"><a href="#__codelineno-4-23">23</a></span>
+<span class="normal"><a href="#__codelineno-4-24">24</a></span>
+<span class="normal"><a href="#__codelineno-4-25">25</a></span>
+<span class="normal"><a href="#__codelineno-4-26">26</a></span>
+<span class="normal"><a href="#__codelineno-4-27">27</a></span>
+<span class="normal"><a href="#__codelineno-4-28">28</a></span>
+<span class="normal"><a href="#__codelineno-4-29">29</a></span>
+<span class="normal"><a href="#__codelineno-4-30">30</a></span>
+<span class="normal"><a href="#__codelineno-4-31">31</a></span>
+<span class="normal"><a href="#__codelineno-4-32">32</a></span>
+<span class="normal"><a href="#__codelineno-4-33">33</a></span>
+<span class="normal"><a href="#__codelineno-4-34">34</a></span>
+<span class="normal"><a href="#__codelineno-4-35">35</a></span>
+<span class="normal"><a href="#__codelineno-4-36">36</a></span>
+<span class="normal"><a href="#__codelineno-4-37">37</a></span>
+<span class="normal"><a href="#__codelineno-4-38">38</a></span>
+<span class="normal"><a href="#__codelineno-4-39">39</a></span>
+<span class="normal"><a href="#__codelineno-4-40">40</a></span>
+<span class="normal"><a href="#__codelineno-4-41">41</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="c1">// respect strict des types déclarés des paramètres et des résultats des fonctions</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="k">declare</span><span class="p">(</span><span class="nx">strict_types</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="c1">// espace de noms</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="k">namespace</span> <span class="nx">Application</span><span class="p">;</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="c1">// le dossier racine de la version 7 : les chemins du fichier de configuration sont relatifs à ce dossier</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="k">const</span> <span class="no">ROOT_DIRECTORY</span> <span class="o">=</span> <span class="no">__DIR__</span> <span class="o">.</span> <span class="s2">"/.."</span><span class="p">;</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="c1">// chemin du fichier de configuration</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="k">const</span> <span class="no">CONFIG_FILENAME</span> <span class="o">=</span> <span class="nx">ROOT_DIRECTORY</span> <span class="o">.</span> <span class="s2">"/Data/config.json"</span><span class="p">;</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="c1">// on récupère la configuration</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="nv">$config</span> <span class="o">=</span> <span class="nb">json_decode</span><span class="p">(</span><span class="nb">file_get_contents</span><span class="p">(</span><span class="nx">CONFIG_FILENAME</span><span class="p">),</span> <span class="k">true</span><span class="p">,</span> <span class="nx">flags</span><span class="o">:</span> <span class="nx">JSON_THROW_ON_ERROR</span><span class="p">);</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a>
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="c1">// on inclut les dépendances nécessaires au script</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="k">foreach</span> <span class="p">(</span><span class="nv">$config</span><span class="p">[</span><span class="s2">"dependencies4calculate"</span><span class="p">]</span> <span class="k">as</span> <span class="nv">$dependency</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a>    <span class="k">require_once</span> <span class="nx">ROOT_DIRECTORY</span> <span class="o">.</span> <span class="s2">"/"</span> <span class="o">.</span> <span class="nv">$config</span><span class="p">[</span><span class="s2">"dependencies"</span><span class="p">][</span><span class="nv">$dependency</span><span class="p">];</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="p">}</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21"></a>
+<a id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="c1">// les chemins des fichiers de données</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="nv">$databaseFilename</span> <span class="o">=</span> <span class="nx">ROOT_DIRECTORY</span> <span class="o">.</span> <span class="s2">"/"</span> <span class="o">.</span> <span class="nv">$config</span><span class="p">[</span><span class="s2">"databaseFilename"</span><span class="p">];</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="nv">$taxPayersDataFilename</span> <span class="o">=</span> <span class="nx">ROOT_DIRECTORY</span> <span class="o">.</span> <span class="s2">"/"</span> <span class="o">.</span> <span class="nv">$config</span><span class="p">[</span><span class="s2">"taxPayersDataFilename"</span><span class="p">];</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="nv">$resultsFilename</span> <span class="o">=</span> <span class="nx">ROOT_DIRECTORY</span> <span class="o">.</span> <span class="s2">"/"</span> <span class="o">.</span> <span class="nv">$config</span><span class="p">[</span><span class="s2">"resultsFilename"</span><span class="p">];</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="nv">$errorsFilename</span> <span class="o">=</span> <span class="nx">ROOT_DIRECTORY</span> <span class="o">.</span> <span class="s2">"/"</span> <span class="o">.</span> <span class="nv">$config</span><span class="p">[</span><span class="s2">"errorsFilename"</span><span class="p">];</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27"></a>
+<a id="__codelineno-4-28" name="__codelineno-4-28"></a><span class="k">try</span> <span class="p">{</span>
+<a id="__codelineno-4-29" name="__codelineno-4-29"></a>    <span class="c1">// création de la couche [dao]</span>
+<a id="__codelineno-4-30" name="__codelineno-4-30"></a>    <span class="nv">$dao</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DaoImpotsWithTaxAdminDataInDatabase</span><span class="p">(</span><span class="nv">$databaseFilename</span><span class="p">);</span>
+<a id="__codelineno-4-31" name="__codelineno-4-31"></a>    <span class="c1">// création de la couche [métier]</span>
+<a id="__codelineno-4-32" name="__codelineno-4-32"></a>    <span class="nv">$métier</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Metier</span><span class="p">(</span><span class="nv">$dao</span><span class="p">);</span>
+<a id="__codelineno-4-33" name="__codelineno-4-33"></a>    <span class="c1">// calcul de l'impôt en mode batch</span>
+<a id="__codelineno-4-34" name="__codelineno-4-34"></a>    <span class="nv">$métier</span><span class="o">-&gt;</span><span class="na">executeBatchImpots</span><span class="p">(</span><span class="nv">$taxPayersDataFilename</span><span class="p">,</span> <span class="nv">$resultsFilename</span><span class="p">,</span> <span class="nv">$errorsFilename</span><span class="p">);</span>
+<a id="__codelineno-4-35" name="__codelineno-4-35"></a>    <span class="k">print</span> <span class="s2">"Les résultats ont été enregistrés dans le fichier [</span><span class="si">{</span><span class="nv">$config</span><span class="p">[</span><span class="s2">"resultsFilename"</span><span class="p">]</span><span class="si">}</span><span class="s2">]</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+<a id="__codelineno-4-36" name="__codelineno-4-36"></a><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">ExceptionImpots</span> <span class="nv">$ex</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-4-37" name="__codelineno-4-37"></a>    <span class="c1">// on affiche l'erreur</span>
+<a id="__codelineno-4-38" name="__codelineno-4-38"></a>    <span class="k">print</span> <span class="s2">"Erreur n° </span><span class="si">{</span><span class="nv">$ex</span><span class="o">-&gt;</span><span class="na">getCode</span><span class="p">()</span><span class="si">}</span><span class="s2"> : </span><span class="si">{</span><span class="nv">$ex</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">()</span><span class="si">}</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+<a id="__codelineno-4-39" name="__codelineno-4-39"></a><span class="p">}</span>
+<a id="__codelineno-4-40" name="__codelineno-4-40"></a><span class="c1">// fin</span>
+<a id="__codelineno-4-41" name="__codelineno-4-41"></a><span class="k">print</span> <span class="s2">"Terminé</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>lignes 18-20 : on inclut cette fois les dépendances du calcul de l&#x27;impôt ;</li>
+<li>lignes 23-26 : les chemins des fichiers JSON de l&#x27;application ;</li>
+<li>lignes 28-39 : le reste du code est celui de la version 6 .</li>
+</ul>
+<p>Résultats :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>&gt; php MainCalculateImpotsWithTaxAdminDataInDatabase.php
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>Les résultats ont été enregistrés dans le fichier [Data/results.json]
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>Terminé
+</code></pre></div></td></tr></table></div>
+<p>Le fichier <em>[Data/results.json]</em> produit est identique au fichier <em>[resultats.json]</em> des versions 5 et 6.</p>
+<p>Les noms des deux scripts ont changé. Dans le cours PHP 7, ils mentionnaient PostgreSQL (<em>[MainTransferAdminDataFromFile2PostgresSQLDatabase.php]</em>, <em>[MainCalculateImpotsWithTaxAdminDataInPostgresDatabase.php]</em>). Mais ces scripts ne dépendent plus d&#x27;aucun SGBD : celui-ci est choisi par la clé <em>[databaseFilename]</em> du fichier de configuration. Si on y remplace <strong><em>[&quot;Data/database-pgsql.json&quot;]</em></strong> par <strong><em>[&quot;Data/database-mysql.json&quot;]</em></strong>, le script de transfert travaille avec la base MySQL, sans qu&#x27;une ligne de code PHP soit modifiée :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>&gt; php MainTransferAdminDataFromJsonFile2Database.php
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>Les données de l'administration fiscale ont été transférées dans la base décrite par [Data/database-mysql.json]
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>Terminé
+</code></pre></div></td></tr></table></div>
+<p>C&#x27;est l&#x27;intérêt d&#x27;un fichier de configuration : on adapte l&#x27;application à son environnement (SGBD, emplacement des fichiers…) sans toucher au code. Nous retrouverons ce fichier de configuration dans les versions suivantes de l&#x27;application.</p>
+<h2 id="152-tests-phpunit">15.2. <span style="color: #2e74b5">Tests <em>[PHPUnit]</em></span></h2>
+<p>Cette version, comme les précédentes, est validée par des tests <em>[PHPUnit]</em>. Leur environnement est lui aussi construit à partir du fichier de configuration.</p>
+<h3 id="1521-test-de-la-couche-dao">15.2.1. <span style="color: #1f4d78">Test de la couche <em>[dao]</em></span></h3>
+<p>Les tests de la couche <em>[dao]</em> vont exploiter les deux descriptions de bases de données du dossier <em>[Data]</em> : nous vérifions ainsi avec les mêmes tests que la couche <em>[dao]</em> fonctionne avec MySQL et avec PostgreSQL. Le test <em>[Tests/DaoTest.php]</em> est le suivant :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span>
+<span class="normal"><a href="#__codelineno-7-16">16</a></span>
+<span class="normal"><a href="#__codelineno-7-17">17</a></span>
+<span class="normal"><a href="#__codelineno-7-18">18</a></span>
+<span class="normal"><a href="#__codelineno-7-19">19</a></span>
+<span class="normal"><a href="#__codelineno-7-20">20</a></span>
+<span class="normal"><a href="#__codelineno-7-21">21</a></span>
+<span class="normal"><a href="#__codelineno-7-22">22</a></span>
+<span class="normal"><a href="#__codelineno-7-23">23</a></span>
+<span class="normal"><a href="#__codelineno-7-24">24</a></span>
+<span class="normal"><a href="#__codelineno-7-25">25</a></span>
+<span class="normal"><a href="#__codelineno-7-26">26</a></span>
+<span class="normal"><a href="#__codelineno-7-27">27</a></span>
+<span class="normal"><a href="#__codelineno-7-28">28</a></span>
+<span class="normal"><a href="#__codelineno-7-29">29</a></span>
+<span class="normal"><a href="#__codelineno-7-30">30</a></span>
+<span class="normal"><a href="#__codelineno-7-31">31</a></span>
+<span class="normal"><a href="#__codelineno-7-32">32</a></span>
+<span class="normal"><a href="#__codelineno-7-33">33</a></span>
+<span class="normal"><a href="#__codelineno-7-34">34</a></span>
+<span class="normal"><a href="#__codelineno-7-35">35</a></span>
+<span class="normal"><a href="#__codelineno-7-36">36</a></span>
+<span class="normal"><a href="#__codelineno-7-37">37</a></span>
+<span class="normal"><a href="#__codelineno-7-38">38</a></span>
+<span class="normal"><a href="#__codelineno-7-39">39</a></span>
+<span class="normal"><a href="#__codelineno-7-40">40</a></span>
+<span class="normal"><a href="#__codelineno-7-41">41</a></span>
+<span class="normal"><a href="#__codelineno-7-42">42</a></span>
+<span class="normal"><a href="#__codelineno-7-43">43</a></span>
+<span class="normal"><a href="#__codelineno-7-44">44</a></span>
+<span class="normal"><a href="#__codelineno-7-45">45</a></span>
+<span class="normal"><a href="#__codelineno-7-46">46</a></span>
+<span class="normal"><a href="#__codelineno-7-47">47</a></span>
+<span class="normal"><a href="#__codelineno-7-48">48</a></span>
+<span class="normal"><a href="#__codelineno-7-49">49</a></span>
+<span class="normal"><a href="#__codelineno-7-50">50</a></span>
+<span class="normal"><a href="#__codelineno-7-51">51</a></span>
+<span class="normal"><a href="#__codelineno-7-52">52</a></span>
+<span class="normal"><a href="#__codelineno-7-53">53</a></span>
+<span class="normal"><a href="#__codelineno-7-54">54</a></span>
+<span class="normal"><a href="#__codelineno-7-55">55</a></span>
+<span class="normal"><a href="#__codelineno-7-56">56</a></span>
+<span class="normal"><a href="#__codelineno-7-57">57</a></span>
+<span class="normal"><a href="#__codelineno-7-58">58</a></span>
+<span class="normal"><a href="#__codelineno-7-59">59</a></span>
+<span class="normal"><a href="#__codelineno-7-60">60</a></span>
+<span class="normal"><a href="#__codelineno-7-61">61</a></span>
+<span class="normal"><a href="#__codelineno-7-62">62</a></span>
+<span class="normal"><a href="#__codelineno-7-63">63</a></span>
+<span class="normal"><a href="#__codelineno-7-64">64</a></span>
+<span class="normal"><a href="#__codelineno-7-65">65</a></span>
+<span class="normal"><a href="#__codelineno-7-66">66</a></span>
+<span class="normal"><a href="#__codelineno-7-67">67</a></span>
+<span class="normal"><a href="#__codelineno-7-68">68</a></span>
+<span class="normal"><a href="#__codelineno-7-69">69</a></span>
+<span class="normal"><a href="#__codelineno-7-70">70</a></span>
+<span class="normal"><a href="#__codelineno-7-71">71</a></span>
+<span class="normal"><a href="#__codelineno-7-72">72</a></span>
+<span class="normal"><a href="#__codelineno-7-73">73</a></span>
+<span class="normal"><a href="#__codelineno-7-74">74</a></span>
+<span class="normal"><a href="#__codelineno-7-75">75</a></span>
+<span class="normal"><a href="#__codelineno-7-76">76</a></span>
+<span class="normal"><a href="#__codelineno-7-77">77</a></span>
+<span class="normal"><a href="#__codelineno-7-78">78</a></span>
+<span class="normal"><a href="#__codelineno-7-79">79</a></span>
+<span class="normal"><a href="#__codelineno-7-80">80</a></span>
+<span class="normal"><a href="#__codelineno-7-81">81</a></span>
+<span class="normal"><a href="#__codelineno-7-82">82</a></span>
+<span class="normal"><a href="#__codelineno-7-83">83</a></span>
+<span class="normal"><a href="#__codelineno-7-84">84</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="c1">// respect strict des types déclarés des paramètres et des résultats des fonctions</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="k">declare</span><span class="p">(</span><span class="nx">strict_types</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="c1">// espace de noms des tests</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="k">namespace</span> <span class="nx">Application\Tests</span><span class="p">;</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="c1">// les classes testées</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="k">use</span> <span class="nx">Application\DaoImpotsWithTaxAdminDataInDatabase</span><span class="p">;</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="k">use</span> <span class="nx">Application\DaoTransferAdminDataFromJsonFile2Database</span><span class="p">;</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="k">use</span> <span class="nx">Application\TaxAdminData</span><span class="p">;</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="c1">// les classes de PHPUnit</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="k">use</span> <span class="nx">PHPUnit\Framework\Attributes\DataProvider</span><span class="p">;</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="k">use</span> <span class="nx">PHPUnit\Framework\TestCase</span><span class="p">;</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a>
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="k">final</span> <span class="k">class</span> <span class="nc">DaoTest</span> <span class="k">extends</span> <span class="nx">TestCase</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18"></a><span class="p">{</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19"></a>    <span class="c1">// le dossier racine de la version 7</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20"></a>    <span class="k">private</span> <span class="k">const</span> <span class="no">string</span> <span class="nx">ROOT_DIRECTORY</span> <span class="o">=</span> <span class="no">__DIR__</span> <span class="o">.</span> <span class="s2">"/.."</span><span class="p">;</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21"></a>    <span class="c1">// la configuration de l'application</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22"></a>    <span class="k">private</span> <span class="k">static</span> <span class="k">array</span> <span class="nv">$config</span><span class="p">;</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23"></a>
+<a id="__codelineno-7-24" name="__codelineno-7-24"></a>    <span class="c1">// exécutée une fois, avant le premier test de la classe</span>
+<a id="__codelineno-7-25" name="__codelineno-7-25"></a>    <span class="p">#[</span><span class="nd">\Override</span><span class="p">]</span>
+<a id="__codelineno-7-26" name="__codelineno-7-26"></a>    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">setUpBeforeClass</span><span class="p">()</span><span class="o">:</span> <span class="nx">void</span>
+<a id="__codelineno-7-27" name="__codelineno-7-27"></a>    <span class="p">{</span>
+<a id="__codelineno-7-28" name="__codelineno-7-28"></a>        <span class="c1">// on récupère la configuration</span>
+<a id="__codelineno-7-29" name="__codelineno-7-29"></a>        <span class="nx">self</span><span class="o">::</span><span class="nv">$config</span> <span class="o">=</span> <span class="nb">json_decode</span><span class="p">(</span><span class="nb">file_get_contents</span><span class="p">(</span><span class="nx">self</span><span class="o">::</span><span class="na">ROOT_DIRECTORY</span> <span class="o">.</span> <span class="s2">"/Data/config.json"</span><span class="p">),</span> <span class="k">true</span><span class="p">,</span> <span class="nx">flags</span><span class="o">:</span> <span class="nx">JSON_THROW_ON_ERROR</span><span class="p">);</span>
+<a id="__codelineno-7-30" name="__codelineno-7-30"></a>        <span class="c1">// on inclut les dépendances du calcul de l'impôt et celles du transfert des données</span>
+<a id="__codelineno-7-31" name="__codelineno-7-31"></a>        <span class="nv">$dependencies</span> <span class="o">=</span> <span class="nb">array_unique</span><span class="p">([</span><span class="o">...</span><span class="nx">self</span><span class="o">::</span><span class="nv">$config</span><span class="p">[</span><span class="s2">"dependencies4calculate"</span><span class="p">],</span> <span class="o">...</span><span class="nx">self</span><span class="o">::</span><span class="nv">$config</span><span class="p">[</span><span class="s2">"dependencies4transfer"</span><span class="p">]]);</span>
+<a id="__codelineno-7-32" name="__codelineno-7-32"></a>        <span class="k">foreach</span> <span class="p">(</span><span class="nv">$dependencies</span> <span class="k">as</span> <span class="nv">$dependency</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-7-33" name="__codelineno-7-33"></a>            <span class="k">require_once</span> <span class="nx">self</span><span class="o">::</span><span class="na">ROOT_DIRECTORY</span> <span class="o">.</span> <span class="s2">"/"</span> <span class="o">.</span> <span class="nx">self</span><span class="o">::</span><span class="nv">$config</span><span class="p">[</span><span class="s2">"dependencies"</span><span class="p">][</span><span class="nv">$dependency</span><span class="p">];</span>
+<a id="__codelineno-7-34" name="__codelineno-7-34"></a>        <span class="p">}</span>
+<a id="__codelineno-7-35" name="__codelineno-7-35"></a>    <span class="p">}</span>
+<a id="__codelineno-7-36" name="__codelineno-7-36"></a>
+<a id="__codelineno-7-37" name="__codelineno-7-37"></a>    <span class="c1">// les deux bases de données</span>
+<a id="__codelineno-7-38" name="__codelineno-7-38"></a>    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">bases</span><span class="p">()</span><span class="o">:</span> <span class="k">array</span>
+<a id="__codelineno-7-39" name="__codelineno-7-39"></a>    <span class="p">{</span>
+<a id="__codelineno-7-40" name="__codelineno-7-40"></a>        <span class="c1">// [fichier de description de la base]</span>
+<a id="__codelineno-7-41" name="__codelineno-7-41"></a>        <span class="k">return</span> <span class="p">[</span>
+<a id="__codelineno-7-42" name="__codelineno-7-42"></a>            <span class="s2">"MySQL"</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s2">"Data/database-mysql.json"</span><span class="p">],</span>
+<a id="__codelineno-7-43" name="__codelineno-7-43"></a>            <span class="s2">"PostgreSQL"</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s2">"Data/database-pgsql.json"</span><span class="p">],</span>
+<a id="__codelineno-7-44" name="__codelineno-7-44"></a>        <span class="p">];</span>
+<a id="__codelineno-7-45" name="__codelineno-7-45"></a>    <span class="p">}</span>
+<a id="__codelineno-7-46" name="__codelineno-7-46"></a>
+<a id="__codelineno-7-47" name="__codelineno-7-47"></a>    <span class="c1">// les données de l'administration fiscale lues dans la base de données</span>
+<a id="__codelineno-7-48" name="__codelineno-7-48"></a>    <span class="p">#[</span><span class="nd">DataProvider</span><span class="p">(</span><span class="s2">"bases"</span><span class="p">)]</span>
+<a id="__codelineno-7-49" name="__codelineno-7-49"></a>    <span class="k">public</span> <span class="k">function</span> <span class="nf">testTaxAdminData</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$databaseFilename</span><span class="p">)</span><span class="o">:</span> <span class="nx">void</span>
+<a id="__codelineno-7-50" name="__codelineno-7-50"></a>    <span class="p">{</span>
+<a id="__codelineno-7-51" name="__codelineno-7-51"></a>        <span class="nv">$dao</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DaoImpotsWithTaxAdminDataInDatabase</span><span class="p">(</span><span class="nx">self</span><span class="o">::</span><span class="na">ROOT_DIRECTORY</span> <span class="o">.</span> <span class="s2">"/</span><span class="si">$databaseFilename</span><span class="s2">"</span><span class="p">);</span>
+<a id="__codelineno-7-52" name="__codelineno-7-52"></a>        <span class="nv">$taxAdminData</span> <span class="o">=</span> <span class="nv">$dao</span><span class="o">-&gt;</span><span class="na">getTaxAdminData</span><span class="p">();</span>
+<a id="__codelineno-7-53" name="__codelineno-7-53"></a>        <span class="c1">// constantes de calcul</span>
+<a id="__codelineno-7-54" name="__codelineno-7-54"></a>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertSame</span><span class="p">(</span><span class="mf">1551.0</span><span class="p">,</span> <span class="nv">$taxAdminData</span><span class="o">-&gt;</span><span class="na">plafondQfDemiPart</span><span class="p">);</span>
+<a id="__codelineno-7-55" name="__codelineno-7-55"></a>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertSame</span><span class="p">(</span><span class="mf">21037.0</span><span class="p">,</span> <span class="nv">$taxAdminData</span><span class="o">-&gt;</span><span class="na">plafondRevenusCelibatairePourReduction</span><span class="p">);</span>
+<a id="__codelineno-7-56" name="__codelineno-7-56"></a>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertSame</span><span class="p">(</span><span class="mf">42074.0</span><span class="p">,</span> <span class="nv">$taxAdminData</span><span class="o">-&gt;</span><span class="na">plafondRevenusCouplePourReduction</span><span class="p">);</span>
+<a id="__codelineno-7-57" name="__codelineno-7-57"></a>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertSame</span><span class="p">(</span><span class="mf">3797.0</span><span class="p">,</span> <span class="nv">$taxAdminData</span><span class="o">-&gt;</span><span class="na">valeurReducDemiPart</span><span class="p">);</span>
+<a id="__codelineno-7-58" name="__codelineno-7-58"></a>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertSame</span><span class="p">(</span><span class="mf">1196.0</span><span class="p">,</span> <span class="nv">$taxAdminData</span><span class="o">-&gt;</span><span class="na">plafondDecoteCelibataire</span><span class="p">);</span>
+<a id="__codelineno-7-59" name="__codelineno-7-59"></a>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertSame</span><span class="p">(</span><span class="mf">1970.0</span><span class="p">,</span> <span class="nv">$taxAdminData</span><span class="o">-&gt;</span><span class="na">plafondDecoteCouple</span><span class="p">);</span>
+<a id="__codelineno-7-60" name="__codelineno-7-60"></a>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertSame</span><span class="p">(</span><span class="mf">1595.0</span><span class="p">,</span> <span class="nv">$taxAdminData</span><span class="o">-&gt;</span><span class="na">plafondImpotCelibatairePourDecote</span><span class="p">);</span>
+<a id="__codelineno-7-61" name="__codelineno-7-61"></a>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertSame</span><span class="p">(</span><span class="mf">2627.0</span><span class="p">,</span> <span class="nv">$taxAdminData</span><span class="o">-&gt;</span><span class="na">plafondImpotCouplePourDecote</span><span class="p">);</span>
+<a id="__codelineno-7-62" name="__codelineno-7-62"></a>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertSame</span><span class="p">(</span><span class="mf">12502.0</span><span class="p">,</span> <span class="nv">$taxAdminData</span><span class="o">-&gt;</span><span class="na">abattementDixPourcentMax</span><span class="p">);</span>
+<a id="__codelineno-7-63" name="__codelineno-7-63"></a>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertSame</span><span class="p">(</span><span class="mf">437.0</span><span class="p">,</span> <span class="nv">$taxAdminData</span><span class="o">-&gt;</span><span class="na">abattementDixPourcentMin</span><span class="p">);</span>
+<a id="__codelineno-7-64" name="__codelineno-7-64"></a>        <span class="c1">// tranches de l'impôt</span>
+<a id="__codelineno-7-65" name="__codelineno-7-65"></a>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertSame</span><span class="p">([</span><span class="mf">9964.0</span><span class="p">,</span> <span class="mf">27519.0</span><span class="p">,</span> <span class="mf">73779.0</span><span class="p">,</span> <span class="mf">156244.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span> <span class="nv">$taxAdminData</span><span class="o">-&gt;</span><span class="na">limites</span><span class="p">);</span>
+<a id="__codelineno-7-66" name="__codelineno-7-66"></a>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertSame</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.14</span><span class="p">,</span> <span class="mf">0.30</span><span class="p">,</span> <span class="mf">0.41</span><span class="p">,</span> <span class="mf">0.45</span><span class="p">],</span> <span class="nv">$taxAdminData</span><span class="o">-&gt;</span><span class="na">coeffR</span><span class="p">);</span>
+<a id="__codelineno-7-67" name="__codelineno-7-67"></a>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertSame</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1394.96</span><span class="p">,</span> <span class="mf">5798.0</span><span class="p">,</span> <span class="mf">13913.69</span><span class="p">,</span> <span class="mf">20163.45</span><span class="p">],</span> <span class="nv">$taxAdminData</span><span class="o">-&gt;</span><span class="na">coeffN</span><span class="p">);</span>
+<a id="__codelineno-7-68" name="__codelineno-7-68"></a>    <span class="p">}</span>
+<a id="__codelineno-7-69" name="__codelineno-7-69"></a>
+<a id="__codelineno-7-70" name="__codelineno-7-70"></a>    <span class="c1">// le transfert du fichier JSON vers la base, puis la relecture de la base</span>
+<a id="__codelineno-7-71" name="__codelineno-7-71"></a>    <span class="p">#[</span><span class="nd">DataProvider</span><span class="p">(</span><span class="s2">"bases"</span><span class="p">)]</span>
+<a id="__codelineno-7-72" name="__codelineno-7-72"></a>    <span class="k">public</span> <span class="k">function</span> <span class="nf">testTransfert</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$databaseFilename</span><span class="p">)</span><span class="o">:</span> <span class="nx">void</span>
+<a id="__codelineno-7-73" name="__codelineno-7-73"></a>    <span class="p">{</span>
+<a id="__codelineno-7-74" name="__codelineno-7-74"></a>        <span class="c1">// les fichiers JSON</span>
+<a id="__codelineno-7-75" name="__codelineno-7-75"></a>        <span class="nv">$databaseFilename</span> <span class="o">=</span> <span class="nx">self</span><span class="o">::</span><span class="na">ROOT_DIRECTORY</span> <span class="o">.</span> <span class="s2">"/</span><span class="si">$databaseFilename</span><span class="s2">"</span><span class="p">;</span>
+<a id="__codelineno-7-76" name="__codelineno-7-76"></a>        <span class="nv">$taxAdminDataFilename</span> <span class="o">=</span> <span class="nx">self</span><span class="o">::</span><span class="na">ROOT_DIRECTORY</span> <span class="o">.</span> <span class="s2">"/"</span> <span class="o">.</span> <span class="nx">self</span><span class="o">::</span><span class="nv">$config</span><span class="p">[</span><span class="s2">"taxAdminDataFilename"</span><span class="p">];</span>
+<a id="__codelineno-7-77" name="__codelineno-7-77"></a>        <span class="c1">// transfert</span>
+<a id="__codelineno-7-78" name="__codelineno-7-78"></a>        <span class="p">(</span><span class="k">new</span> <span class="nx">DaoTransferAdminDataFromJsonFile2Database</span><span class="p">(</span><span class="nv">$databaseFilename</span><span class="p">,</span> <span class="nv">$taxAdminDataFilename</span><span class="p">))</span><span class="o">-&gt;</span><span class="na">transferAdminData2Database</span><span class="p">();</span>
+<a id="__codelineno-7-79" name="__codelineno-7-79"></a>        <span class="c1">// relecture de la base par une couche [dao]</span>
+<a id="__codelineno-7-80" name="__codelineno-7-80"></a>        <span class="nv">$dao</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DaoImpotsWithTaxAdminDataInDatabase</span><span class="p">(</span><span class="nv">$databaseFilename</span><span class="p">);</span>
+<a id="__codelineno-7-81" name="__codelineno-7-81"></a>        <span class="c1">// la base contient les données du fichier JSON</span>
+<a id="__codelineno-7-82" name="__codelineno-7-82"></a>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertEquals</span><span class="p">(</span><span class="nx">TaxAdminData</span><span class="o">::</span><span class="na">fromJsonFile</span><span class="p">(</span><span class="nv">$taxAdminDataFilename</span><span class="p">),</span> <span class="nv">$dao</span><span class="o">-&gt;</span><span class="na">getTaxAdminData</span><span class="p">());</span>
+<a id="__codelineno-7-83" name="__codelineno-7-83"></a>    <span class="p">}</span>
+<a id="__codelineno-7-84" name="__codelineno-7-84"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Commentaires</p>
+<ul>
+<li>lignes 10-12 : les classes testées sont importées. L&#x27;instruction <strong><em>[use]</em></strong> ne charge pas les classes : elle permet seulement de les désigner par leur nom court ;</li>
+<li>ligne 22 : la configuration de l&#x27;application, dans un attribut statique (de classe) ;</li>
+<li>lignes 26-35 : la méthode statique <em>[setUpBeforeClass]</em> de <em>[TestCase]</em> est exécutée une seule fois, avant le premier test de la classe. On y lit le fichier de configuration et on charge les fichiers de l&#x27;application. Le cours PHP 7 faisait ce travail au niveau principal du fichier de test, en dehors de la classe. Avec PHPUnit, ce code est exécuté lorsque PHPUnit charge le fichier, à un moment qu&#x27;on ne maîtrise pas ; la méthode <em>[setUpBeforeClass]</em> est faite pour cela ;</li>
+<li>ligne 31 : les tests de la couche <em>[dao]</em> ont besoin des dépendances du calcul de l&#x27;impôt (pour la classe <em>[DaoImpotsWithTaxAdminDataInDatabase]</em>) et de celles du transfert (pour la classe <em>[DaoTransferAdminDataFromJsonFile2Database]</em>). On réunit les deux listes, puis la fonction <em>[array_unique]</em> élimine les doublons ;</li>
+<li>lignes 38-45 : le fournisseur de données : les fichiers de description des deux bases de données ;</li>
+<li>lignes 48-49 : le test <em>[testTaxAdminData]</em> de la version 5 est exécuté une fois pour chacune des deux bases ;</li>
+<li>lignes 71-83 : de même pour le test du transfert des données du fichier JSON vers la base de données .</li>
+</ul>
+<h3 id="1522-test-de-la-couche-metier">15.2.2. <span style="color: #1f4d78">Test de la couche <em>[métier]</em></span></h3>
+<p>Le test <em>[Tests/MetierTest.php]</em> est celui de la version 5 avec un environnement construit à partir du fichier de configuration :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span>
+<span class="normal"><a href="#__codelineno-8-15">15</a></span>
+<span class="normal"><a href="#__codelineno-8-16">16</a></span>
+<span class="normal"><a href="#__codelineno-8-17">17</a></span>
+<span class="normal"><a href="#__codelineno-8-18">18</a></span>
+<span class="normal"><a href="#__codelineno-8-19">19</a></span>
+<span class="normal"><a href="#__codelineno-8-20">20</a></span>
+<span class="normal"><a href="#__codelineno-8-21">21</a></span>
+<span class="normal"><a href="#__codelineno-8-22">22</a></span>
+<span class="normal"><a href="#__codelineno-8-23">23</a></span>
+<span class="normal"><a href="#__codelineno-8-24">24</a></span>
+<span class="normal"><a href="#__codelineno-8-25">25</a></span>
+<span class="normal"><a href="#__codelineno-8-26">26</a></span>
+<span class="normal"><a href="#__codelineno-8-27">27</a></span>
+<span class="normal"><a href="#__codelineno-8-28">28</a></span>
+<span class="normal"><a href="#__codelineno-8-29">29</a></span>
+<span class="normal"><a href="#__codelineno-8-30">30</a></span>
+<span class="normal"><a href="#__codelineno-8-31">31</a></span>
+<span class="normal"><a href="#__codelineno-8-32">32</a></span>
+<span class="normal"><a href="#__codelineno-8-33">33</a></span>
+<span class="normal"><a href="#__codelineno-8-34">34</a></span>
+<span class="normal"><a href="#__codelineno-8-35">35</a></span>
+<span class="normal"><a href="#__codelineno-8-36">36</a></span>
+<span class="normal"><a href="#__codelineno-8-37">37</a></span>
+<span class="normal"><a href="#__codelineno-8-38">38</a></span>
+<span class="normal"><a href="#__codelineno-8-39">39</a></span>
+<span class="normal"><a href="#__codelineno-8-40">40</a></span>
+<span class="normal"><a href="#__codelineno-8-41">41</a></span>
+<span class="normal"><a href="#__codelineno-8-42">42</a></span>
+<span class="normal"><a href="#__codelineno-8-43">43</a></span>
+<span class="normal"><a href="#__codelineno-8-44">44</a></span>
+<span class="normal"><a href="#__codelineno-8-45">45</a></span>
+<span class="normal"><a href="#__codelineno-8-46">46</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="c1">// respect strict des types déclarés des paramètres et des résultats des fonctions</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="k">declare</span><span class="p">(</span><span class="nx">strict_types</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="c1">// espace de noms des tests</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="k">namespace</span> <span class="nx">Application\Tests</span><span class="p">;</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="c1">// les classes testées</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="k">use</span> <span class="nx">Application\DaoImpotsWithTaxAdminDataInDatabase</span><span class="p">;</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="k">use</span> <span class="nx">Application\InterfaceMetier</span><span class="p">;</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="k">use</span> <span class="nx">Application\Metier</span><span class="p">;</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="c1">// les classes de PHPUnit</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="k">use</span> <span class="nx">PHPUnit\Framework\Attributes\DataProvider</span><span class="p">;</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="k">use</span> <span class="nx">PHPUnit\Framework\TestCase</span><span class="p">;</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a>
+<a id="__codelineno-8-17" name="__codelineno-8-17"></a><span class="k">final</span> <span class="k">class</span> <span class="nc">MetierTest</span> <span class="k">extends</span> <span class="nx">TestCase</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18"></a><span class="p">{</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19"></a>    <span class="c1">// le dossier racine de la version 7</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20"></a>    <span class="k">private</span> <span class="k">const</span> <span class="no">string</span> <span class="nx">ROOT_DIRECTORY</span> <span class="o">=</span> <span class="no">__DIR__</span> <span class="o">.</span> <span class="s2">"/.."</span><span class="p">;</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21"></a>    <span class="c1">// la configuration de l'application</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22"></a>    <span class="k">private</span> <span class="k">static</span> <span class="k">array</span> <span class="nv">$config</span><span class="p">;</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23"></a>    <span class="c1">// la couche [métier] testée</span>
+<a id="__codelineno-8-24" name="__codelineno-8-24"></a>    <span class="k">private</span> <span class="nx">InterfaceMetier</span> <span class="nv">$métier</span><span class="p">;</span>
+<a id="__codelineno-8-25" name="__codelineno-8-25"></a>
+<a id="__codelineno-8-26" name="__codelineno-8-26"></a>    <span class="c1">// exécutée une fois, avant le premier test de la classe</span>
+<a id="__codelineno-8-27" name="__codelineno-8-27"></a>    <span class="p">#[</span><span class="nd">\Override</span><span class="p">]</span>
+<a id="__codelineno-8-28" name="__codelineno-8-28"></a>    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">setUpBeforeClass</span><span class="p">()</span><span class="o">:</span> <span class="nx">void</span>
+<a id="__codelineno-8-29" name="__codelineno-8-29"></a>    <span class="p">{</span>
+<a id="__codelineno-8-30" name="__codelineno-8-30"></a>        <span class="c1">// on récupère la configuration</span>
+<a id="__codelineno-8-31" name="__codelineno-8-31"></a>        <span class="nx">self</span><span class="o">::</span><span class="nv">$config</span> <span class="o">=</span> <span class="nb">json_decode</span><span class="p">(</span><span class="nb">file_get_contents</span><span class="p">(</span><span class="nx">self</span><span class="o">::</span><span class="na">ROOT_DIRECTORY</span> <span class="o">.</span> <span class="s2">"/Data/config.json"</span><span class="p">),</span> <span class="k">true</span><span class="p">,</span> <span class="nx">flags</span><span class="o">:</span> <span class="nx">JSON_THROW_ON_ERROR</span><span class="p">);</span>
+<a id="__codelineno-8-32" name="__codelineno-8-32"></a>        <span class="c1">// on inclut les dépendances du calcul de l'impôt</span>
+<a id="__codelineno-8-33" name="__codelineno-8-33"></a>        <span class="k">foreach</span> <span class="p">(</span><span class="nx">self</span><span class="o">::</span><span class="nv">$config</span><span class="p">[</span><span class="s2">"dependencies4calculate"</span><span class="p">]</span> <span class="k">as</span> <span class="nv">$dependency</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-8-34" name="__codelineno-8-34"></a>            <span class="k">require_once</span> <span class="nx">self</span><span class="o">::</span><span class="na">ROOT_DIRECTORY</span> <span class="o">.</span> <span class="s2">"/"</span> <span class="o">.</span> <span class="nx">self</span><span class="o">::</span><span class="nv">$config</span><span class="p">[</span><span class="s2">"dependencies"</span><span class="p">][</span><span class="nv">$dependency</span><span class="p">];</span>
+<a id="__codelineno-8-35" name="__codelineno-8-35"></a>        <span class="p">}</span>
+<a id="__codelineno-8-36" name="__codelineno-8-36"></a>    <span class="p">}</span>
+<a id="__codelineno-8-37" name="__codelineno-8-37"></a>
+<a id="__codelineno-8-38" name="__codelineno-8-38"></a>    <span class="c1">// exécutée avant chaque test</span>
+<a id="__codelineno-8-39" name="__codelineno-8-39"></a>    <span class="p">#[</span><span class="nd">\Override</span><span class="p">]</span>
+<a id="__codelineno-8-40" name="__codelineno-8-40"></a>    <span class="k">protected</span> <span class="k">function</span> <span class="nf">setUp</span><span class="p">()</span><span class="o">:</span> <span class="nx">void</span>
+<a id="__codelineno-8-41" name="__codelineno-8-41"></a>    <span class="p">{</span>
+<a id="__codelineno-8-42" name="__codelineno-8-42"></a>        <span class="c1">// création de la couche [dao] sur la base de données de la configuration</span>
+<a id="__codelineno-8-43" name="__codelineno-8-43"></a>        <span class="nv">$dao</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DaoImpotsWithTaxAdminDataInDatabase</span><span class="p">(</span><span class="nx">self</span><span class="o">::</span><span class="na">ROOT_DIRECTORY</span> <span class="o">.</span> <span class="s2">"/"</span> <span class="o">.</span> <span class="nx">self</span><span class="o">::</span><span class="nv">$config</span><span class="p">[</span><span class="s2">"databaseFilename"</span><span class="p">]);</span>
+<a id="__codelineno-8-44" name="__codelineno-8-44"></a>        <span class="c1">// création de la couche [métier]</span>
+<a id="__codelineno-8-45" name="__codelineno-8-45"></a>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">métier</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Metier</span><span class="p">(</span><span class="nv">$dao</span><span class="p">);</span>
+<a id="__codelineno-8-46" name="__codelineno-8-46"></a>    <span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Commentaires</p>
+<ul>
+<li>lignes 28-36 : on lit le fichier de configuration et on charge les dépendances du calcul de l&#x27;impôt, comme le fait le script principal <em>[MainCalculateImpotsWithTaxAdminDataInDatabase]</em> ;</li>
+<li>ligne 43 : la couche <em>[dao]</em> utilise la base de données désignée par le fichier de configuration ;</li>
+<li>le fournisseur de données <em>[contribuables]</em> et la méthode <em>[testCalculerImpot]</em>, non reproduits ici, sont ceux de la version 4 .</li>
+</ul>
+<h3 id="1523-execution-des-tests">15.2.3. <span style="color: #1f4d78">Exécution des tests</span></h3>
+<p>Les deux SGBD, MySQL et PostgreSQL, doivent être lancés. Les résultats des tests sont les suivants :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span>
+<span class="normal"><a href="#__codelineno-9-13">13</a></span>
+<span class="normal"><a href="#__codelineno-9-14">14</a></span>
+<span class="normal"><a href="#__codelineno-9-15">15</a></span>
+<span class="normal"><a href="#__codelineno-9-16">16</a></span>
+<span class="normal"><a href="#__codelineno-9-17">17</a></span>
+<span class="normal"><a href="#__codelineno-9-18">18</a></span>
+<span class="normal"><a href="#__codelineno-9-19">19</a></span>
+<span class="normal"><a href="#__codelineno-9-20">20</a></span>
+<span class="normal"><a href="#__codelineno-9-21">21</a></span>
+<span class="normal"><a href="#__codelineno-9-22">22</a></span>
+<span class="normal"><a href="#__codelineno-9-23">23</a></span>
+<span class="normal"><a href="#__codelineno-9-24">24</a></span>
+<span class="normal"><a href="#__codelineno-9-25">25</a></span>
+<span class="normal"><a href="#__codelineno-9-26">26</a></span>
+<span class="normal"><a href="#__codelineno-9-27">27</a></span>
+<span class="normal"><a href="#__codelineno-9-28">28</a></span>
+<span class="normal"><a href="#__codelineno-9-29">29</a></span>
+<span class="normal"><a href="#__codelineno-9-30">30</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>&gt; php vendor/bin/phpunit scripts-console/impots/version-07/Tests --testdox
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>PHPUnit 12.5.37 by Sebastian Bergmann and contributors.
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a>Runtime:       PHP 8.5.11
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a>Configuration: .../php8-oct-2026/phpunit.xml
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a>...............                                                   15 / 15 (100%)
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a>Time: 00:00.602, Memory: 16.00 MB
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a>Dao (Application\Tests\Dao)
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a> ✔ Tax admin data with data set "MySQL"
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a> ✔ Tax admin data with data set "PostgreSQL"
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a> ✔ Transfert with data set "MySQL"
+<a id="__codelineno-9-15" name="__codelineno-9-15"></a> ✔ Transfert with data set "PostgreSQL"
+<a id="__codelineno-9-16" name="__codelineno-9-16"></a>
+<a id="__codelineno-9-17" name="__codelineno-9-17"></a>Metier (Application\Tests\Metier)
+<a id="__codelineno-9-18" name="__codelineno-9-18"></a> ✔ Calculer impot with data set "couple, 2 enfants, 55555"
+<a id="__codelineno-9-19" name="__codelineno-9-19"></a> ✔ Calculer impot with data set "couple, 2 enfants, 50000"
+<a id="__codelineno-9-20" name="__codelineno-9-20"></a> ✔ Calculer impot with data set "couple, 3 enfants, 50000"
+<a id="__codelineno-9-21" name="__codelineno-9-21"></a> ✔ Calculer impot with data set "célibataire, 2 enfants, 100000"
+<a id="__codelineno-9-22" name="__codelineno-9-22"></a> ✔ Calculer impot with data set "célibataire, 3 enfants, 100000"
+<a id="__codelineno-9-23" name="__codelineno-9-23"></a> ✔ Calculer impot with data set "couple, 3 enfants, 100000"
+<a id="__codelineno-9-24" name="__codelineno-9-24"></a> ✔ Calculer impot with data set "couple, 5 enfants, 100000"
+<a id="__codelineno-9-25" name="__codelineno-9-25"></a> ✔ Calculer impot with data set "célibataire, 0 enfant, 100000"
+<a id="__codelineno-9-26" name="__codelineno-9-26"></a> ✔ Calculer impot with data set "couple, 2 enfants, 30000"
+<a id="__codelineno-9-27" name="__codelineno-9-27"></a> ✔ Calculer impot with data set "célibataire, 0 enfant, 200000"
+<a id="__codelineno-9-28" name="__codelineno-9-28"></a> ✔ Calculer impot with data set "couple, 3 enfants, 200000"
+<a id="__codelineno-9-29" name="__codelineno-9-29"></a>
+<a id="__codelineno-9-30" name="__codelineno-9-30"></a>OK (15 tests, 50 assertions)
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>lignes 12-15 : les tests de la couche <em>[dao]</em> ont été exécutés avec chacune des deux bases ;</li>
+<li>lignes 18-28 : les 11 tests de la couche <em>[métier]</em> .</li>
+</ul>
+<p>Nous arrivons au terme des versions console de l&#x27;application de calcul de l&#x27;impôt. La version 8 la transformera en application client / serveur : la base de données et le calcul de l&#x27;impôt seront sur un serveur web, interrogé par des clients. Elle reprendra les classes de la version 5 et la technique du fichier de configuration de la version 7.</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
+        </a>
+        <br>
+        Ce cours, rédigé par l’IA d’Anthropic <strong>Claude</strong> à la demande de <strong>Serge Tahé</strong>, est mis à la disposition du public selon les termes de la
+        <em>licence Creative Commons Attribution – Pas d’utilisation commerciale –
+        ShareAlike 3.0 Unported</em>.
+
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>
