@@ -1516,15 +1516,15 @@
 <span class="normal"><a href="#__codelineno-3-27">27</a></span>
 <span class="normal"><a href="#__codelineno-3-28">28</a></span>
 <span class="normal"><a href="#__codelineno-3-29">29</a></span>
-<span class="normal"><a href="#__codelineno-3-30">30</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-22" name="__codelineno-3-22"></a>    <span class="s2">"adminMail"</span><span class="p">:</span> <span class="p">{</span>
-<a id="__codelineno-3-23" name="__codelineno-3-23"></a>        <span class="s2">"smtp-server"</span><span class="p">:</span> <span class="s2">"localhost"</span><span class="p">,</span>
-<a id="__codelineno-3-24" name="__codelineno-3-24"></a>        <span class="s2">"smtp-port"</span><span class="p">:</span> <span class="mi">1025</span><span class="p">,</span>
-<a id="__codelineno-3-25" name="__codelineno-3-25"></a>        <span class="s2">"from"</span><span class="p">:</span> <span class="s2">"guest@localhost"</span><span class="p">,</span>
-<a id="__codelineno-3-26" name="__codelineno-3-26"></a>        <span class="s2">"to"</span><span class="p">:</span> <span class="s2">"guest@localhost"</span><span class="p">,</span>
-<a id="__codelineno-3-27" name="__codelineno-3-27"></a>        <span class="s2">"subject"</span><span class="p">:</span> <span class="s2">"plantage du serveur de calcul d'impôts"</span><span class="p">,</span>
-<a id="__codelineno-3-28" name="__codelineno-3-28"></a>        <span class="s2">"tls"</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
-<a id="__codelineno-3-29" name="__codelineno-3-29"></a>        <span class="s2">"attachments"</span><span class="p">:</span> <span class="p">[]</span>
-<a id="__codelineno-3-30" name="__codelineno-3-30"></a>    <span class="p">},</span>
+<span class="normal"><a href="#__codelineno-3-30">30</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="w">    </span><span class="nt">"adminMail"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="w">        </span><span class="nt">"smtp-server"</span><span class="p">:</span><span class="w"> </span><span class="s2">"localhost"</span><span class="p">,</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="w">        </span><span class="nt">"smtp-port"</span><span class="p">:</span><span class="w"> </span><span class="mi">1025</span><span class="p">,</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="w">        </span><span class="nt">"from"</span><span class="p">:</span><span class="w"> </span><span class="s2">"guest@localhost"</span><span class="p">,</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="w">        </span><span class="nt">"to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"guest@localhost"</span><span class="p">,</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="w">        </span><span class="nt">"subject"</span><span class="p">:</span><span class="w"> </span><span class="s2">"plantage du serveur de calcul d'impôts"</span><span class="p">,</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28"></a><span class="w">        </span><span class="nt">"tls"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a id="__codelineno-3-29" name="__codelineno-3-29"></a><span class="w">        </span><span class="nt">"attachments"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
+<a id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="w">    </span><span class="p">},</span>
 </code></pre></div></td></tr></table></div>
 <p>Le mail est envoyé au serveur <em>[Mailpit]</em> présenté au chapitre sur les fonctions réseau, qui écoute sur le port 1025 de la machine <em>[localhost]</em> et garde tous les mails qu&#x27;il reçoit. Il doit être lancé (fichier <em>[mailpit.bat]</em> du dossier <em>[scripts-console/inet/mailpit]</em>).</p>
 <h3 id="1912-la-couche-dao">19.1.2. <span style="color: #1f4d78">La couche <em>[dao]</em></span></h3>
@@ -1623,36 +1623,36 @@
 <span class="normal"><a href="#__codelineno-5-30">30</a></span>
 <span class="normal"><a href="#__codelineno-5-31">31</a></span>
 <span class="normal"><a href="#__codelineno-5-32">32</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="p">{</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a>    <span class="s2">"databaseFilename"</span><span class="p">:</span> <span class="s2">"../version-08/Data/database-mysql.json"</span><span class="p">,</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a>    <span class="s2">"dependencies"</span><span class="p">:</span> <span class="p">[</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a>        <span class="s2">"../../../scripts-console/impots/version-05/Entities/ExceptionImpots.php"</span><span class="p">,</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a>        <span class="s2">"../../../scripts-console/impots/version-05/Entities/TaxAdminData.php"</span><span class="p">,</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6"></a>        <span class="s2">"../../../scripts-console/impots/version-05/Entities/Database.php"</span><span class="p">,</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7"></a>        <span class="s2">"../../../scripts-console/impots/version-05/Utilities/Utilitaires.php"</span><span class="p">,</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8"></a>        <span class="s2">"../version-08/Dao/InterfaceServerDao.php"</span><span class="p">,</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9"></a>        <span class="s2">"../version-08/Dao/ServerDao.php"</span><span class="p">,</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10"></a>        <span class="s2">"Dao/ServerDaoWithSession.php"</span><span class="p">,</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11"></a>        <span class="s2">"../version-08/Metier/InterfaceServerMetier.php"</span><span class="p">,</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12"></a>        <span class="s2">"../version-08/Metier/ServerMetier.php"</span><span class="p">,</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13"></a>        <span class="s2">"Utilities/Logger.php"</span><span class="p">,</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14"></a>        <span class="s2">"Utilities/SendAdminMail.php"</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15"></a>    <span class="p">],</span>
-<a id="__codelineno-5-16" name="__codelineno-5-16"></a>    <span class="s2">"users"</span><span class="p">:</span> <span class="p">[</span>
-<a id="__codelineno-5-17" name="__codelineno-5-17"></a>        <span class="p">{</span>
-<a id="__codelineno-5-18" name="__codelineno-5-18"></a>            <span class="s2">"login"</span><span class="p">:</span> <span class="s2">"admin"</span><span class="p">,</span>
-<a id="__codelineno-5-19" name="__codelineno-5-19"></a>            <span class="s2">"passwd"</span><span class="p">:</span> <span class="s2">"admin"</span>
-<a id="__codelineno-5-20" name="__codelineno-5-20"></a>        <span class="p">}</span>
-<a id="__codelineno-5-21" name="__codelineno-5-21"></a>    <span class="p">],</span>
-<a id="__codelineno-5-22" name="__codelineno-5-22"></a>    <span class="s2">"adminMail"</span><span class="p">:</span> <span class="p">{</span>
-<a id="__codelineno-5-23" name="__codelineno-5-23"></a>        <span class="s2">"smtp-server"</span><span class="p">:</span> <span class="s2">"localhost"</span><span class="p">,</span>
-<a id="__codelineno-5-24" name="__codelineno-5-24"></a>        <span class="s2">"smtp-port"</span><span class="p">:</span> <span class="mi">1025</span><span class="p">,</span>
-<a id="__codelineno-5-25" name="__codelineno-5-25"></a>        <span class="s2">"from"</span><span class="p">:</span> <span class="s2">"guest@localhost"</span><span class="p">,</span>
-<a id="__codelineno-5-26" name="__codelineno-5-26"></a>        <span class="s2">"to"</span><span class="p">:</span> <span class="s2">"guest@localhost"</span><span class="p">,</span>
-<a id="__codelineno-5-27" name="__codelineno-5-27"></a>        <span class="s2">"subject"</span><span class="p">:</span> <span class="s2">"plantage du serveur de calcul d'impôts"</span><span class="p">,</span>
-<a id="__codelineno-5-28" name="__codelineno-5-28"></a>        <span class="s2">"tls"</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
-<a id="__codelineno-5-29" name="__codelineno-5-29"></a>        <span class="s2">"attachments"</span><span class="p">:</span> <span class="p">[]</span>
-<a id="__codelineno-5-30" name="__codelineno-5-30"></a>    <span class="p">},</span>
-<a id="__codelineno-5-31" name="__codelineno-5-31"></a>    <span class="s2">"logsFilename"</span><span class="p">:</span> <span class="s2">"Data/logs.txt"</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="nt">"databaseFilename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"../version-08/Data/database-mysql.json"</span><span class="p">,</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="nt">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">        </span><span class="s2">"../../../scripts-console/impots/version-05/Entities/ExceptionImpots.php"</span><span class="p">,</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">        </span><span class="s2">"../../../scripts-console/impots/version-05/Entities/TaxAdminData.php"</span><span class="p">,</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">        </span><span class="s2">"../../../scripts-console/impots/version-05/Entities/Database.php"</span><span class="p">,</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">        </span><span class="s2">"../../../scripts-console/impots/version-05/Utilities/Utilitaires.php"</span><span class="p">,</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">        </span><span class="s2">"../version-08/Dao/InterfaceServerDao.php"</span><span class="p">,</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">        </span><span class="s2">"../version-08/Dao/ServerDao.php"</span><span class="p">,</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">        </span><span class="s2">"Dao/ServerDaoWithSession.php"</span><span class="p">,</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">        </span><span class="s2">"../version-08/Metier/InterfaceServerMetier.php"</span><span class="p">,</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">        </span><span class="s2">"../version-08/Metier/ServerMetier.php"</span><span class="p">,</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="w">        </span><span class="s2">"Utilities/Logger.php"</span><span class="p">,</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">        </span><span class="s2">"Utilities/SendAdminMail.php"</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="w">    </span><span class="p">],</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="w">    </span><span class="nt">"users"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="w">            </span><span class="nt">"login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin"</span><span class="p">,</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="w">            </span><span class="nt">"passwd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin"</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="w">    </span><span class="p">],</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="w">    </span><span class="nt">"adminMail"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23"></a><span class="w">        </span><span class="nt">"smtp-server"</span><span class="p">:</span><span class="w"> </span><span class="s2">"localhost"</span><span class="p">,</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="w">        </span><span class="nt">"smtp-port"</span><span class="p">:</span><span class="w"> </span><span class="mi">1025</span><span class="p">,</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25"></a><span class="w">        </span><span class="nt">"from"</span><span class="p">:</span><span class="w"> </span><span class="s2">"guest@localhost"</span><span class="p">,</span>
+<a id="__codelineno-5-26" name="__codelineno-5-26"></a><span class="w">        </span><span class="nt">"to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"guest@localhost"</span><span class="p">,</span>
+<a id="__codelineno-5-27" name="__codelineno-5-27"></a><span class="w">        </span><span class="nt">"subject"</span><span class="p">:</span><span class="w"> </span><span class="s2">"plantage du serveur de calcul d'impôts"</span><span class="p">,</span>
+<a id="__codelineno-5-28" name="__codelineno-5-28"></a><span class="w">        </span><span class="nt">"tls"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a id="__codelineno-5-29" name="__codelineno-5-29"></a><span class="w">        </span><span class="nt">"attachments"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
+<a id="__codelineno-5-30" name="__codelineno-5-30"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-5-31" name="__codelineno-5-31"></a><span class="w">    </span><span class="nt">"logsFilename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Data/logs.txt"</span>
 <a id="__codelineno-5-32" name="__codelineno-5-32"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
@@ -2527,20 +2527,20 @@
 <span class="normal"><a href="#__codelineno-11-21">21</a></span>
 <span class="normal"><a href="#__codelineno-11-22">22</a></span>
 <span class="normal"><a href="#__codelineno-11-23">23</a></span>
-<span class="normal"><a href="#__codelineno-11-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="err">{</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">    </span><span class="s2">"urlServer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost/php8-oct-2026/scripts-web/impots/version-09/impots-server.php"</span><span class="p">,</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">    </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="err">{</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">        </span><span class="s2">"login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin"</span><span class="p">,</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">        </span><span class="s2">"passwd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin"</span>
-<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="w">    </span><span class="err">},</span>
-<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">    </span><span class="s2">"httpClientOptions"</span><span class="p">:</span><span class="w"> </span><span class="err">{</span>
-<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="w">        </span><span class="s2">"verify_peer"</span><span class="p">:</span><span class="w"> </span><span class="no">false</span><span class="p">,</span>
-<a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="w">        </span><span class="s2">"verify_host"</span><span class="p">:</span><span class="w"> </span><span class="no">false</span>
-<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="w">    </span><span class="err">},</span>
-<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">    </span><span class="s2">"taxPayersDataFilename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Data/taxpayersdata.json"</span><span class="p">,</span>
-<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="w">    </span><span class="s2">"resultsFilename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Data/results.json"</span><span class="p">,</span>
-<a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="w">    </span><span class="s2">"errorsFilename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Data/errors.json"</span><span class="p">,</span>
-<a id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="w">    </span><span class="s2">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="err">[</span>
+<span class="normal"><a href="#__codelineno-11-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="p">{</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">    </span><span class="nt">"urlServer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost/php8-oct-2026/scripts-web/impots/version-09/impots-server.php"</span><span class="p">,</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">    </span><span class="nt">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">        </span><span class="nt">"login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin"</span><span class="p">,</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">        </span><span class="nt">"passwd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin"</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">    </span><span class="nt">"httpClientOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="w">        </span><span class="nt">"verify_peer"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="w">        </span><span class="nt">"verify_host"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">    </span><span class="nt">"taxPayersDataFilename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Data/taxpayersdata.json"</span><span class="p">,</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="w">    </span><span class="nt">"resultsFilename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Data/results.json"</span><span class="p">,</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="w">    </span><span class="nt">"errorsFilename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Data/errors.json"</span><span class="p">,</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="w">    </span><span class="nt">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <a id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="w">        </span><span class="s2">"../version-05/Entities/ExceptionImpots.php"</span><span class="p">,</span>
 <a id="__codelineno-11-16" name="__codelineno-11-16"></a><span class="w">        </span><span class="s2">"../version-05/Entities/TaxPayerData.php"</span><span class="p">,</span>
 <a id="__codelineno-11-17" name="__codelineno-11-17"></a><span class="w">        </span><span class="s2">"../version-05/Utilities/Utilitaires.php"</span><span class="p">,</span>
@@ -2549,8 +2549,8 @@
 <a id="__codelineno-11-20" name="__codelineno-11-20"></a><span class="w">        </span><span class="s2">"Dao/ClientDao.php"</span><span class="p">,</span>
 <a id="__codelineno-11-21" name="__codelineno-11-21"></a><span class="w">        </span><span class="s2">"../version-08/Metier/InterfaceClientMetier.php"</span><span class="p">,</span>
 <a id="__codelineno-11-22" name="__codelineno-11-22"></a><span class="w">        </span><span class="s2">"../version-08/Metier/ClientMetier.php"</span>
-<a id="__codelineno-11-23" name="__codelineno-11-23"></a><span class="w">    </span><span class="err">]</span>
-<a id="__codelineno-11-24" name="__codelineno-11-24"></a><span class="err">}</span>
+<a id="__codelineno-11-23" name="__codelineno-11-23"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-11-24" name="__codelineno-11-24"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 2 : l&#x27;URL du serveur de la version 9 ;</li>
@@ -2649,21 +2649,21 @@
 <span class="normal"><a href="#__codelineno-16-12">12</a></span>
 <span class="normal"><a href="#__codelineno-16-13">13</a></span>
 <span class="normal"><a href="#__codelineno-16-14">14</a></span>
-<span class="normal"><a href="#__codelineno-16-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="n">Return</span><span class="o">-</span><span class="n">Path</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">guest</span><span class="nd">@localhost</span><span class="o">&gt;</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="n">Received</span><span class="p">:</span> <span class="kn">from</span><span class="w"> </span><span class="p">[</span><span class="mf">127.0.0.1</span><span class="p">]</span> <span class="p">(</span><span class="n">localhost</span> <span class="p">[</span><span class="mf">127.0.0.1</span><span class="p">])</span>
-<a id="__codelineno-16-3" name="__codelineno-16-3"></a>        <span class="n">by</span> <span class="n">vm</span> <span class="p">(</span><span class="n">Mailpit</span><span class="p">)</span> <span class="k">with</span> <span class="n">SMTP</span>
-<a id="__codelineno-16-4" name="__codelineno-16-4"></a>        <span class="k">for</span> <span class="o">&lt;</span><span class="n">guest</span><span class="nd">@localhost</span><span class="o">&gt;</span><span class="p">;</span> <span class="n">Thu</span><span class="p">,</span> <span class="mi">1</span> <span class="n">Oct</span> <span class="mi">2026</span> <span class="mi">18</span><span class="p">:</span><span class="mi">06</span><span class="p">:</span><span class="mi">48</span> <span class="o">+</span><span class="mi">0200</span> <span class="p">(</span><span class="n">CEST</span><span class="p">)</span>
-<a id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="n">From</span><span class="p">:</span> <span class="n">guest</span><span class="nd">@localhost</span>
-<a id="__codelineno-16-6" name="__codelineno-16-6"></a><span class="n">To</span><span class="p">:</span> <span class="n">guest</span><span class="nd">@localhost</span>
-<a id="__codelineno-16-7" name="__codelineno-16-7"></a><span class="n">Subject</span><span class="p">:</span> <span class="n">plantage</span> <span class="n">du</span> <span class="n">serveur</span> <span class="n">de</span> <span class="n">calcul</span> <span class="o">=</span><span class="err">?</span><span class="n">utf</span><span class="o">-</span><span class="mi">8</span><span class="err">?</span><span class="n">Q</span><span class="err">?</span><span class="n">d</span><span class="o">=</span><span class="mi">27</span><span class="n">imp</span><span class="o">=</span><span class="n">C3</span><span class="o">=</span><span class="n">B4ts</span><span class="err">?</span><span class="o">=</span>
-<a id="__codelineno-16-8" name="__codelineno-16-8"></a><span class="n">Message</span><span class="o">-</span><span class="n">ID</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">abc3d7c0b4e68b2d5e70d6710a13a897</span><span class="nd">@localhost</span><span class="o">&gt;</span>
-<a id="__codelineno-16-9" name="__codelineno-16-9"></a><span class="n">MIME</span><span class="o">-</span><span class="n">Version</span><span class="p">:</span> <span class="mf">1.0</span>
-<a id="__codelineno-16-10" name="__codelineno-16-10"></a><span class="n">Date</span><span class="p">:</span> <span class="n">Thu</span><span class="p">,</span> <span class="mi">01</span> <span class="n">Oct</span> <span class="mi">2026</span> <span class="mi">18</span><span class="p">:</span><span class="mi">06</span><span class="p">:</span><span class="mi">48</span> <span class="o">+</span><span class="mi">0200</span>
-<a id="__codelineno-16-11" name="__codelineno-16-11"></a><span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">text</span><span class="o">/</span><span class="n">plain</span><span class="p">;</span> <span class="n">charset</span><span class="o">=</span><span class="n">utf</span><span class="o">-</span><span class="mi">8</span>
-<a id="__codelineno-16-12" name="__codelineno-16-12"></a><span class="n">Content</span><span class="o">-</span><span class="n">Transfer</span><span class="o">-</span><span class="n">Encoding</span><span class="p">:</span> <span class="n">quoted</span><span class="o">-</span><span class="n">printable</span>
+<span class="normal"><a href="#__codelineno-16-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a>Return-Path: &lt;guest@localhost&gt;
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a>Received: from [127.0.0.1] (localhost [127.0.0.1])
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a>        by vm (Mailpit) with SMTP
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a>        for &lt;guest@localhost&gt;; Thu, 1 Oct 2026 18:06:48 +0200 (CEST)
+<a id="__codelineno-16-5" name="__codelineno-16-5"></a>From: guest@localhost
+<a id="__codelineno-16-6" name="__codelineno-16-6"></a>To: guest@localhost
+<a id="__codelineno-16-7" name="__codelineno-16-7"></a>Subject: plantage du serveur de calcul =?utf-8?Q?d=27imp=C3=B4ts?=
+<a id="__codelineno-16-8" name="__codelineno-16-8"></a>Message-ID: &lt;abc3d7c0b4e68b2d5e70d6710a13a897@localhost&gt;
+<a id="__codelineno-16-9" name="__codelineno-16-9"></a>MIME-Version: 1.0
+<a id="__codelineno-16-10" name="__codelineno-16-10"></a>Date: Thu, 01 Oct 2026 18:06:48 +0200
+<a id="__codelineno-16-11" name="__codelineno-16-11"></a>Content-Type: text/plain; charset=utf-8
+<a id="__codelineno-16-12" name="__codelineno-16-12"></a>Content-Transfer-Encoding: quoted-printable
 <a id="__codelineno-16-13" name="__codelineno-16-13"></a>
-<a id="__codelineno-16-14" name="__codelineno-16-14"></a><span class="n">Erreur</span> <span class="n">d</span><span class="s1">'acc=C3=A8s =C3=A0 la base de donn=C3=A9es (SQLSTATE[HY000] [2002] =</span>
-<a id="__codelineno-16-15" name="__codelineno-16-15"></a><span class="n">Connection</span> <span class="n">refused</span><span class="p">)</span>
+<a id="__codelineno-16-14" name="__codelineno-16-14"></a>Erreur d'acc=C3=A8s =C3=A0 la base de donn=C3=A9es (SQLSTATE[HY000] [2002] =
+<a id="__codelineno-16-15" name="__codelineno-16-15"></a>Connection refused)
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 7 : le sujet contient des caractères non ASCII. Il est codé selon la RFC 2047 ;</li>
@@ -2691,20 +2691,20 @@
 <span class="normal"><a href="#__codelineno-18-11">11</a></span>
 <span class="normal"><a href="#__codelineno-18-12">12</a></span>
 <span class="normal"><a href="#__codelineno-18-13">13</a></span>
-<span class="normal"><a href="#__codelineno-18-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="n">Return</span><span class="o">-</span><span class="n">Path</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">guest</span><span class="nd">@localhost</span><span class="o">&gt;</span>
-<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="n">Received</span><span class="p">:</span> <span class="kn">from</span><span class="w"> </span><span class="p">[</span><span class="mf">127.0.0.1</span><span class="p">]</span> <span class="p">(</span><span class="n">localhost</span> <span class="p">[</span><span class="mf">127.0.0.1</span><span class="p">])</span>
-<a id="__codelineno-18-3" name="__codelineno-18-3"></a>        <span class="n">by</span> <span class="n">vm</span> <span class="p">(</span><span class="n">Mailpit</span><span class="p">)</span> <span class="k">with</span> <span class="n">SMTP</span>
-<a id="__codelineno-18-4" name="__codelineno-18-4"></a>        <span class="k">for</span> <span class="o">&lt;</span><span class="n">guest</span><span class="nd">@localhost</span><span class="o">&gt;</span><span class="p">;</span> <span class="n">Thu</span><span class="p">,</span> <span class="mi">1</span> <span class="n">Oct</span> <span class="mi">2026</span> <span class="mi">18</span><span class="p">:</span><span class="mi">07</span><span class="p">:</span><span class="mi">32</span> <span class="o">+</span><span class="mi">0200</span> <span class="p">(</span><span class="n">CEST</span><span class="p">)</span>
-<a id="__codelineno-18-5" name="__codelineno-18-5"></a><span class="n">From</span><span class="p">:</span> <span class="n">guest</span><span class="nd">@localhost</span>
-<a id="__codelineno-18-6" name="__codelineno-18-6"></a><span class="n">To</span><span class="p">:</span> <span class="n">guest</span><span class="nd">@localhost</span>
-<a id="__codelineno-18-7" name="__codelineno-18-7"></a><span class="n">Subject</span><span class="p">:</span> <span class="n">plantage</span> <span class="n">du</span> <span class="n">serveur</span> <span class="n">de</span> <span class="n">calcul</span> <span class="o">=</span><span class="err">?</span><span class="n">utf</span><span class="o">-</span><span class="mi">8</span><span class="err">?</span><span class="n">Q</span><span class="err">?</span><span class="n">d</span><span class="o">=</span><span class="mi">27</span><span class="n">imp</span><span class="o">=</span><span class="n">C3</span><span class="o">=</span><span class="n">B4ts</span><span class="err">?</span><span class="o">=</span>
-<a id="__codelineno-18-8" name="__codelineno-18-8"></a><span class="n">Message</span><span class="o">-</span><span class="n">ID</span><span class="p">:</span> <span class="o">&lt;</span><span class="mi">4</span><span class="n">ec9aec48972386b80bbcbb0e2967dfd</span><span class="nd">@localhost</span><span class="o">&gt;</span>
-<a id="__codelineno-18-9" name="__codelineno-18-9"></a><span class="n">MIME</span><span class="o">-</span><span class="n">Version</span><span class="p">:</span> <span class="mf">1.0</span>
-<a id="__codelineno-18-10" name="__codelineno-18-10"></a><span class="n">Date</span><span class="p">:</span> <span class="n">Thu</span><span class="p">,</span> <span class="mi">01</span> <span class="n">Oct</span> <span class="mi">2026</span> <span class="mi">18</span><span class="p">:</span><span class="mi">07</span><span class="p">:</span><span class="mi">32</span> <span class="o">+</span><span class="mi">0200</span>
-<a id="__codelineno-18-11" name="__codelineno-18-11"></a><span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">text</span><span class="o">/</span><span class="n">plain</span><span class="p">;</span> <span class="n">charset</span><span class="o">=</span><span class="n">utf</span><span class="o">-</span><span class="mi">8</span>
-<a id="__codelineno-18-12" name="__codelineno-18-12"></a><span class="n">Content</span><span class="o">-</span><span class="n">Transfer</span><span class="o">-</span><span class="n">Encoding</span><span class="p">:</span> <span class="n">quoted</span><span class="o">-</span><span class="n">printable</span>
+<span class="normal"><a href="#__codelineno-18-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a>Return-Path: &lt;guest@localhost&gt;
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a>Received: from [127.0.0.1] (localhost [127.0.0.1])
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a>        by vm (Mailpit) with SMTP
+<a id="__codelineno-18-4" name="__codelineno-18-4"></a>        for &lt;guest@localhost&gt;; Thu, 1 Oct 2026 18:07:32 +0200 (CEST)
+<a id="__codelineno-18-5" name="__codelineno-18-5"></a>From: guest@localhost
+<a id="__codelineno-18-6" name="__codelineno-18-6"></a>To: guest@localhost
+<a id="__codelineno-18-7" name="__codelineno-18-7"></a>Subject: plantage du serveur de calcul =?utf-8?Q?d=27imp=C3=B4ts?=
+<a id="__codelineno-18-8" name="__codelineno-18-8"></a>Message-ID: &lt;4ec9aec48972386b80bbcbb0e2967dfd@localhost&gt;
+<a id="__codelineno-18-9" name="__codelineno-18-9"></a>MIME-Version: 1.0
+<a id="__codelineno-18-10" name="__codelineno-18-10"></a>Date: Thu, 01 Oct 2026 18:07:32 +0200
+<a id="__codelineno-18-11" name="__codelineno-18-11"></a>Content-Type: text/plain; charset=utf-8
+<a id="__codelineno-18-12" name="__codelineno-18-12"></a>Content-Transfer-Encoding: quoted-printable
 <a id="__codelineno-18-13" name="__codelineno-18-13"></a>
-<a id="__codelineno-18-14" name="__codelineno-18-14"></a><span class="n">Echec</span> <span class="n">lors</span> <span class="n">de</span> <span class="n">la</span> <span class="n">cr</span><span class="o">=</span><span class="n">C3</span><span class="o">=</span><span class="n">A9ation</span> <span class="n">du</span> <span class="n">fichier</span> <span class="n">de</span> <span class="n">logs</span> <span class="p">[</span><span class="n">Data</span><span class="o">/</span><span class="n">logs</span><span class="o">.</span><span class="n">txt</span><span class="p">]</span>
+<a id="__codelineno-18-14" name="__codelineno-18-14"></a>Echec lors de la cr=C3=A9ation du fichier de logs [Data/logs.txt]
 </code></pre></div></td></tr></table></div>
 <p>On supprime ensuite le dossier <em>[Data/logs.txt]</em>.</p>
 <h3 id="1934-test-4">19.3.4. <span style="color: #1f4d78">Test 4</span></h3>
@@ -2847,14 +2847,14 @@
 <span class="normal"><a href="#__codelineno-25-42">42</a></span>
 <span class="normal"><a href="#__codelineno-25-43">43</a></span>
 <span class="normal"><a href="#__codelineno-25-44">44</a></span>
-<span class="normal"><a href="#__codelineno-25-45">45</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-38" name="__codelineno-25-38"></a><span class="w">    </span><span class="o">//</span><span class="w"> </span><span class="n">ex</span><span class="err">écutée avant chaque test</span>
-<a id="__codelineno-25-39" name="__codelineno-25-39"></a><span class="w">    </span><span class="err">#[\Override]</span>
-<a id="__codelineno-25-40" name="__codelineno-25-40"></a><span class="w">    </span><span class="n">protected</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nf">setUp</span><span class="p">():</span><span class="w"> </span><span class="n">void</span>
-<a id="__codelineno-25-41" name="__codelineno-25-41"></a><span class="w">    </span><span class="err">{</span>
-<a id="__codelineno-25-42" name="__codelineno-25-42"></a><span class="w">        </span><span class="o">//</span><span class="w"> </span><span class="n">cr</span><span class="err">éation des couches [dao] et [métier] comme dans le script principal</span>
-<a id="__codelineno-25-43" name="__codelineno-25-43"></a><span class="w">        </span><span class="o">$</span><span class="n">clientDao</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ClientDao</span><span class="p">(</span><span class="n">self</span><span class="p">::</span><span class="o">$</span><span class="n">config</span><span class="err">["urlServer"], self::$config["user"], self::$config["httpClientOptions"]);</span>
-<a id="__codelineno-25-44" name="__codelineno-25-44"></a><span class="w">        </span><span class="o">$</span><span class="n">this</span><span class="o">-&gt;</span><span class="n">m</span><span class="err">étier = new ClientMetier($clientDao);</span>
-<a id="__codelineno-25-45" name="__codelineno-25-45"></a><span class="w">    </span><span class="err">}</span>
+<span class="normal"><a href="#__codelineno-25-45">45</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-38" name="__codelineno-25-38"></a><span class="x">    // exécutée avant chaque test</span>
+<a id="__codelineno-25-39" name="__codelineno-25-39"></a><span class="x">    #[\Override]</span>
+<a id="__codelineno-25-40" name="__codelineno-25-40"></a><span class="x">    protected function setUp(): void</span>
+<a id="__codelineno-25-41" name="__codelineno-25-41"></a><span class="x">    {</span>
+<a id="__codelineno-25-42" name="__codelineno-25-42"></a><span class="x">        // création des couches [dao] et [métier] comme dans le script principal</span>
+<a id="__codelineno-25-43" name="__codelineno-25-43"></a><span class="x">        $clientDao = new ClientDao(self::$config["urlServer"], self::$config["user"], self::$config["httpClientOptions"]);</span>
+<a id="__codelineno-25-44" name="__codelineno-25-44"></a><span class="x">        $this-&gt;métier = new ClientMetier($clientDao);</span>
+<a id="__codelineno-25-45" name="__codelineno-25-45"></a><span class="x">    }</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 41 : la méthode <em>[setUp]</em> est exécutée avant chaque test. Un nouveau <em>[ClientDao]</em> est donc créé pour chaque test, avec un cookie de session <strong><em>[null]</em></strong>. Ceci explique que ce client ne profite d&#x27;aucune session : tout se passe comme si les 11 tests étaient faits par 11 utilisateurs différents .</li>

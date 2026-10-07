@@ -1173,47 +1173,47 @@
 <span class="normal"><a href="#__codelineno-1-38">38</a></span>
 <span class="normal"><a href="#__codelineno-1-39">39</a></span>
 <span class="normal"><a href="#__codelineno-1-40">40</a></span>
-<span class="normal"><a href="#__codelineno-1-41">41</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>{
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>    "databaseFilename": "Data/database-pgsql.json",
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>    "taxAdminDataFilename": "Data/taxadmindata.json",
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a>    "taxPayersDataFilename": "Data/taxpayersdata.json",
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a>    "resultsFilename": "Data/results.json",
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a>    "errorsFilename": "Data/errors.json",
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a>    "dependencies": {
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a>        "ExceptionImpots": "../version-05/Entities/ExceptionImpots.php",
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a>        "TaxAdminData": "../version-05/Entities/TaxAdminData.php",
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a>        "TaxPayerData": "../version-05/Entities/TaxPayerData.php",
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a>        "Database": "../version-05/Entities/Database.php",
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a>        "Utilitaires": "../version-05/Utilities/Utilitaires.php",
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a>        "InterfaceDao": "../version-05/Dao/InterfaceDao.php",
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a>        "TraitDao": "../version-05/Dao/TraitDao.php",
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a>        "DaoImpotsWithTaxAdminDataInDatabase": "../version-05/Dao/DaoImpotsWithTaxAdminDataInDatabase.php",
-<a id="__codelineno-1-16" name="__codelineno-1-16"></a>        "InterfaceDao4TransferAdminData2Database": "../version-05/Dao/InterfaceDao4TransferAdminData2Database.php",
-<a id="__codelineno-1-17" name="__codelineno-1-17"></a>        "DaoTransferAdminDataFromJsonFile2Database": "../version-05/Dao/DaoTransferAdminDataFromJsonFile2Database.php",
-<a id="__codelineno-1-18" name="__codelineno-1-18"></a>        "InterfaceMetier": "../version-05/Metier/InterfaceMetier.php",
-<a id="__codelineno-1-19" name="__codelineno-1-19"></a>        "Metier": "../version-05/Metier/Metier.php"
-<a id="__codelineno-1-20" name="__codelineno-1-20"></a>    },
-<a id="__codelineno-1-21" name="__codelineno-1-21"></a>    "dependencies4calculate": [
-<a id="__codelineno-1-22" name="__codelineno-1-22"></a>        "ExceptionImpots",
-<a id="__codelineno-1-23" name="__codelineno-1-23"></a>        "TaxAdminData",
-<a id="__codelineno-1-24" name="__codelineno-1-24"></a>        "TaxPayerData",
-<a id="__codelineno-1-25" name="__codelineno-1-25"></a>        "Database",
-<a id="__codelineno-1-26" name="__codelineno-1-26"></a>        "Utilitaires",
-<a id="__codelineno-1-27" name="__codelineno-1-27"></a>        "InterfaceDao",
-<a id="__codelineno-1-28" name="__codelineno-1-28"></a>        "TraitDao",
-<a id="__codelineno-1-29" name="__codelineno-1-29"></a>        "DaoImpotsWithTaxAdminDataInDatabase",
-<a id="__codelineno-1-30" name="__codelineno-1-30"></a>        "InterfaceMetier",
-<a id="__codelineno-1-31" name="__codelineno-1-31"></a>        "Metier"
-<a id="__codelineno-1-32" name="__codelineno-1-32"></a>    ],
-<a id="__codelineno-1-33" name="__codelineno-1-33"></a>    "dependencies4transfer": [
-<a id="__codelineno-1-34" name="__codelineno-1-34"></a>        "ExceptionImpots",
-<a id="__codelineno-1-35" name="__codelineno-1-35"></a>        "TaxAdminData",
-<a id="__codelineno-1-36" name="__codelineno-1-36"></a>        "Database",
-<a id="__codelineno-1-37" name="__codelineno-1-37"></a>        "Utilitaires",
-<a id="__codelineno-1-38" name="__codelineno-1-38"></a>        "InterfaceDao4TransferAdminData2Database",
-<a id="__codelineno-1-39" name="__codelineno-1-39"></a>        "DaoTransferAdminDataFromJsonFile2Database"
-<a id="__codelineno-1-40" name="__codelineno-1-40"></a>    ]
-<a id="__codelineno-1-41" name="__codelineno-1-41"></a>}
+<span class="normal"><a href="#__codelineno-1-41">41</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="nt">"databaseFilename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Data/database-pgsql.json"</span><span class="p">,</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="nt">"taxAdminDataFilename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Data/taxadmindata.json"</span><span class="p">,</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="nt">"taxPayersDataFilename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Data/taxpayersdata.json"</span><span class="p">,</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="nt">"resultsFilename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Data/results.json"</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="nt">"errorsFilename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Data/errors.json"</span><span class="p">,</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">    </span><span class="nt">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">        </span><span class="nt">"ExceptionImpots"</span><span class="p">:</span><span class="w"> </span><span class="s2">"../version-05/Entities/ExceptionImpots.php"</span><span class="p">,</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">        </span><span class="nt">"TaxAdminData"</span><span class="p">:</span><span class="w"> </span><span class="s2">"../version-05/Entities/TaxAdminData.php"</span><span class="p">,</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">        </span><span class="nt">"TaxPayerData"</span><span class="p">:</span><span class="w"> </span><span class="s2">"../version-05/Entities/TaxPayerData.php"</span><span class="p">,</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">        </span><span class="nt">"Database"</span><span class="p">:</span><span class="w"> </span><span class="s2">"../version-05/Entities/Database.php"</span><span class="p">,</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">        </span><span class="nt">"Utilitaires"</span><span class="p">:</span><span class="w"> </span><span class="s2">"../version-05/Utilities/Utilitaires.php"</span><span class="p">,</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">        </span><span class="nt">"InterfaceDao"</span><span class="p">:</span><span class="w"> </span><span class="s2">"../version-05/Dao/InterfaceDao.php"</span><span class="p">,</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">        </span><span class="nt">"TraitDao"</span><span class="p">:</span><span class="w"> </span><span class="s2">"../version-05/Dao/TraitDao.php"</span><span class="p">,</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">        </span><span class="nt">"DaoImpotsWithTaxAdminDataInDatabase"</span><span class="p">:</span><span class="w"> </span><span class="s2">"../version-05/Dao/DaoImpotsWithTaxAdminDataInDatabase.php"</span><span class="p">,</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">        </span><span class="nt">"InterfaceDao4TransferAdminData2Database"</span><span class="p">:</span><span class="w"> </span><span class="s2">"../version-05/Dao/InterfaceDao4TransferAdminData2Database.php"</span><span class="p">,</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">        </span><span class="nt">"DaoTransferAdminDataFromJsonFile2Database"</span><span class="p">:</span><span class="w"> </span><span class="s2">"../version-05/Dao/DaoTransferAdminDataFromJsonFile2Database.php"</span><span class="p">,</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="w">        </span><span class="nt">"InterfaceMetier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"../version-05/Metier/InterfaceMetier.php"</span><span class="p">,</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">        </span><span class="nt">"Metier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"../version-05/Metier/Metier.php"</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="w">    </span><span class="nt">"dependencies4calculate"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="w">        </span><span class="s2">"ExceptionImpots"</span><span class="p">,</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="w">        </span><span class="s2">"TaxAdminData"</span><span class="p">,</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="w">        </span><span class="s2">"TaxPayerData"</span><span class="p">,</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="w">        </span><span class="s2">"Database"</span><span class="p">,</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="w">        </span><span class="s2">"Utilitaires"</span><span class="p">,</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="w">        </span><span class="s2">"InterfaceDao"</span><span class="p">,</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="w">        </span><span class="s2">"TraitDao"</span><span class="p">,</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="w">        </span><span class="s2">"DaoImpotsWithTaxAdminDataInDatabase"</span><span class="p">,</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30"></a><span class="w">        </span><span class="s2">"InterfaceMetier"</span><span class="p">,</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31"></a><span class="w">        </span><span class="s2">"Metier"</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32"></a><span class="w">    </span><span class="p">],</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33"></a><span class="w">    </span><span class="nt">"dependencies4transfer"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-1-34" name="__codelineno-1-34"></a><span class="w">        </span><span class="s2">"ExceptionImpots"</span><span class="p">,</span>
+<a id="__codelineno-1-35" name="__codelineno-1-35"></a><span class="w">        </span><span class="s2">"TaxAdminData"</span><span class="p">,</span>
+<a id="__codelineno-1-36" name="__codelineno-1-36"></a><span class="w">        </span><span class="s2">"Database"</span><span class="p">,</span>
+<a id="__codelineno-1-37" name="__codelineno-1-37"></a><span class="w">        </span><span class="s2">"Utilitaires"</span><span class="p">,</span>
+<a id="__codelineno-1-38" name="__codelineno-1-38"></a><span class="w">        </span><span class="s2">"InterfaceDao4TransferAdminData2Database"</span><span class="p">,</span>
+<a id="__codelineno-1-39" name="__codelineno-1-39"></a><span class="w">        </span><span class="s2">"DaoTransferAdminDataFromJsonFile2Database"</span>
+<a id="__codelineno-1-40" name="__codelineno-1-40"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-1-41" name="__codelineno-1-41"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Dans cette configuration :</p>
 <ul>

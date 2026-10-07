@@ -1511,39 +1511,39 @@
 <span class="normal"><a href="#__codelineno-4-30">30</a></span>
 <span class="normal"><a href="#__codelineno-4-31">31</a></span>
 <span class="normal"><a href="#__codelineno-4-32">32</a></span>
-<span class="normal"><a href="#__codelineno-4-33">33</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="nx">version</span><span class="o">-</span><span class="mo">05</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="err">├──</span><span class="w"> </span><span class="nx">Dao</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">DaoImpotsWithTaxAdminDataInDatabase</span><span class="p">.</span><span class="nx">php</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">DaoTransferAdminDataFromJsonFile2Database</span><span class="p">.</span><span class="nx">php</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">InterfaceDao</span><span class="p">.</span><span class="nx">php</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">InterfaceDao4TransferAdminData2Database</span><span class="p">.</span><span class="nx">php</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="nx">TraitDao</span><span class="p">.</span><span class="nx">php</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="err">├──</span><span class="w"> </span><span class="nx">Data</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">database</span><span class="p">.</span><span class="nx">json</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">dbimpots</span><span class="o">-</span><span class="mf">2019.</span><span class="nx">sql</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">errors</span><span class="p">.</span><span class="nx">json</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">resultats</span><span class="p">.</span><span class="nx">json</span>
-<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">taxadmindata</span><span class="p">.</span><span class="nx">json</span>
-<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="nx">taxpayersdata</span><span class="p">.</span><span class="nx">json</span>
-<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="err">├──</span><span class="w"> </span><span class="nx">Entities</span>
-<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">Database</span><span class="p">.</span><span class="nx">php</span>
-<a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">ExceptionImpots</span><span class="p">.</span><span class="nx">php</span>
-<a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">TaxAdminData</span><span class="p">.</span><span class="nx">php</span>
-<a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="nx">TaxPayerData</span><span class="p">.</span><span class="nx">php</span>
-<a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="err">├──</span><span class="w"> </span><span class="nx">Main</span>
-<a id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">MainCalculateImpotsWithTaxAdminDataInMySQLDatabase</span><span class="p">.</span><span class="nx">php</span>
-<a id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="nx">MainTransferAdminDataFromJsonFile2MySQLDatabase</span><span class="p">.</span><span class="nx">php</span>
-<a id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="err">├──</span><span class="w"> </span><span class="nx">Metier</span>
-<a id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">InterfaceMetier</span><span class="p">.</span><span class="nx">php</span>
-<a id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="nx">Metier</span><span class="p">.</span><span class="nx">php</span>
-<a id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="err">├──</span><span class="w"> </span><span class="nx">Tests</span>
-<a id="__codelineno-4-27" name="__codelineno-4-27"></a><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">data</span>
-<a id="__codelineno-4-28" name="__codelineno-4-28"></a><span class="err">│</span><span class="w">   </span><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">database</span><span class="o">-</span><span class="nx">incomplet</span><span class="p">.</span><span class="nx">json</span>
-<a id="__codelineno-4-29" name="__codelineno-4-29"></a><span class="err">│</span><span class="w">   </span><span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="nx">database</span><span class="o">-</span><span class="nx">mdp</span><span class="o">-</span><span class="nx">errone</span><span class="p">.</span><span class="nx">json</span>
-<a id="__codelineno-4-30" name="__codelineno-4-30"></a><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">DaoTest</span><span class="p">.</span><span class="nx">php</span>
-<a id="__codelineno-4-31" name="__codelineno-4-31"></a><span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="nx">MetierTest</span><span class="p">.</span><span class="nx">php</span>
-<a id="__codelineno-4-32" name="__codelineno-4-32"></a><span class="err">└──</span><span class="w"> </span><span class="nx">Utilities</span>
-<a id="__codelineno-4-33" name="__codelineno-4-33"></a><span class="w">    </span><span class="err">└──</span><span class="w"> </span><span class="nx">Utilitaires</span><span class="p">.</span><span class="nx">php</span>
+<span class="normal"><a href="#__codelineno-4-33">33</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>version-05
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>├── Dao
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>│   ├── DaoImpotsWithTaxAdminDataInDatabase.php
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>│   ├── DaoTransferAdminDataFromJsonFile2Database.php
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>│   ├── InterfaceDao.php
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a>│   ├── InterfaceDao4TransferAdminData2Database.php
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a>│   └── TraitDao.php
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a>├── Data
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a>│   ├── database.json
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a>│   ├── dbimpots-2019.sql
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a>│   ├── errors.json
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a>│   ├── resultats.json
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a>│   ├── taxadmindata.json
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a>│   └── taxpayersdata.json
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a>├── Entities
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a>│   ├── Database.php
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a>│   ├── ExceptionImpots.php
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a>│   ├── TaxAdminData.php
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a>│   └── TaxPayerData.php
+<a id="__codelineno-4-20" name="__codelineno-4-20"></a>├── Main
+<a id="__codelineno-4-21" name="__codelineno-4-21"></a>│   ├── MainCalculateImpotsWithTaxAdminDataInMySQLDatabase.php
+<a id="__codelineno-4-22" name="__codelineno-4-22"></a>│   └── MainTransferAdminDataFromJsonFile2MySQLDatabase.php
+<a id="__codelineno-4-23" name="__codelineno-4-23"></a>├── Metier
+<a id="__codelineno-4-24" name="__codelineno-4-24"></a>│   ├── InterfaceMetier.php
+<a id="__codelineno-4-25" name="__codelineno-4-25"></a>│   └── Metier.php
+<a id="__codelineno-4-26" name="__codelineno-4-26"></a>├── Tests
+<a id="__codelineno-4-27" name="__codelineno-4-27"></a>│   ├── data
+<a id="__codelineno-4-28" name="__codelineno-4-28"></a>│   │   ├── database-incomplet.json
+<a id="__codelineno-4-29" name="__codelineno-4-29"></a>│   │   └── database-mdp-errone.json
+<a id="__codelineno-4-30" name="__codelineno-4-30"></a>│   ├── DaoTest.php
+<a id="__codelineno-4-31" name="__codelineno-4-31"></a>│   └── MetierTest.php
+<a id="__codelineno-4-32" name="__codelineno-4-32"></a>└── Utilities
+<a id="__codelineno-4-33" name="__codelineno-4-33"></a>    └── Utilitaires.php
 </code></pre></div></td></tr></table></div>
 <ul>
 <li><em>[Entities]</em> : les entités de l&#x27;application, objets échangés entre couches ;</li>
@@ -1581,21 +1581,21 @@
 <span class="normal"><a href="#__codelineno-5-12">12</a></span>
 <span class="normal"><a href="#__codelineno-5-13">13</a></span>
 <span class="normal"><a href="#__codelineno-5-14">14</a></span>
-<span class="normal"><a href="#__codelineno-5-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="err">{</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="s2">"limites"</span><span class="p">:</span><span class="w"> </span><span class="err">[9964, 27519, 73779, 156244, 0],</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="s2">"coeffR"</span><span class="p">:</span><span class="w"> </span><span class="err">[0, 0.14, 0.3, 0.41, 0.45],</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">    </span><span class="s2">"coeffN"</span><span class="p">:</span><span class="w"> </span><span class="err">[0, 1394.96, 5798, 13913.69, 20163.45],</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">    </span><span class="s2">"plafondQfDemiPart"</span><span class="p">:</span><span class="w"> </span><span class="mi">1551</span><span class="p">,</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span><span class="s2">"plafondRevenusCelibatairePourReduction"</span><span class="p">:</span><span class="w"> </span><span class="mi">21037</span><span class="p">,</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">    </span><span class="s2">"plafondRevenusCouplePourReduction"</span><span class="p">:</span><span class="w"> </span><span class="mi">42074</span><span class="p">,</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">    </span><span class="s2">"valeurReducDemiPart"</span><span class="p">:</span><span class="w"> </span><span class="mi">3797</span><span class="p">,</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">    </span><span class="s2">"plafondDecoteCelibataire"</span><span class="p">:</span><span class="w"> </span><span class="mi">1196</span><span class="p">,</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">    </span><span class="s2">"plafondDecoteCouple"</span><span class="p">:</span><span class="w"> </span><span class="mi">1970</span><span class="p">,</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">    </span><span class="s2">"plafondImpotCouplePourDecote"</span><span class="p">:</span><span class="w"> </span><span class="mi">2627</span><span class="p">,</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">    </span><span class="s2">"plafondImpotCelibatairePourDecote"</span><span class="p">:</span><span class="w"> </span><span class="mi">1595</span><span class="p">,</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="w">    </span><span class="s2">"abattementDixPourcentMax"</span><span class="p">:</span><span class="w"> </span><span class="mi">12502</span><span class="p">,</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">    </span><span class="s2">"abattementDixPourcentMin"</span><span class="p">:</span><span class="w"> </span><span class="mi">437</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="err">}</span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="nt">"limites"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">9964</span><span class="p">,</span><span class="w"> </span><span class="mi">27519</span><span class="p">,</span><span class="w"> </span><span class="mi">73779</span><span class="p">,</span><span class="w"> </span><span class="mi">156244</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="nt">"coeffR"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.14</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3</span><span class="p">,</span><span class="w"> </span><span class="mf">0.41</span><span class="p">,</span><span class="w"> </span><span class="mf">0.45</span><span class="p">],</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">    </span><span class="nt">"coeffN"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1394.96</span><span class="p">,</span><span class="w"> </span><span class="mi">5798</span><span class="p">,</span><span class="w"> </span><span class="mf">13913.69</span><span class="p">,</span><span class="w"> </span><span class="mf">20163.45</span><span class="p">],</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">    </span><span class="nt">"plafondQfDemiPart"</span><span class="p">:</span><span class="w"> </span><span class="mi">1551</span><span class="p">,</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span><span class="nt">"plafondRevenusCelibatairePourReduction"</span><span class="p">:</span><span class="w"> </span><span class="mi">21037</span><span class="p">,</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">    </span><span class="nt">"plafondRevenusCouplePourReduction"</span><span class="p">:</span><span class="w"> </span><span class="mi">42074</span><span class="p">,</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">    </span><span class="nt">"valeurReducDemiPart"</span><span class="p">:</span><span class="w"> </span><span class="mi">3797</span><span class="p">,</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">    </span><span class="nt">"plafondDecoteCelibataire"</span><span class="p">:</span><span class="w"> </span><span class="mi">1196</span><span class="p">,</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">    </span><span class="nt">"plafondDecoteCouple"</span><span class="p">:</span><span class="w"> </span><span class="mi">1970</span><span class="p">,</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">    </span><span class="nt">"plafondImpotCouplePourDecote"</span><span class="p">:</span><span class="w"> </span><span class="mi">2627</span><span class="p">,</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">    </span><span class="nt">"plafondImpotCelibatairePourDecote"</span><span class="p">:</span><span class="w"> </span><span class="mi">1595</span><span class="p">,</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="w">    </span><span class="nt">"abattementDixPourcentMax"</span><span class="p">:</span><span class="w"> </span><span class="mi">12502</span><span class="p">,</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">    </span><span class="nt">"abattementDixPourcentMin"</span><span class="p">:</span><span class="w"> </span><span class="mi">437</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Notre objectif est de transférer ces données dans la base MySQL <em>[dbimpots-2019]</em> créée précédemment.</p>
 <h3 id="1332-les-entites">13.3.2. <span style="color: #1f4d78">Les entités</span></h3>
@@ -1610,9 +1610,9 @@
 <p>Le cours PHP 7 introduisait à cet endroit une classe parent <em>[BaseEntity]</em> dont dérivaient toutes les entités. Elle reposait sur une règle : les attributs d&#x27;une entité ont les mêmes noms que les clés du fichier JSON qu&#x27;elle encapsule. <em>[BaseEntity]</em> savait alors initialiser n&#x27;importe quelle entité à partir d&#x27;un fichier JSON ou d&#x27;un tableau associatif par la boucle :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
 <span class="normal"><a href="#__codelineno-6-2">2</a></span>
-<span class="normal"><a href="#__codelineno-6-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>foreach ($arrayOfAttributes as $key =&gt; $value) {
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a>  $this-&gt;$key = $value;
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a>}
+<span class="normal"><a href="#__codelineno-6-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="x">foreach ($arrayOfAttributes as $key =&gt; $value) {</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="x">  $this-&gt;$key = $value;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="x">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Les attributs des entités étaient déclarés <strong><em>[protected]</em></strong> (sans type) pour que la classe parent puisse les modifier, et chaque entité ajoutait ses getters et ses setters. Nous ne reprenons pas cette solution :</p>
 <ul>
@@ -1643,27 +1643,27 @@
 <span class="normal"><a href="#__codelineno-7-18">18</a></span>
 <span class="normal"><a href="#__codelineno-7-19">19</a></span>
 <span class="normal"><a href="#__codelineno-7-20">20</a></span>
-<span class="normal"><a href="#__codelineno-7-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="err">{</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">    </span><span class="s2">"dsn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mysql:host=localhost;dbname=dbimpots-2019;charset=utf8mb4"</span><span class="p">,</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admimpots"</span><span class="p">,</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">    </span><span class="s2">"pwd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mdpimpots"</span><span class="p">,</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">    </span><span class="s2">"tableTranches"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tbtranches"</span><span class="p">,</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">    </span><span class="s2">"colId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"id"</span><span class="p">,</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">    </span><span class="s2">"colLimites"</span><span class="p">:</span><span class="w"> </span><span class="s2">"limites"</span><span class="p">,</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">    </span><span class="s2">"colCoeffR"</span><span class="p">:</span><span class="w"> </span><span class="s2">"coeffr"</span><span class="p">,</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">    </span><span class="s2">"colCoeffN"</span><span class="p">:</span><span class="w"> </span><span class="s2">"coeffn"</span><span class="p">,</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="w">    </span><span class="s2">"tableConstantes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tbconstantes"</span><span class="p">,</span>
-<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">    </span><span class="s2">"colPlafondQfDemiPart"</span><span class="p">:</span><span class="w"> </span><span class="s2">"plafondQfDemiPart"</span><span class="p">,</span>
-<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">    </span><span class="s2">"colPlafondRevenusCelibatairePourReduction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"plafondRevenusCelibatairePourReduction"</span><span class="p">,</span>
-<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="w">    </span><span class="s2">"colPlafondRevenusCouplePourReduction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"plafondRevenusCouplePourReduction"</span><span class="p">,</span>
-<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">    </span><span class="s2">"colValeurReducDemiPart"</span><span class="p">:</span><span class="w"> </span><span class="s2">"valeurReducDemiPart"</span><span class="p">,</span>
-<a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="w">    </span><span class="s2">"colPlafondDecoteCelibataire"</span><span class="p">:</span><span class="w"> </span><span class="s2">"plafondDecoteCelibataire"</span><span class="p">,</span>
-<a id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="w">    </span><span class="s2">"colPlafondDecoteCouple"</span><span class="p">:</span><span class="w"> </span><span class="s2">"plafondDecoteCouple"</span><span class="p">,</span>
-<a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="w">    </span><span class="s2">"colPlafondImpotCelibatairePourDecote"</span><span class="p">:</span><span class="w"> </span><span class="s2">"plafondImpotCelibatairePourDecote"</span><span class="p">,</span>
-<a id="__codelineno-7-18" name="__codelineno-7-18"></a><span class="w">    </span><span class="s2">"colPlafondImpotCouplePourDecote"</span><span class="p">:</span><span class="w"> </span><span class="s2">"plafondImpotCouplePourDecote"</span><span class="p">,</span>
-<a id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="w">    </span><span class="s2">"colAbattementDixPourcentMax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abattementDixPourcentMax"</span><span class="p">,</span>
-<a id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="w">    </span><span class="s2">"colAbattementDixPourcentMin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abattementDixPourcentMin"</span>
-<a id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="err">}</span>
+<span class="normal"><a href="#__codelineno-7-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">    </span><span class="nt">"dsn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mysql:host=localhost;dbname=dbimpots-2019;charset=utf8mb4"</span><span class="p">,</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admimpots"</span><span class="p">,</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">    </span><span class="nt">"pwd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mdpimpots"</span><span class="p">,</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">    </span><span class="nt">"tableTranches"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tbtranches"</span><span class="p">,</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">    </span><span class="nt">"colId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"id"</span><span class="p">,</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">    </span><span class="nt">"colLimites"</span><span class="p">:</span><span class="w"> </span><span class="s2">"limites"</span><span class="p">,</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">    </span><span class="nt">"colCoeffR"</span><span class="p">:</span><span class="w"> </span><span class="s2">"coeffr"</span><span class="p">,</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">    </span><span class="nt">"colCoeffN"</span><span class="p">:</span><span class="w"> </span><span class="s2">"coeffn"</span><span class="p">,</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="w">    </span><span class="nt">"tableConstantes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tbconstantes"</span><span class="p">,</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">    </span><span class="nt">"colPlafondQfDemiPart"</span><span class="p">:</span><span class="w"> </span><span class="s2">"plafondQfDemiPart"</span><span class="p">,</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">    </span><span class="nt">"colPlafondRevenusCelibatairePourReduction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"plafondRevenusCelibatairePourReduction"</span><span class="p">,</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="w">    </span><span class="nt">"colPlafondRevenusCouplePourReduction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"plafondRevenusCouplePourReduction"</span><span class="p">,</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">    </span><span class="nt">"colValeurReducDemiPart"</span><span class="p">:</span><span class="w"> </span><span class="s2">"valeurReducDemiPart"</span><span class="p">,</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="w">    </span><span class="nt">"colPlafondDecoteCelibataire"</span><span class="p">:</span><span class="w"> </span><span class="s2">"plafondDecoteCelibataire"</span><span class="p">,</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="w">    </span><span class="nt">"colPlafondDecoteCouple"</span><span class="p">:</span><span class="w"> </span><span class="s2">"plafondDecoteCouple"</span><span class="p">,</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="w">    </span><span class="nt">"colPlafondImpotCelibatairePourDecote"</span><span class="p">:</span><span class="w"> </span><span class="s2">"plafondImpotCelibatairePourDecote"</span><span class="p">,</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18"></a><span class="w">    </span><span class="nt">"colPlafondImpotCouplePourDecote"</span><span class="p">:</span><span class="w"> </span><span class="s2">"plafondImpotCouplePourDecote"</span><span class="p">,</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="w">    </span><span class="nt">"colAbattementDixPourcentMax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abattementDixPourcentMax"</span><span class="p">,</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="w">    </span><span class="nt">"colAbattementDixPourcentMin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abattementDixPourcentMin"</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Ses attributs décrivent les caractéristiques de la base de données MySQL <em>[dbimpots-2019]</em> :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>Attribut</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>Rôle</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">dsn</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">le DSN de la base</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">id</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">le propriétaire de la base</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">pwd</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">son mot de passe</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">tableTranches</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">le nom de la table contenant les tranches d&#x27;imposition</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">colId / colLimites / colCoeffR / colCoeffN</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">les noms des colonnes de la table <i>[tableTranches]</i></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">tableConstantes</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">le nom de la table contenant les constantes de calcul de l&#x27;impôt</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">colPlafondQfDemiPart / colPlafondRevenusCelibatairePourReduction / colPlafondRevenusCouplePourReduction / colValeurReducDemiPart / colPlafondDecoteCelibataire / colPlafondDecoteCouple / colPlafondImpotCelibatairePourDecote / colPlafondImpotCouplePourDecote / colAbattementDixPourcentMax / colAbattementDixPourcentMin</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">les noms des colonnes de la table <i>[tableConstantes]</i> contenant les constantes de calcul de l&#x27;impôt</div></td></tr></table>
@@ -2111,28 +2111,28 @@
 <span class="normal"><a href="#__codelineno-12-70">70</a></span>
 <span class="normal"><a href="#__codelineno-12-71">71</a></span>
 <span class="normal"><a href="#__codelineno-12-72">72</a></span>
-<span class="normal"><a href="#__codelineno-12-73">73</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-52" name="__codelineno-12-52"></a><span class="w">    </span><span class="o">//</span><span class="w"> </span><span class="n">remplissage</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">des</span><span class="w"> </span><span class="n">tranches</span><span class="w"> </span><span class="n">d</span><span class="s1">'impôt</span>
-<a id="__codelineno-12-53" name="__codelineno-12-53"></a><span class="s1">    private function fillTableTranches(\PDO $connexion): void</span>
-<a id="__codelineno-12-54" name="__codelineno-12-54"></a><span class="s1">    {</span>
-<a id="__codelineno-12-55" name="__codelineno-12-55"></a><span class="s1">        // raccourcis</span>
-<a id="__codelineno-12-56" name="__codelineno-12-56"></a><span class="s1">        $database = $this-&gt;database;</span>
-<a id="__codelineno-12-57" name="__codelineno-12-57"></a><span class="s1">        $taxAdminData = $this-&gt;taxAdminData;</span>
-<a id="__codelineno-12-58" name="__codelineno-12-58"></a><span class="s1">        // on vide la table au cas où il y aurait quelque chose dedans</span>
-<a id="__codelineno-12-59" name="__codelineno-12-59"></a><span class="s1">        $connexion-&gt;exec("delete from $database-&gt;tableTranches");</span>
-<a id="__codelineno-12-60" name="__codelineno-12-60"></a><span class="s1">        // on prépare les insertions</span>
-<a id="__codelineno-12-61" name="__codelineno-12-61"></a><span class="s1">        $statement = $connexion-&gt;prepare(</span>
-<a id="__codelineno-12-62" name="__codelineno-12-62"></a><span class="s1">            "insert into $database-&gt;tableTranches ($database-&gt;colLimites, $database-&gt;colCoeffR, $database-&gt;colCoeffN)"</span>
-<a id="__codelineno-12-63" name="__codelineno-12-63"></a><span class="s1">            . " values (:limites, :coeffR, :coeffN)"</span>
-<a id="__codelineno-12-64" name="__codelineno-12-64"></a><span class="s1">        );</span>
-<a id="__codelineno-12-65" name="__codelineno-12-65"></a><span class="s1">        // on exécute l'</span><span class="n">ordre</span><span class="w"> </span><span class="n">préparé</span><span class="w"> </span><span class="n">avec</span><span class="w"> </span><span class="n">les</span><span class="w"> </span><span class="n">valeurs</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">chaque</span><span class="w"> </span><span class="n">tranche</span><span class="w"> </span><span class="n">d</span><span class="err">'</span><span class="n">impôt</span>
-<a id="__codelineno-12-66" name="__codelineno-12-66"></a><span class="w">        </span><span class="n">foreach</span><span class="w"> </span><span class="p">(</span><span class="err">$</span><span class="n">taxAdminData</span><span class="o">-&gt;</span><span class="n">limites</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="err">$</span><span class="n">i</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="err">$</span><span class="n">limite</span><span class="p">)</span><span class="w"> </span><span class="err">{</span>
-<a id="__codelineno-12-67" name="__codelineno-12-67"></a><span class="w">            </span><span class="err">$</span><span class="k">statement</span><span class="o">-&gt;</span><span class="k">execute</span><span class="p">([</span>
-<a id="__codelineno-12-68" name="__codelineno-12-68"></a><span class="w">                </span><span class="ss">"limites"</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="err">$</span><span class="n">limite</span><span class="p">,</span>
-<a id="__codelineno-12-69" name="__codelineno-12-69"></a><span class="w">                </span><span class="ss">"coeffR"</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="err">$</span><span class="n">taxAdminData</span><span class="o">-&gt;</span><span class="n">coeffR</span><span class="p">[</span><span class="err">$</span><span class="n">i</span><span class="p">],</span>
-<a id="__codelineno-12-70" name="__codelineno-12-70"></a><span class="w">                </span><span class="ss">"coeffN"</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="err">$</span><span class="n">taxAdminData</span><span class="o">-&gt;</span><span class="n">coeffN</span><span class="p">[</span><span class="err">$</span><span class="n">i</span><span class="p">],</span>
-<a id="__codelineno-12-71" name="__codelineno-12-71"></a><span class="w">            </span><span class="p">]);</span>
-<a id="__codelineno-12-72" name="__codelineno-12-72"></a><span class="w">        </span><span class="err">}</span>
-<a id="__codelineno-12-73" name="__codelineno-12-73"></a><span class="w">    </span><span class="err">}</span>
+<span class="normal"><a href="#__codelineno-12-73">73</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-52" name="__codelineno-12-52"></a><span class="x">    // remplissage de la table des tranches d'impôt</span>
+<a id="__codelineno-12-53" name="__codelineno-12-53"></a><span class="x">    private function fillTableTranches(\PDO $connexion): void</span>
+<a id="__codelineno-12-54" name="__codelineno-12-54"></a><span class="x">    {</span>
+<a id="__codelineno-12-55" name="__codelineno-12-55"></a><span class="x">        // raccourcis</span>
+<a id="__codelineno-12-56" name="__codelineno-12-56"></a><span class="x">        $database = $this-&gt;database;</span>
+<a id="__codelineno-12-57" name="__codelineno-12-57"></a><span class="x">        $taxAdminData = $this-&gt;taxAdminData;</span>
+<a id="__codelineno-12-58" name="__codelineno-12-58"></a><span class="x">        // on vide la table au cas où il y aurait quelque chose dedans</span>
+<a id="__codelineno-12-59" name="__codelineno-12-59"></a><span class="x">        $connexion-&gt;exec("delete from $database-&gt;tableTranches");</span>
+<a id="__codelineno-12-60" name="__codelineno-12-60"></a><span class="x">        // on prépare les insertions</span>
+<a id="__codelineno-12-61" name="__codelineno-12-61"></a><span class="x">        $statement = $connexion-&gt;prepare(</span>
+<a id="__codelineno-12-62" name="__codelineno-12-62"></a><span class="x">            "insert into $database-&gt;tableTranches ($database-&gt;colLimites, $database-&gt;colCoeffR, $database-&gt;colCoeffN)"</span>
+<a id="__codelineno-12-63" name="__codelineno-12-63"></a><span class="x">            . " values (:limites, :coeffR, :coeffN)"</span>
+<a id="__codelineno-12-64" name="__codelineno-12-64"></a><span class="x">        );</span>
+<a id="__codelineno-12-65" name="__codelineno-12-65"></a><span class="x">        // on exécute l'ordre préparé avec les valeurs de chaque tranche d'impôt</span>
+<a id="__codelineno-12-66" name="__codelineno-12-66"></a><span class="x">        foreach ($taxAdminData-&gt;limites as $i =&gt; $limite) {</span>
+<a id="__codelineno-12-67" name="__codelineno-12-67"></a><span class="x">            $statement-&gt;execute([</span>
+<a id="__codelineno-12-68" name="__codelineno-12-68"></a><span class="x">                "limites" =&gt; $limite,</span>
+<a id="__codelineno-12-69" name="__codelineno-12-69"></a><span class="x">                "coeffR" =&gt; $taxAdminData-&gt;coeffR[$i],</span>
+<a id="__codelineno-12-70" name="__codelineno-12-70"></a><span class="x">                "coeffN" =&gt; $taxAdminData-&gt;coeffN[$i],</span>
+<a id="__codelineno-12-71" name="__codelineno-12-71"></a><span class="x">            ]);</span>
+<a id="__codelineno-12-72" name="__codelineno-12-72"></a><span class="x">        }</span>
+<a id="__codelineno-12-73" name="__codelineno-12-73"></a><span class="x">    }</span>
 </code></pre></div></td></tr></table></div>
 <p>Commentaires</p>
 <ul>
@@ -2165,29 +2165,29 @@
 <span class="normal"><a href="#__codelineno-13-94">94</a></span>
 <span class="normal"><a href="#__codelineno-13-95">95</a></span>
 <span class="normal"><a href="#__codelineno-13-96">96</a></span>
-<span class="normal"><a href="#__codelineno-13-97">97</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-75" name="__codelineno-13-75"></a><span class="w">    </span><span class="o">//</span><span class="w"> </span><span class="n">remplissage</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">des</span><span class="w"> </span><span class="n">constantes</span>
-<a id="__codelineno-13-76" name="__codelineno-13-76"></a><span class="w">    </span><span class="n">private</span><span class="w"> </span><span class="k">function</span><span class="w"> </span><span class="n">fillTableConstantes</span><span class="p">(</span><span class="err">\</span><span class="n">PDO</span><span class="w"> </span><span class="err">$</span><span class="n">connexion</span><span class="p">):</span><span class="w"> </span><span class="n">void</span>
-<a id="__codelineno-13-77" name="__codelineno-13-77"></a><span class="w">    </span><span class="err">{</span>
-<a id="__codelineno-13-78" name="__codelineno-13-78"></a><span class="w">        </span><span class="o">//</span><span class="w"> </span><span class="n">raccourci</span>
-<a id="__codelineno-13-79" name="__codelineno-13-79"></a><span class="w">        </span><span class="err">$</span><span class="k">database</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">$</span><span class="n">this</span><span class="o">-&gt;</span><span class="k">database</span><span class="p">;</span>
-<a id="__codelineno-13-80" name="__codelineno-13-80"></a><span class="w">        </span><span class="o">//</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">vide</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">au</span><span class="w"> </span><span class="n">cas</span><span class="w"> </span><span class="n">où</span><span class="w"> </span><span class="n">il</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="n">aurait</span><span class="w"> </span><span class="n">quelque</span><span class="w"> </span><span class="n">chose</span><span class="w"> </span><span class="n">dedans</span>
-<a id="__codelineno-13-81" name="__codelineno-13-81"></a><span class="w">        </span><span class="err">$</span><span class="n">connexion</span><span class="o">-&gt;</span><span class="k">exec</span><span class="p">(</span><span class="ss">"delete from $database-&gt;tableConstantes"</span><span class="p">);</span>
-<a id="__codelineno-13-82" name="__codelineno-13-82"></a><span class="w">        </span><span class="o">//</span><span class="w"> </span><span class="p">[</span><span class="n">nom</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">constante</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">colonne</span><span class="p">]</span>
-<a id="__codelineno-13-83" name="__codelineno-13-83"></a><span class="w">        </span><span class="err">$</span><span class="n">colonnes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">$</span><span class="k">database</span><span class="o">-&gt;</span><span class="n">colonnesConstantes</span><span class="p">();</span>
-<a id="__codelineno-13-84" name="__codelineno-13-84"></a><span class="w">        </span><span class="o">//</span><span class="w"> </span><span class="n">les</span><span class="w"> </span><span class="n">paramètres</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">l</span><span class="s1">'ordre préparé portent les noms des constantes : :plafondQfDemiPart, ...</span>
-<a id="__codelineno-13-85" name="__codelineno-13-85"></a><span class="s1">        $paramètres = array_map(fn(string $constante): string =&gt; ":$constante", array_keys($colonnes));</span>
-<a id="__codelineno-13-86" name="__codelineno-13-86"></a><span class="s1">        $statement = $connexion-&gt;prepare(</span>
-<a id="__codelineno-13-87" name="__codelineno-13-87"></a><span class="s1">            "insert into $database-&gt;tableConstantes (" . implode(", ", $colonnes) . ")"</span>
-<a id="__codelineno-13-88" name="__codelineno-13-88"></a><span class="s1">            . " values (" . implode(", ", $paramètres) . ")"</span>
-<a id="__codelineno-13-89" name="__codelineno-13-89"></a><span class="s1">        );</span>
-<a id="__codelineno-13-90" name="__codelineno-13-90"></a><span class="s1">        // les valeurs des paramètres : [nom de la constante =&gt; valeur de la constante]</span>
-<a id="__codelineno-13-91" name="__codelineno-13-91"></a><span class="s1">        $valeurs = [];</span>
-<a id="__codelineno-13-92" name="__codelineno-13-92"></a><span class="s1">        foreach (array_keys($colonnes) as $constante) {</span>
-<a id="__codelineno-13-93" name="__codelineno-13-93"></a><span class="s1">            $valeurs[$constante] = $this-&gt;taxAdminData-&gt;$constante;</span>
-<a id="__codelineno-13-94" name="__codelineno-13-94"></a><span class="s1">        }</span>
-<a id="__codelineno-13-95" name="__codelineno-13-95"></a><span class="s1">        // on exécute l'</span><span class="n">ordre</span><span class="w"> </span><span class="n">préparé</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">une</span><span class="w"> </span><span class="n">seule</span><span class="w"> </span><span class="n">ligne</span><span class="w"> </span><span class="n">est</span><span class="w"> </span><span class="n">insérée</span>
-<a id="__codelineno-13-96" name="__codelineno-13-96"></a><span class="w">        </span><span class="err">$</span><span class="k">statement</span><span class="o">-&gt;</span><span class="k">execute</span><span class="p">(</span><span class="err">$</span><span class="n">valeurs</span><span class="p">);</span>
-<a id="__codelineno-13-97" name="__codelineno-13-97"></a><span class="w">    </span><span class="err">}</span>
+<span class="normal"><a href="#__codelineno-13-97">97</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-75" name="__codelineno-13-75"></a><span class="x">    // remplissage de la table des constantes</span>
+<a id="__codelineno-13-76" name="__codelineno-13-76"></a><span class="x">    private function fillTableConstantes(\PDO $connexion): void</span>
+<a id="__codelineno-13-77" name="__codelineno-13-77"></a><span class="x">    {</span>
+<a id="__codelineno-13-78" name="__codelineno-13-78"></a><span class="x">        // raccourci</span>
+<a id="__codelineno-13-79" name="__codelineno-13-79"></a><span class="x">        $database = $this-&gt;database;</span>
+<a id="__codelineno-13-80" name="__codelineno-13-80"></a><span class="x">        // on vide la table au cas où il y aurait quelque chose dedans</span>
+<a id="__codelineno-13-81" name="__codelineno-13-81"></a><span class="x">        $connexion-&gt;exec("delete from $database-&gt;tableConstantes");</span>
+<a id="__codelineno-13-82" name="__codelineno-13-82"></a><span class="x">        // [nom de la constante =&gt; nom de la colonne]</span>
+<a id="__codelineno-13-83" name="__codelineno-13-83"></a><span class="x">        $colonnes = $database-&gt;colonnesConstantes();</span>
+<a id="__codelineno-13-84" name="__codelineno-13-84"></a><span class="x">        // les paramètres de l'ordre préparé portent les noms des constantes : :plafondQfDemiPart, ...</span>
+<a id="__codelineno-13-85" name="__codelineno-13-85"></a><span class="x">        $paramètres = array_map(fn(string $constante): string =&gt; ":$constante", array_keys($colonnes));</span>
+<a id="__codelineno-13-86" name="__codelineno-13-86"></a><span class="x">        $statement = $connexion-&gt;prepare(</span>
+<a id="__codelineno-13-87" name="__codelineno-13-87"></a><span class="x">            "insert into $database-&gt;tableConstantes (" . implode(", ", $colonnes) . ")"</span>
+<a id="__codelineno-13-88" name="__codelineno-13-88"></a><span class="x">            . " values (" . implode(", ", $paramètres) . ")"</span>
+<a id="__codelineno-13-89" name="__codelineno-13-89"></a><span class="x">        );</span>
+<a id="__codelineno-13-90" name="__codelineno-13-90"></a><span class="x">        // les valeurs des paramètres : [nom de la constante =&gt; valeur de la constante]</span>
+<a id="__codelineno-13-91" name="__codelineno-13-91"></a><span class="x">        $valeurs = [];</span>
+<a id="__codelineno-13-92" name="__codelineno-13-92"></a><span class="x">        foreach (array_keys($colonnes) as $constante) {</span>
+<a id="__codelineno-13-93" name="__codelineno-13-93"></a><span class="x">            $valeurs[$constante] = $this-&gt;taxAdminData-&gt;$constante;</span>
+<a id="__codelineno-13-94" name="__codelineno-13-94"></a><span class="x">        }</span>
+<a id="__codelineno-13-95" name="__codelineno-13-95"></a><span class="x">        // on exécute l'ordre préparé : une seule ligne est insérée</span>
+<a id="__codelineno-13-96" name="__codelineno-13-96"></a><span class="x">        $statement-&gt;execute($valeurs);</span>
+<a id="__codelineno-13-97" name="__codelineno-13-97"></a><span class="x">    }</span>
 </code></pre></div></td></tr></table></div>
 <p>Commentaires</p>
 <ul>
@@ -2291,17 +2291,17 @@
 <span class="normal"><a href="#__codelineno-16-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-16-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-16-10">10</a></span>
-<span class="normal"><a href="#__codelineno-16-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="o">&gt;</span><span class="w"> </span><span class="n">mysql</span><span class="w"> </span><span class="o">-</span><span class="n">u</span><span class="w"> </span><span class="n">admimpots</span><span class="w"> </span><span class="o">-</span><span class="n">pmdpimpots</span><span class="w"> </span><span class="n">dbimpots</span><span class="o">-</span><span class="mi">2019</span><span class="w"> </span><span class="o">-</span><span class="n">e</span><span class="w"> </span><span class="ss">"select * from tbtranches"</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="n">mysql</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="n">Warning</span><span class="p">]</span><span class="w"> </span><span class="k">Using</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">command</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="n">interface</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">insecure</span><span class="p">.</span>
-<a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="o">+</span><span class="c1">----+-----------+--------+----------+</span>
-<a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="o">|</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">limites</span><span class="w">   </span><span class="o">|</span><span class="w"> </span><span class="n">coeffr</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">coeffn</span><span class="w">   </span><span class="o">|</span>
-<a id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="o">+</span><span class="c1">----+-----------+--------+----------+</span>
-<a id="__codelineno-16-6" name="__codelineno-16-6"></a><span class="o">|</span><span class="w">  </span><span class="mi">1</span><span class="w"> </span><span class="o">|</span><span class="w">   </span><span class="mi">9964</span><span class="p">.</span><span class="mi">00</span><span class="w"> </span><span class="o">|</span><span class="w">   </span><span class="mi">0</span><span class="p">.</span><span class="mi">00</span><span class="w"> </span><span class="o">|</span><span class="w">     </span><span class="mi">0</span><span class="p">.</span><span class="mi">00</span><span class="w"> </span><span class="o">|</span>
-<a id="__codelineno-16-7" name="__codelineno-16-7"></a><span class="o">|</span><span class="w">  </span><span class="mi">2</span><span class="w"> </span><span class="o">|</span><span class="w">  </span><span class="mi">27519</span><span class="p">.</span><span class="mi">00</span><span class="w"> </span><span class="o">|</span><span class="w">   </span><span class="mi">0</span><span class="p">.</span><span class="mi">14</span><span class="w"> </span><span class="o">|</span><span class="w">  </span><span class="mi">1394</span><span class="p">.</span><span class="mi">96</span><span class="w"> </span><span class="o">|</span>
-<a id="__codelineno-16-8" name="__codelineno-16-8"></a><span class="o">|</span><span class="w">  </span><span class="mi">3</span><span class="w"> </span><span class="o">|</span><span class="w">  </span><span class="mi">73779</span><span class="p">.</span><span class="mi">00</span><span class="w"> </span><span class="o">|</span><span class="w">   </span><span class="mi">0</span><span class="p">.</span><span class="mi">30</span><span class="w"> </span><span class="o">|</span><span class="w">  </span><span class="mi">5798</span><span class="p">.</span><span class="mi">00</span><span class="w"> </span><span class="o">|</span>
-<a id="__codelineno-16-9" name="__codelineno-16-9"></a><span class="o">|</span><span class="w">  </span><span class="mi">4</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mi">156244</span><span class="p">.</span><span class="mi">00</span><span class="w"> </span><span class="o">|</span><span class="w">   </span><span class="mi">0</span><span class="p">.</span><span class="mi">41</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mi">13913</span><span class="p">.</span><span class="mi">69</span><span class="w"> </span><span class="o">|</span>
-<a id="__codelineno-16-10" name="__codelineno-16-10"></a><span class="o">|</span><span class="w">  </span><span class="mi">5</span><span class="w"> </span><span class="o">|</span><span class="w">      </span><span class="mi">0</span><span class="p">.</span><span class="mi">00</span><span class="w"> </span><span class="o">|</span><span class="w">   </span><span class="mi">0</span><span class="p">.</span><span class="mi">45</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mi">20163</span><span class="p">.</span><span class="mi">45</span><span class="w"> </span><span class="o">|</span>
-<a id="__codelineno-16-11" name="__codelineno-16-11"></a><span class="o">+</span><span class="c1">----+-----------+--------+----------+</span>
+<span class="normal"><a href="#__codelineno-16-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a>&gt; mysql -u admimpots -pmdpimpots dbimpots-2019 -e "select * from tbtranches"
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a>mysql: [Warning] Using a password on the command line interface can be insecure.
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a>+----+-----------+--------+----------+
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a>| id | limites   | coeffr | coeffn   |
+<a id="__codelineno-16-5" name="__codelineno-16-5"></a>+----+-----------+--------+----------+
+<a id="__codelineno-16-6" name="__codelineno-16-6"></a>|  1 |   9964.00 |   0.00 |     0.00 |
+<a id="__codelineno-16-7" name="__codelineno-16-7"></a>|  2 |  27519.00 |   0.14 |  1394.96 |
+<a id="__codelineno-16-8" name="__codelineno-16-8"></a>|  3 |  73779.00 |   0.30 |  5798.00 |
+<a id="__codelineno-16-9" name="__codelineno-16-9"></a>|  4 | 156244.00 |   0.41 | 13913.69 |
+<a id="__codelineno-16-10" name="__codelineno-16-10"></a>|  5 |      0.00 |   0.45 | 20163.45 |
+<a id="__codelineno-16-11" name="__codelineno-16-11"></a>+----+-----------+--------+----------+
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>colonne <em>[id]</em> : les valeurs attribuées par MySQL à la clé primaire. La numérotation démarre à 1. Si on exécute de nouveau le script, les lignes sont supprimées puis réinsérées et MySQL continue la numérotation (6, 7…) : une valeur de clé auto-incrémentée n&#x27;est jamais réutilisée ;</li>
@@ -2321,20 +2321,20 @@
 <span class="normal"><a href="#__codelineno-17-11">11</a></span>
 <span class="normal"><a href="#__codelineno-17-12">12</a></span>
 <span class="normal"><a href="#__codelineno-17-13">13</a></span>
-<span class="normal"><a href="#__codelineno-17-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="o">&gt;</span><span class="w"> </span><span class="n">mysql</span><span class="w"> </span><span class="o">-</span><span class="n">u</span><span class="w"> </span><span class="n">admimpots</span><span class="w"> </span><span class="o">-</span><span class="n">pmdpimpots</span><span class="w"> </span><span class="n">dbimpots</span><span class="o">-</span><span class="mi">2019</span><span class="w"> </span><span class="o">-</span><span class="n">e</span><span class="w"> </span><span class="ss">"select * from tbconstantes\G"</span>
-<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="n">mysql</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="n">Warning</span><span class="p">]</span><span class="w"> </span><span class="k">Using</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">command</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="n">interface</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">insecure</span><span class="p">.</span>
-<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="o">***************************</span><span class="w"> </span><span class="mi">1</span><span class="p">.</span><span class="w"> </span><span class="k">row</span><span class="w"> </span><span class="o">***************************</span>
-<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="w">                                    </span><span class="n">id</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
-<a id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="w">                     </span><span class="n">plafondQfDemiPart</span><span class="p">:</span><span class="w"> </span><span class="mi">1551</span><span class="p">.</span><span class="mi">00</span>
-<a id="__codelineno-17-6" name="__codelineno-17-6"></a><span class="n">plafondRevenusCelibatairePourReduction</span><span class="p">:</span><span class="w"> </span><span class="mi">21037</span><span class="p">.</span><span class="mi">00</span>
-<a id="__codelineno-17-7" name="__codelineno-17-7"></a><span class="w">     </span><span class="n">plafondRevenusCouplePourReduction</span><span class="p">:</span><span class="w"> </span><span class="mi">42074</span><span class="p">.</span><span class="mi">00</span>
-<a id="__codelineno-17-8" name="__codelineno-17-8"></a><span class="w">                   </span><span class="n">valeurReducDemiPart</span><span class="p">:</span><span class="w"> </span><span class="mi">3797</span><span class="p">.</span><span class="mi">00</span>
-<a id="__codelineno-17-9" name="__codelineno-17-9"></a><span class="w">              </span><span class="n">plafondDecoteCelibataire</span><span class="p">:</span><span class="w"> </span><span class="mi">1196</span><span class="p">.</span><span class="mi">00</span>
-<a id="__codelineno-17-10" name="__codelineno-17-10"></a><span class="w">                   </span><span class="n">plafondDecoteCouple</span><span class="p">:</span><span class="w"> </span><span class="mi">1970</span><span class="p">.</span><span class="mi">00</span>
-<a id="__codelineno-17-11" name="__codelineno-17-11"></a><span class="w">     </span><span class="n">plafondImpotCelibatairePourDecote</span><span class="p">:</span><span class="w"> </span><span class="mi">1595</span><span class="p">.</span><span class="mi">00</span>
-<a id="__codelineno-17-12" name="__codelineno-17-12"></a><span class="w">          </span><span class="n">plafondImpotCouplePourDecote</span><span class="p">:</span><span class="w"> </span><span class="mi">2627</span><span class="p">.</span><span class="mi">00</span>
-<a id="__codelineno-17-13" name="__codelineno-17-13"></a><span class="w">              </span><span class="n">abattementDixPourcentMax</span><span class="p">:</span><span class="w"> </span><span class="mi">12502</span><span class="p">.</span><span class="mi">00</span>
-<a id="__codelineno-17-14" name="__codelineno-17-14"></a><span class="w">              </span><span class="n">abattementDixPourcentMin</span><span class="p">:</span><span class="w"> </span><span class="mi">437</span><span class="p">.</span><span class="mi">00</span>
+<span class="normal"><a href="#__codelineno-17-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a>&gt; mysql -u admimpots -pmdpimpots dbimpots-2019 -e "select * from tbconstantes\G"
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a>mysql: [Warning] Using a password on the command line interface can be insecure.
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a>*************************** 1. row ***************************
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a>                                    id: 1
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a>                     plafondQfDemiPart: 1551.00
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a>plafondRevenusCelibatairePourReduction: 21037.00
+<a id="__codelineno-17-7" name="__codelineno-17-7"></a>     plafondRevenusCouplePourReduction: 42074.00
+<a id="__codelineno-17-8" name="__codelineno-17-8"></a>                   valeurReducDemiPart: 3797.00
+<a id="__codelineno-17-9" name="__codelineno-17-9"></a>              plafondDecoteCelibataire: 1196.00
+<a id="__codelineno-17-10" name="__codelineno-17-10"></a>                   plafondDecoteCouple: 1970.00
+<a id="__codelineno-17-11" name="__codelineno-17-11"></a>     plafondImpotCelibatairePourDecote: 1595.00
+<a id="__codelineno-17-12" name="__codelineno-17-12"></a>          plafondImpotCouplePourDecote: 2627.00
+<a id="__codelineno-17-13" name="__codelineno-17-13"></a>              abattementDixPourcentMax: 12502.00
+<a id="__codelineno-17-14" name="__codelineno-17-14"></a>              abattementDixPourcentMin: 437.00
 </code></pre></div></td></tr></table></div>
 <h2 id="134-calcul-de-limpot">13.4. <span style="color: #2e74b5">Calcul de l&#x27;impôt</span></h2>
 <h3 id="1341-architecture">13.4.1. <span style="color: #1f4d78">Architecture</span></h3>
@@ -2405,68 +2405,68 @@
 <span class="normal"><a href="#__codelineno-18-59">59</a></span>
 <span class="normal"><a href="#__codelineno-18-60">60</a></span>
 <span class="normal"><a href="#__codelineno-18-61">61</a></span>
-<span class="normal"><a href="#__codelineno-18-62">62</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a>[
-<a id="__codelineno-18-2" name="__codelineno-18-2"></a>    {
-<a id="__codelineno-18-3" name="__codelineno-18-3"></a>        "marié": "oui",
-<a id="__codelineno-18-4" name="__codelineno-18-4"></a>        "enfants": 2,
-<a id="__codelineno-18-5" name="__codelineno-18-5"></a>        "salaire": 55555
-<a id="__codelineno-18-6" name="__codelineno-18-6"></a>    },
-<a id="__codelineno-18-7" name="__codelineno-18-7"></a>    {
-<a id="__codelineno-18-8" name="__codelineno-18-8"></a>        "marié": "ouix",
-<a id="__codelineno-18-9" name="__codelineno-18-9"></a>        "enfants": "2x",
-<a id="__codelineno-18-10" name="__codelineno-18-10"></a>        "salaire": "55555x"
-<a id="__codelineno-18-11" name="__codelineno-18-11"></a>    },
-<a id="__codelineno-18-12" name="__codelineno-18-12"></a>    {
-<a id="__codelineno-18-13" name="__codelineno-18-13"></a>        "marié": "oui",
-<a id="__codelineno-18-14" name="__codelineno-18-14"></a>        "enfants": "2",
-<a id="__codelineno-18-15" name="__codelineno-18-15"></a>        "salaire": 50000
-<a id="__codelineno-18-16" name="__codelineno-18-16"></a>    },
-<a id="__codelineno-18-17" name="__codelineno-18-17"></a>    {
-<a id="__codelineno-18-18" name="__codelineno-18-18"></a>        "marié": "oui",
-<a id="__codelineno-18-19" name="__codelineno-18-19"></a>        "enfants": 3,
-<a id="__codelineno-18-20" name="__codelineno-18-20"></a>        "salaire": 50000
-<a id="__codelineno-18-21" name="__codelineno-18-21"></a>    },
-<a id="__codelineno-18-22" name="__codelineno-18-22"></a>    {
-<a id="__codelineno-18-23" name="__codelineno-18-23"></a>        "marié": "non",
-<a id="__codelineno-18-24" name="__codelineno-18-24"></a>        "enfants": 2,
-<a id="__codelineno-18-25" name="__codelineno-18-25"></a>        "salaire": 100000
-<a id="__codelineno-18-26" name="__codelineno-18-26"></a>    },
-<a id="__codelineno-18-27" name="__codelineno-18-27"></a>    {
-<a id="__codelineno-18-28" name="__codelineno-18-28"></a>        "marié": "non",
-<a id="__codelineno-18-29" name="__codelineno-18-29"></a>        "enfants": 3,
-<a id="__codelineno-18-30" name="__codelineno-18-30"></a>        "salaire": 100000
-<a id="__codelineno-18-31" name="__codelineno-18-31"></a>    },
-<a id="__codelineno-18-32" name="__codelineno-18-32"></a>    {
-<a id="__codelineno-18-33" name="__codelineno-18-33"></a>        "marié": "oui",
-<a id="__codelineno-18-34" name="__codelineno-18-34"></a>        "enfants": 3,
-<a id="__codelineno-18-35" name="__codelineno-18-35"></a>        "salaire": 100000
-<a id="__codelineno-18-36" name="__codelineno-18-36"></a>    },
-<a id="__codelineno-18-37" name="__codelineno-18-37"></a>    {
-<a id="__codelineno-18-38" name="__codelineno-18-38"></a>        "marié": "oui",
-<a id="__codelineno-18-39" name="__codelineno-18-39"></a>        "enfants": 5,
-<a id="__codelineno-18-40" name="__codelineno-18-40"></a>        "salaire": 100000
-<a id="__codelineno-18-41" name="__codelineno-18-41"></a>    },
-<a id="__codelineno-18-42" name="__codelineno-18-42"></a>    {
-<a id="__codelineno-18-43" name="__codelineno-18-43"></a>        "marié": "non",
-<a id="__codelineno-18-44" name="__codelineno-18-44"></a>        "enfants": 0,
-<a id="__codelineno-18-45" name="__codelineno-18-45"></a>        "salaire": 100000
-<a id="__codelineno-18-46" name="__codelineno-18-46"></a>    },
-<a id="__codelineno-18-47" name="__codelineno-18-47"></a>    {
-<a id="__codelineno-18-48" name="__codelineno-18-48"></a>        "marié": "oui",
-<a id="__codelineno-18-49" name="__codelineno-18-49"></a>        "enfants": 2,
-<a id="__codelineno-18-50" name="__codelineno-18-50"></a>        "salaire": 30000
-<a id="__codelineno-18-51" name="__codelineno-18-51"></a>    },
-<a id="__codelineno-18-52" name="__codelineno-18-52"></a>    {
-<a id="__codelineno-18-53" name="__codelineno-18-53"></a>        "marié": "non",
-<a id="__codelineno-18-54" name="__codelineno-18-54"></a>        "enfants": 0,
-<a id="__codelineno-18-55" name="__codelineno-18-55"></a>        "salaire": 200000
-<a id="__codelineno-18-56" name="__codelineno-18-56"></a>    },
-<a id="__codelineno-18-57" name="__codelineno-18-57"></a>    {
-<a id="__codelineno-18-58" name="__codelineno-18-58"></a>        "marié": "oui",
-<a id="__codelineno-18-59" name="__codelineno-18-59"></a>        "enfants": 3,
-<a id="__codelineno-18-60" name="__codelineno-18-60"></a>        "salaire": 200000
-<a id="__codelineno-18-61" name="__codelineno-18-61"></a>    }
-<a id="__codelineno-18-62" name="__codelineno-18-62"></a>]
+<span class="normal"><a href="#__codelineno-18-62">62</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="p">[</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="w">        </span><span class="nt">"marié"</span><span class="p">:</span><span class="w"> </span><span class="s2">"oui"</span><span class="p">,</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4"></a><span class="w">        </span><span class="nt">"enfants"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5"></a><span class="w">        </span><span class="nt">"salaire"</span><span class="p">:</span><span class="w"> </span><span class="mi">55555</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8"></a><span class="w">        </span><span class="nt">"marié"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ouix"</span><span class="p">,</span>
+<a id="__codelineno-18-9" name="__codelineno-18-9"></a><span class="w">        </span><span class="nt">"enfants"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2x"</span><span class="p">,</span>
+<a id="__codelineno-18-10" name="__codelineno-18-10"></a><span class="w">        </span><span class="nt">"salaire"</span><span class="p">:</span><span class="w"> </span><span class="s2">"55555x"</span>
+<a id="__codelineno-18-11" name="__codelineno-18-11"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-18-12" name="__codelineno-18-12"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-18-13" name="__codelineno-18-13"></a><span class="w">        </span><span class="nt">"marié"</span><span class="p">:</span><span class="w"> </span><span class="s2">"oui"</span><span class="p">,</span>
+<a id="__codelineno-18-14" name="__codelineno-18-14"></a><span class="w">        </span><span class="nt">"enfants"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span>
+<a id="__codelineno-18-15" name="__codelineno-18-15"></a><span class="w">        </span><span class="nt">"salaire"</span><span class="p">:</span><span class="w"> </span><span class="mi">50000</span>
+<a id="__codelineno-18-16" name="__codelineno-18-16"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-18-17" name="__codelineno-18-17"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-18-18" name="__codelineno-18-18"></a><span class="w">        </span><span class="nt">"marié"</span><span class="p">:</span><span class="w"> </span><span class="s2">"oui"</span><span class="p">,</span>
+<a id="__codelineno-18-19" name="__codelineno-18-19"></a><span class="w">        </span><span class="nt">"enfants"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<a id="__codelineno-18-20" name="__codelineno-18-20"></a><span class="w">        </span><span class="nt">"salaire"</span><span class="p">:</span><span class="w"> </span><span class="mi">50000</span>
+<a id="__codelineno-18-21" name="__codelineno-18-21"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-18-22" name="__codelineno-18-22"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-18-23" name="__codelineno-18-23"></a><span class="w">        </span><span class="nt">"marié"</span><span class="p">:</span><span class="w"> </span><span class="s2">"non"</span><span class="p">,</span>
+<a id="__codelineno-18-24" name="__codelineno-18-24"></a><span class="w">        </span><span class="nt">"enfants"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<a id="__codelineno-18-25" name="__codelineno-18-25"></a><span class="w">        </span><span class="nt">"salaire"</span><span class="p">:</span><span class="w"> </span><span class="mi">100000</span>
+<a id="__codelineno-18-26" name="__codelineno-18-26"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-18-27" name="__codelineno-18-27"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-18-28" name="__codelineno-18-28"></a><span class="w">        </span><span class="nt">"marié"</span><span class="p">:</span><span class="w"> </span><span class="s2">"non"</span><span class="p">,</span>
+<a id="__codelineno-18-29" name="__codelineno-18-29"></a><span class="w">        </span><span class="nt">"enfants"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<a id="__codelineno-18-30" name="__codelineno-18-30"></a><span class="w">        </span><span class="nt">"salaire"</span><span class="p">:</span><span class="w"> </span><span class="mi">100000</span>
+<a id="__codelineno-18-31" name="__codelineno-18-31"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-18-32" name="__codelineno-18-32"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-18-33" name="__codelineno-18-33"></a><span class="w">        </span><span class="nt">"marié"</span><span class="p">:</span><span class="w"> </span><span class="s2">"oui"</span><span class="p">,</span>
+<a id="__codelineno-18-34" name="__codelineno-18-34"></a><span class="w">        </span><span class="nt">"enfants"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<a id="__codelineno-18-35" name="__codelineno-18-35"></a><span class="w">        </span><span class="nt">"salaire"</span><span class="p">:</span><span class="w"> </span><span class="mi">100000</span>
+<a id="__codelineno-18-36" name="__codelineno-18-36"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-18-37" name="__codelineno-18-37"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-18-38" name="__codelineno-18-38"></a><span class="w">        </span><span class="nt">"marié"</span><span class="p">:</span><span class="w"> </span><span class="s2">"oui"</span><span class="p">,</span>
+<a id="__codelineno-18-39" name="__codelineno-18-39"></a><span class="w">        </span><span class="nt">"enfants"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+<a id="__codelineno-18-40" name="__codelineno-18-40"></a><span class="w">        </span><span class="nt">"salaire"</span><span class="p">:</span><span class="w"> </span><span class="mi">100000</span>
+<a id="__codelineno-18-41" name="__codelineno-18-41"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-18-42" name="__codelineno-18-42"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-18-43" name="__codelineno-18-43"></a><span class="w">        </span><span class="nt">"marié"</span><span class="p">:</span><span class="w"> </span><span class="s2">"non"</span><span class="p">,</span>
+<a id="__codelineno-18-44" name="__codelineno-18-44"></a><span class="w">        </span><span class="nt">"enfants"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-18-45" name="__codelineno-18-45"></a><span class="w">        </span><span class="nt">"salaire"</span><span class="p">:</span><span class="w"> </span><span class="mi">100000</span>
+<a id="__codelineno-18-46" name="__codelineno-18-46"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-18-47" name="__codelineno-18-47"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-18-48" name="__codelineno-18-48"></a><span class="w">        </span><span class="nt">"marié"</span><span class="p">:</span><span class="w"> </span><span class="s2">"oui"</span><span class="p">,</span>
+<a id="__codelineno-18-49" name="__codelineno-18-49"></a><span class="w">        </span><span class="nt">"enfants"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<a id="__codelineno-18-50" name="__codelineno-18-50"></a><span class="w">        </span><span class="nt">"salaire"</span><span class="p">:</span><span class="w"> </span><span class="mi">30000</span>
+<a id="__codelineno-18-51" name="__codelineno-18-51"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-18-52" name="__codelineno-18-52"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-18-53" name="__codelineno-18-53"></a><span class="w">        </span><span class="nt">"marié"</span><span class="p">:</span><span class="w"> </span><span class="s2">"non"</span><span class="p">,</span>
+<a id="__codelineno-18-54" name="__codelineno-18-54"></a><span class="w">        </span><span class="nt">"enfants"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-18-55" name="__codelineno-18-55"></a><span class="w">        </span><span class="nt">"salaire"</span><span class="p">:</span><span class="w"> </span><span class="mi">200000</span>
+<a id="__codelineno-18-56" name="__codelineno-18-56"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-18-57" name="__codelineno-18-57"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-18-58" name="__codelineno-18-58"></a><span class="w">        </span><span class="nt">"marié"</span><span class="p">:</span><span class="w"> </span><span class="s2">"oui"</span><span class="p">,</span>
+<a id="__codelineno-18-59" name="__codelineno-18-59"></a><span class="w">        </span><span class="nt">"enfants"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<a id="__codelineno-18-60" name="__codelineno-18-60"></a><span class="w">        </span><span class="nt">"salaire"</span><span class="p">:</span><span class="w"> </span><span class="mi">200000</span>
+<a id="__codelineno-18-61" name="__codelineno-18-61"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-18-62" name="__codelineno-18-62"></a><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
 <p>Les clés des objets JSON sont les noms des attributs de la classe <em>[TaxPayerData]</em>. On notera :</p>
 <ul>
@@ -2855,27 +2855,27 @@
 <span class="normal"><a href="#__codelineno-22-72">72</a></span>
 <span class="normal"><a href="#__codelineno-22-73">73</a></span>
 <span class="normal"><a href="#__codelineno-22-74">74</a></span>
-<span class="normal"><a href="#__codelineno-22-75">75</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-55" name="__codelineno-22-55"></a><span class="w">    </span><span class="o">//</span><span class="w"> </span><span class="n">lecture</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">des</span><span class="w"> </span><span class="n">tranches</span><span class="w"> </span><span class="n">d</span><span class="err">'</span><span class="n">impôt</span>
-<a id="__codelineno-22-56" name="__codelineno-22-56"></a><span class="w">    </span><span class="o">//</span><span class="w"> </span><span class="n">rend</span><span class="w"> </span><span class="n">le</span><span class="w"> </span><span class="n">tableau</span><span class="w"> </span><span class="p">[</span><span class="ss">"limites"</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">[...],</span><span class="w"> </span><span class="ss">"coeffR"</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">[...],</span><span class="w"> </span><span class="ss">"coeffN"</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">[...]]</span>
-<a id="__codelineno-22-57" name="__codelineno-22-57"></a><span class="w">    </span><span class="n">private</span><span class="w"> </span><span class="k">function</span><span class="w"> </span><span class="n">getTranches</span><span class="p">(</span><span class="err">\</span><span class="n">PDO</span><span class="w"> </span><span class="err">$</span><span class="n">connexion</span><span class="p">):</span><span class="w"> </span><span class="nb">array</span>
-<a id="__codelineno-22-58" name="__codelineno-22-58"></a><span class="w">    </span><span class="err">{</span>
-<a id="__codelineno-22-59" name="__codelineno-22-59"></a><span class="w">        </span><span class="o">//</span><span class="w"> </span><span class="n">raccourci</span>
-<a id="__codelineno-22-60" name="__codelineno-22-60"></a><span class="w">        </span><span class="err">$</span><span class="k">database</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">$</span><span class="n">this</span><span class="o">-&gt;</span><span class="k">database</span><span class="p">;</span>
-<a id="__codelineno-22-61" name="__codelineno-22-61"></a><span class="w">        </span><span class="o">//</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">prépare</span><span class="w"> </span><span class="n">puis</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">exécute</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">requête</span><span class="w"> </span><span class="k">SELECT</span>
-<a id="__codelineno-22-62" name="__codelineno-22-62"></a><span class="w">        </span><span class="err">$</span><span class="k">statement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">$</span><span class="n">connexion</span><span class="o">-&gt;</span><span class="k">prepare</span><span class="p">(</span>
-<a id="__codelineno-22-63" name="__codelineno-22-63"></a><span class="w">            </span><span class="ss">"select $database-&gt;colLimites, $database-&gt;colCoeffR, $database-&gt;colCoeffN"</span>
-<a id="__codelineno-22-64" name="__codelineno-22-64"></a><span class="w">            </span><span class="p">.</span><span class="w"> </span><span class="ss">" from $database-&gt;tableTranches order by $database-&gt;colId"</span>
-<a id="__codelineno-22-65" name="__codelineno-22-65"></a><span class="w">        </span><span class="p">);</span>
-<a id="__codelineno-22-66" name="__codelineno-22-66"></a><span class="w">        </span><span class="err">$</span><span class="k">statement</span><span class="o">-&gt;</span><span class="k">execute</span><span class="p">();</span>
-<a id="__codelineno-22-67" name="__codelineno-22-67"></a><span class="w">        </span><span class="o">//</span><span class="w"> </span><span class="n">toutes</span><span class="w"> </span><span class="n">les</span><span class="w"> </span><span class="n">lignes</span><span class="w"> </span><span class="n">en</span><span class="w"> </span><span class="n">une</span><span class="w"> </span><span class="n">fois</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">un</span><span class="w"> </span><span class="n">tableau</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">tableaux</span><span class="w"> </span><span class="n">associatifs</span>
-<a id="__codelineno-22-68" name="__codelineno-22-68"></a><span class="w">        </span><span class="err">$</span><span class="n">tranches</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">$</span><span class="k">statement</span><span class="o">-&gt;</span><span class="n">fetchAll</span><span class="p">();</span>
-<a id="__codelineno-22-69" name="__codelineno-22-69"></a><span class="w">        </span><span class="o">//</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">extrait</span><span class="w"> </span><span class="n">chaque</span><span class="w"> </span><span class="n">colonne</span><span class="w"> </span><span class="n">du</span><span class="w"> </span><span class="n">résultat</span>
-<a id="__codelineno-22-70" name="__codelineno-22-70"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-22-71" name="__codelineno-22-71"></a><span class="w">            </span><span class="ss">"limites"</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">array_column</span><span class="p">(</span><span class="err">$</span><span class="n">tranches</span><span class="p">,</span><span class="w"> </span><span class="err">$</span><span class="k">database</span><span class="o">-&gt;</span><span class="n">colLimites</span><span class="p">),</span>
-<a id="__codelineno-22-72" name="__codelineno-22-72"></a><span class="w">            </span><span class="ss">"coeffR"</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">array_column</span><span class="p">(</span><span class="err">$</span><span class="n">tranches</span><span class="p">,</span><span class="w"> </span><span class="err">$</span><span class="k">database</span><span class="o">-&gt;</span><span class="n">colCoeffR</span><span class="p">),</span>
-<a id="__codelineno-22-73" name="__codelineno-22-73"></a><span class="w">            </span><span class="ss">"coeffN"</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">array_column</span><span class="p">(</span><span class="err">$</span><span class="n">tranches</span><span class="p">,</span><span class="w"> </span><span class="err">$</span><span class="k">database</span><span class="o">-&gt;</span><span class="n">colCoeffN</span><span class="p">),</span>
-<a id="__codelineno-22-74" name="__codelineno-22-74"></a><span class="w">        </span><span class="p">];</span>
-<a id="__codelineno-22-75" name="__codelineno-22-75"></a><span class="w">    </span><span class="err">}</span>
+<span class="normal"><a href="#__codelineno-22-75">75</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-55" name="__codelineno-22-55"></a><span class="x">    // lecture de la table des tranches d'impôt</span>
+<a id="__codelineno-22-56" name="__codelineno-22-56"></a><span class="x">    // rend le tableau ["limites" =&gt; [...], "coeffR" =&gt; [...], "coeffN" =&gt; [...]]</span>
+<a id="__codelineno-22-57" name="__codelineno-22-57"></a><span class="x">    private function getTranches(\PDO $connexion): array</span>
+<a id="__codelineno-22-58" name="__codelineno-22-58"></a><span class="x">    {</span>
+<a id="__codelineno-22-59" name="__codelineno-22-59"></a><span class="x">        // raccourci</span>
+<a id="__codelineno-22-60" name="__codelineno-22-60"></a><span class="x">        $database = $this-&gt;database;</span>
+<a id="__codelineno-22-61" name="__codelineno-22-61"></a><span class="x">        // on prépare puis on exécute la requête SELECT</span>
+<a id="__codelineno-22-62" name="__codelineno-22-62"></a><span class="x">        $statement = $connexion-&gt;prepare(</span>
+<a id="__codelineno-22-63" name="__codelineno-22-63"></a><span class="x">            "select $database-&gt;colLimites, $database-&gt;colCoeffR, $database-&gt;colCoeffN"</span>
+<a id="__codelineno-22-64" name="__codelineno-22-64"></a><span class="x">            . " from $database-&gt;tableTranches order by $database-&gt;colId"</span>
+<a id="__codelineno-22-65" name="__codelineno-22-65"></a><span class="x">        );</span>
+<a id="__codelineno-22-66" name="__codelineno-22-66"></a><span class="x">        $statement-&gt;execute();</span>
+<a id="__codelineno-22-67" name="__codelineno-22-67"></a><span class="x">        // toutes les lignes en une fois : un tableau de tableaux associatifs</span>
+<a id="__codelineno-22-68" name="__codelineno-22-68"></a><span class="x">        $tranches = $statement-&gt;fetchAll();</span>
+<a id="__codelineno-22-69" name="__codelineno-22-69"></a><span class="x">        // on extrait chaque colonne du résultat</span>
+<a id="__codelineno-22-70" name="__codelineno-22-70"></a><span class="x">        return [</span>
+<a id="__codelineno-22-71" name="__codelineno-22-71"></a><span class="x">            "limites" =&gt; array_column($tranches, $database-&gt;colLimites),</span>
+<a id="__codelineno-22-72" name="__codelineno-22-72"></a><span class="x">            "coeffR" =&gt; array_column($tranches, $database-&gt;colCoeffR),</span>
+<a id="__codelineno-22-73" name="__codelineno-22-73"></a><span class="x">            "coeffN" =&gt; array_column($tranches, $database-&gt;colCoeffN),</span>
+<a id="__codelineno-22-74" name="__codelineno-22-74"></a><span class="x">        ];</span>
+<a id="__codelineno-22-75" name="__codelineno-22-75"></a><span class="x">    }</span>
 </code></pre></div></td></tr></table></div>
 <p>Commentaires</p>
 <ul>
@@ -2900,22 +2900,22 @@
 <span class="normal"><a href="#__codelineno-23-89">89</a></span>
 <span class="normal"><a href="#__codelineno-23-90">90</a></span>
 <span class="normal"><a href="#__codelineno-23-91">91</a></span>
-<span class="normal"><a href="#__codelineno-23-92">92</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-77" name="__codelineno-23-77"></a><span class="w">    </span><span class="o">//</span><span class="w"> </span><span class="n">lecture</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">des</span><span class="w"> </span><span class="n">constantes</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">calcul</span>
-<a id="__codelineno-23-78" name="__codelineno-23-78"></a><span class="w">    </span><span class="o">//</span><span class="w"> </span><span class="n">rend</span><span class="w"> </span><span class="n">le</span><span class="w"> </span><span class="n">tableau</span><span class="w"> </span><span class="p">[</span><span class="n">nom</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">constante</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">valeur</span><span class="p">]</span>
-<a id="__codelineno-23-79" name="__codelineno-23-79"></a><span class="w">    </span><span class="n">private</span><span class="w"> </span><span class="k">function</span><span class="w"> </span><span class="n">getConstantes</span><span class="p">(</span><span class="err">\</span><span class="n">PDO</span><span class="w"> </span><span class="err">$</span><span class="n">connexion</span><span class="p">):</span><span class="w"> </span><span class="nb">array</span>
-<a id="__codelineno-23-80" name="__codelineno-23-80"></a><span class="w">    </span><span class="err">{</span>
-<a id="__codelineno-23-81" name="__codelineno-23-81"></a><span class="w">        </span><span class="o">//</span><span class="w"> </span><span class="p">[</span><span class="n">nom</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">constante</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">colonne</span><span class="p">]</span>
-<a id="__codelineno-23-82" name="__codelineno-23-82"></a><span class="w">        </span><span class="err">$</span><span class="n">colonnes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">$</span><span class="n">this</span><span class="o">-&gt;</span><span class="k">database</span><span class="o">-&gt;</span><span class="n">colonnesConstantes</span><span class="p">();</span>
-<a id="__codelineno-23-83" name="__codelineno-23-83"></a><span class="w">        </span><span class="o">//</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">prépare</span><span class="w"> </span><span class="n">puis</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">exécute</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">requête</span><span class="w"> </span><span class="k">SELECT</span>
-<a id="__codelineno-23-84" name="__codelineno-23-84"></a><span class="w">        </span><span class="err">$</span><span class="k">statement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">$</span><span class="n">connexion</span><span class="o">-&gt;</span><span class="k">prepare</span><span class="p">(</span>
-<a id="__codelineno-23-85" name="__codelineno-23-85"></a><span class="w">            </span><span class="ss">"select "</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="n">implode</span><span class="p">(</span><span class="ss">", "</span><span class="p">,</span><span class="w"> </span><span class="err">$</span><span class="n">colonnes</span><span class="p">)</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="ss">" from {$this-&gt;database-&gt;tableConstantes}"</span>
-<a id="__codelineno-23-86" name="__codelineno-23-86"></a><span class="w">        </span><span class="p">);</span>
-<a id="__codelineno-23-87" name="__codelineno-23-87"></a><span class="w">        </span><span class="err">$</span><span class="k">statement</span><span class="o">-&gt;</span><span class="k">execute</span><span class="p">();</span>
-<a id="__codelineno-23-88" name="__codelineno-23-88"></a><span class="w">        </span><span class="o">//</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">exploite</span><span class="w"> </span><span class="n">le</span><span class="w"> </span><span class="n">résultat</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">seule</span><span class="w"> </span><span class="n">ligne</span><span class="w"> </span><span class="n">ici</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">[</span><span class="k">false</span><span class="p">]</span><span class="w"> </span><span class="n">si</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">est</span><span class="w"> </span><span class="n">vide</span>
-<a id="__codelineno-23-89" name="__codelineno-23-89"></a><span class="w">        </span><span class="err">$</span><span class="n">ligne</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">$</span><span class="k">statement</span><span class="o">-&gt;</span><span class="k">fetch</span><span class="p">()</span><span class="w"> </span><span class="o">?</span><span class="p">:</span><span class="w"> </span><span class="p">[];</span>
-<a id="__codelineno-23-90" name="__codelineno-23-90"></a><span class="w">        </span><span class="o">//</span><span class="w"> </span><span class="p">[</span><span class="n">nom</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">constante</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">valeur</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">sa</span><span class="w"> </span><span class="n">colonne</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="k">null</span><span class="w"> </span><span class="n">si</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">est</span><span class="w"> </span><span class="n">vide</span><span class="p">)</span>
-<a id="__codelineno-23-91" name="__codelineno-23-91"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">array_map</span><span class="p">(</span><span class="n">fn</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="err">$</span><span class="n">colonne</span><span class="p">):</span><span class="w"> </span><span class="n">mixed</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="err">$</span><span class="n">ligne</span><span class="p">[</span><span class="err">$</span><span class="n">colonne</span><span class="p">]</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="k">null</span><span class="p">,</span><span class="w"> </span><span class="err">$</span><span class="n">colonnes</span><span class="p">);</span>
-<a id="__codelineno-23-92" name="__codelineno-23-92"></a><span class="w">    </span><span class="err">}</span>
+<span class="normal"><a href="#__codelineno-23-92">92</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-77" name="__codelineno-23-77"></a><span class="x">    // lecture de la table des constantes de calcul</span>
+<a id="__codelineno-23-78" name="__codelineno-23-78"></a><span class="x">    // rend le tableau [nom de la constante =&gt; valeur]</span>
+<a id="__codelineno-23-79" name="__codelineno-23-79"></a><span class="x">    private function getConstantes(\PDO $connexion): array</span>
+<a id="__codelineno-23-80" name="__codelineno-23-80"></a><span class="x">    {</span>
+<a id="__codelineno-23-81" name="__codelineno-23-81"></a><span class="x">        // [nom de la constante =&gt; nom de la colonne]</span>
+<a id="__codelineno-23-82" name="__codelineno-23-82"></a><span class="x">        $colonnes = $this-&gt;database-&gt;colonnesConstantes();</span>
+<a id="__codelineno-23-83" name="__codelineno-23-83"></a><span class="x">        // on prépare puis on exécute la requête SELECT</span>
+<a id="__codelineno-23-84" name="__codelineno-23-84"></a><span class="x">        $statement = $connexion-&gt;prepare(</span>
+<a id="__codelineno-23-85" name="__codelineno-23-85"></a><span class="x">            "select " . implode(", ", $colonnes) . " from {$this-&gt;database-&gt;tableConstantes}"</span>
+<a id="__codelineno-23-86" name="__codelineno-23-86"></a><span class="x">        );</span>
+<a id="__codelineno-23-87" name="__codelineno-23-87"></a><span class="x">        $statement-&gt;execute();</span>
+<a id="__codelineno-23-88" name="__codelineno-23-88"></a><span class="x">        // on exploite le résultat - 1 seule ligne ici - [false] si la table est vide</span>
+<a id="__codelineno-23-89" name="__codelineno-23-89"></a><span class="x">        $ligne = $statement-&gt;fetch() ?: [];</span>
+<a id="__codelineno-23-90" name="__codelineno-23-90"></a><span class="x">        // [nom de la constante =&gt; valeur de sa colonne] (null si la table est vide)</span>
+<a id="__codelineno-23-91" name="__codelineno-23-91"></a><span class="x">        return array_map(fn(string $colonne): mixed =&gt; $ligne[$colonne] ?? null, $colonnes);</span>
+<a id="__codelineno-23-92" name="__codelineno-23-92"></a><span class="x">    }</span>
 </code></pre></div></td></tr></table></div>
 <p>Commentaires</p>
 <ul>
@@ -2950,25 +2950,25 @@
 <span class="normal"><a href="#__codelineno-24-200">200</a></span>
 <span class="normal"><a href="#__codelineno-24-201">201</a></span>
 <span class="normal"><a href="#__codelineno-24-202">202</a></span>
-<span class="normal"><a href="#__codelineno-24-203">203</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-185" name="__codelineno-24-185"></a><span class="w">    </span><span class="c1">// calcul des impôts en mode batch</span>
-<a id="__codelineno-24-186" name="__codelineno-24-186"></a><span class="w">    </span><span class="c1">// --------------------------------------------------------------------------</span>
-<a id="__codelineno-24-187" name="__codelineno-24-187"></a><span class="w">    </span><span class="err">#</span><span class="p">[</span><span class="err">\</span><span class="nx">Override</span><span class="p">]</span>
-<a id="__codelineno-24-188" name="__codelineno-24-188"></a><span class="w">    </span><span class="kr">public</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">executeBatchImpots</span><span class="p">(</span><span class="nx">string</span><span class="w"> </span><span class="nx">$taxPayersFileName</span><span class="p">,</span><span class="w"> </span><span class="nx">string</span><span class="w"> </span><span class="nx">$resultsFileName</span><span class="p">,</span><span class="w"> </span><span class="nx">string</span><span class="w"> </span><span class="nx">$errorsFileName</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span>
-<a id="__codelineno-24-189" name="__codelineno-24-189"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-24-190" name="__codelineno-24-190"></a><span class="w">        </span><span class="c1">// on laisse remonter les exceptions qui proviennent de la couche [dao]</span>
-<a id="__codelineno-24-191" name="__codelineno-24-191"></a><span class="w">        </span><span class="c1">// on récupère les données contribuables</span>
-<a id="__codelineno-24-192" name="__codelineno-24-192"></a><span class="w">        </span><span class="nx">$taxPayersData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$this</span><span class="o">-&gt;</span><span class="nx">dao</span><span class="o">-&gt;</span><span class="nx">getTaxPayersData</span><span class="p">(</span><span class="nx">$taxPayersFileName</span><span class="p">,</span><span class="w"> </span><span class="nx">$errorsFileName</span><span class="p">);</span>
-<a id="__codelineno-24-193" name="__codelineno-24-193"></a><span class="w">        </span><span class="c1">// on calcule l'impôt de chacun des contribuables</span>
-<a id="__codelineno-24-194" name="__codelineno-24-194"></a><span class="w">        </span><span class="nx">$results</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">array_map</span><span class="p">(</span>
-<a id="__codelineno-24-195" name="__codelineno-24-195"></a><span class="w">            </span><span class="nx">fn</span><span class="p">(</span><span class="nx">TaxPayerData</span><span class="w"> </span><span class="nx">$taxPayerData</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">TaxPayerData</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">$taxPayerData</span><span class="o">-&gt;</span><span class="nx">avecRésultats</span><span class="p">(</span>
-<a id="__codelineno-24-196" name="__codelineno-24-196"></a><span class="w">                </span><span class="nx">$this</span><span class="o">-&gt;</span><span class="nx">calculerImpot</span><span class="p">(</span><span class="nx">$taxPayerData</span><span class="o">-&gt;</span><span class="nx">marié</span><span class="p">,</span><span class="w"> </span><span class="nx">$taxPayerData</span><span class="o">-&gt;</span><span class="nx">enfants</span><span class="p">,</span><span class="w"> </span><span class="nx">$taxPayerData</span><span class="o">-&gt;</span><span class="nx">salaire</span><span class="p">)</span>
-<a id="__codelineno-24-197" name="__codelineno-24-197"></a><span class="w">            </span><span class="p">),</span>
-<a id="__codelineno-24-198" name="__codelineno-24-198"></a><span class="w">            </span><span class="nx">$taxPayersData</span>
-<a id="__codelineno-24-199" name="__codelineno-24-199"></a><span class="w">        </span><span class="p">);</span>
-<a id="__codelineno-24-200" name="__codelineno-24-200"></a><span class="w">        </span><span class="c1">// enregistrement des résultats</span>
-<a id="__codelineno-24-201" name="__codelineno-24-201"></a><span class="w">        </span><span class="nx">$this</span><span class="o">-&gt;</span><span class="nx">dao</span><span class="o">-&gt;</span><span class="nx">saveResults</span><span class="p">(</span><span class="nx">$resultsFileName</span><span class="p">,</span><span class="w"> </span><span class="nx">$results</span><span class="p">);</span>
-<a id="__codelineno-24-202" name="__codelineno-24-202"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-24-203" name="__codelineno-24-203"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-24-203">203</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-185" name="__codelineno-24-185"></a><span class="x">    // calcul des impôts en mode batch</span>
+<a id="__codelineno-24-186" name="__codelineno-24-186"></a><span class="x">    // --------------------------------------------------------------------------</span>
+<a id="__codelineno-24-187" name="__codelineno-24-187"></a><span class="x">    #[\Override]</span>
+<a id="__codelineno-24-188" name="__codelineno-24-188"></a><span class="x">    public function executeBatchImpots(string $taxPayersFileName, string $resultsFileName, string $errorsFileName): void</span>
+<a id="__codelineno-24-189" name="__codelineno-24-189"></a><span class="x">    {</span>
+<a id="__codelineno-24-190" name="__codelineno-24-190"></a><span class="x">        // on laisse remonter les exceptions qui proviennent de la couche [dao]</span>
+<a id="__codelineno-24-191" name="__codelineno-24-191"></a><span class="x">        // on récupère les données contribuables</span>
+<a id="__codelineno-24-192" name="__codelineno-24-192"></a><span class="x">        $taxPayersData = $this-&gt;dao-&gt;getTaxPayersData($taxPayersFileName, $errorsFileName);</span>
+<a id="__codelineno-24-193" name="__codelineno-24-193"></a><span class="x">        // on calcule l'impôt de chacun des contribuables</span>
+<a id="__codelineno-24-194" name="__codelineno-24-194"></a><span class="x">        $results = array_map(</span>
+<a id="__codelineno-24-195" name="__codelineno-24-195"></a><span class="x">            fn(TaxPayerData $taxPayerData): TaxPayerData =&gt; $taxPayerData-&gt;avecRésultats(</span>
+<a id="__codelineno-24-196" name="__codelineno-24-196"></a><span class="x">                $this-&gt;calculerImpot($taxPayerData-&gt;marié, $taxPayerData-&gt;enfants, $taxPayerData-&gt;salaire)</span>
+<a id="__codelineno-24-197" name="__codelineno-24-197"></a><span class="x">            ),</span>
+<a id="__codelineno-24-198" name="__codelineno-24-198"></a><span class="x">            $taxPayersData</span>
+<a id="__codelineno-24-199" name="__codelineno-24-199"></a><span class="x">        );</span>
+<a id="__codelineno-24-200" name="__codelineno-24-200"></a><span class="x">        // enregistrement des résultats</span>
+<a id="__codelineno-24-201" name="__codelineno-24-201"></a><span class="x">        $this-&gt;dao-&gt;saveResults($resultsFileName, $results);</span>
+<a id="__codelineno-24-202" name="__codelineno-24-202"></a><span class="x">    }</span>
+<a id="__codelineno-24-203" name="__codelineno-24-203"></a><span class="x">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 192 : la couche <em>[métier]</em> ne sait pas que les données des contribuables viennent désormais d&#x27;un fichier JSON : elle demande les données à la couche <em>[dao]</em> et reçoit un tableau d&#x27;objets <em>[TaxPayerData]</em>, comme dans la version 4 ;</li>
@@ -3097,22 +3097,22 @@
 <span class="normal"><a href="#__codelineno-27-13">13</a></span>
 <span class="normal"><a href="#__codelineno-27-14">14</a></span>
 <span class="normal"><a href="#__codelineno-27-15">15</a></span>
-<span class="normal"><a href="#__codelineno-27-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a>[
-<a id="__codelineno-27-2" name="__codelineno-27-2"></a>    {
-<a id="__codelineno-27-3" name="__codelineno-27-3"></a>        "numéro": 1,
-<a id="__codelineno-27-4" name="__codelineno-27-4"></a>        "erreurs": [
-<a id="__codelineno-27-5" name="__codelineno-27-5"></a>            {
-<a id="__codelineno-27-6" name="__codelineno-27-6"></a>                "marié": "ouix"
-<a id="__codelineno-27-7" name="__codelineno-27-7"></a>            },
-<a id="__codelineno-27-8" name="__codelineno-27-8"></a>            {
-<a id="__codelineno-27-9" name="__codelineno-27-9"></a>                "enfants": "2x"
-<a id="__codelineno-27-10" name="__codelineno-27-10"></a>            },
-<a id="__codelineno-27-11" name="__codelineno-27-11"></a>            {
-<a id="__codelineno-27-12" name="__codelineno-27-12"></a>                "salaire": "55555x"
-<a id="__codelineno-27-13" name="__codelineno-27-13"></a>            }
-<a id="__codelineno-27-14" name="__codelineno-27-14"></a>        ]
-<a id="__codelineno-27-15" name="__codelineno-27-15"></a>    }
-<a id="__codelineno-27-16" name="__codelineno-27-16"></a>]
+<span class="normal"><a href="#__codelineno-27-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="p">[</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3"></a><span class="w">        </span><span class="nt">"numéro"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-27-4" name="__codelineno-27-4"></a><span class="w">        </span><span class="nt">"erreurs"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-27-5" name="__codelineno-27-5"></a><span class="w">            </span><span class="p">{</span>
+<a id="__codelineno-27-6" name="__codelineno-27-6"></a><span class="w">                </span><span class="nt">"marié"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ouix"</span>
+<a id="__codelineno-27-7" name="__codelineno-27-7"></a><span class="w">            </span><span class="p">},</span>
+<a id="__codelineno-27-8" name="__codelineno-27-8"></a><span class="w">            </span><span class="p">{</span>
+<a id="__codelineno-27-9" name="__codelineno-27-9"></a><span class="w">                </span><span class="nt">"enfants"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2x"</span>
+<a id="__codelineno-27-10" name="__codelineno-27-10"></a><span class="w">            </span><span class="p">},</span>
+<a id="__codelineno-27-11" name="__codelineno-27-11"></a><span class="w">            </span><span class="p">{</span>
+<a id="__codelineno-27-12" name="__codelineno-27-12"></a><span class="w">                </span><span class="nt">"salaire"</span><span class="p">:</span><span class="w"> </span><span class="s2">"55555x"</span>
+<a id="__codelineno-27-13" name="__codelineno-27-13"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-27-14" name="__codelineno-27-14"></a><span class="w">        </span><span class="p">]</span>
+<a id="__codelineno-27-15" name="__codelineno-27-15"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-27-16" name="__codelineno-27-16"></a><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
 <p>Cela signifie que dans <em>[taxpayersdata.json]</em>, l&#x27;élément n° 1 du tableau des contribuables est erroné, et pourquoi. Le fichier des résultats <em>[resultats.json]</em> est lui le suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">  1</a></span>
@@ -3226,118 +3226,118 @@
 <span class="normal"><a href="#__codelineno-28-109">109</a></span>
 <span class="normal"><a href="#__codelineno-28-110">110</a></span>
 <span class="normal"><a href="#__codelineno-28-111">111</a></span>
-<span class="normal"><a href="#__codelineno-28-112">112</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a>[
-<a id="__codelineno-28-2" name="__codelineno-28-2"></a>    {
-<a id="__codelineno-28-3" name="__codelineno-28-3"></a>        "marié": "oui",
-<a id="__codelineno-28-4" name="__codelineno-28-4"></a>        "enfants": 2,
-<a id="__codelineno-28-5" name="__codelineno-28-5"></a>        "salaire": 55555,
-<a id="__codelineno-28-6" name="__codelineno-28-6"></a>        "impôt": 2814,
-<a id="__codelineno-28-7" name="__codelineno-28-7"></a>        "surcôte": 0,
-<a id="__codelineno-28-8" name="__codelineno-28-8"></a>        "décôte": 0,
-<a id="__codelineno-28-9" name="__codelineno-28-9"></a>        "réduction": 0,
-<a id="__codelineno-28-10" name="__codelineno-28-10"></a>        "taux": 0.14
-<a id="__codelineno-28-11" name="__codelineno-28-11"></a>    },
-<a id="__codelineno-28-12" name="__codelineno-28-12"></a>    {
-<a id="__codelineno-28-13" name="__codelineno-28-13"></a>        "marié": "oui",
-<a id="__codelineno-28-14" name="__codelineno-28-14"></a>        "enfants": 2,
-<a id="__codelineno-28-15" name="__codelineno-28-15"></a>        "salaire": 50000,
-<a id="__codelineno-28-16" name="__codelineno-28-16"></a>        "impôt": 1384,
-<a id="__codelineno-28-17" name="__codelineno-28-17"></a>        "surcôte": 0,
-<a id="__codelineno-28-18" name="__codelineno-28-18"></a>        "décôte": 384,
-<a id="__codelineno-28-19" name="__codelineno-28-19"></a>        "réduction": 347,
-<a id="__codelineno-28-20" name="__codelineno-28-20"></a>        "taux": 0.14
-<a id="__codelineno-28-21" name="__codelineno-28-21"></a>    },
-<a id="__codelineno-28-22" name="__codelineno-28-22"></a>    {
-<a id="__codelineno-28-23" name="__codelineno-28-23"></a>        "marié": "oui",
-<a id="__codelineno-28-24" name="__codelineno-28-24"></a>        "enfants": 3,
-<a id="__codelineno-28-25" name="__codelineno-28-25"></a>        "salaire": 50000,
-<a id="__codelineno-28-26" name="__codelineno-28-26"></a>        "impôt": 0,
-<a id="__codelineno-28-27" name="__codelineno-28-27"></a>        "surcôte": 0,
-<a id="__codelineno-28-28" name="__codelineno-28-28"></a>        "décôte": 720,
-<a id="__codelineno-28-29" name="__codelineno-28-29"></a>        "réduction": 0,
-<a id="__codelineno-28-30" name="__codelineno-28-30"></a>        "taux": 0.14
-<a id="__codelineno-28-31" name="__codelineno-28-31"></a>    },
-<a id="__codelineno-28-32" name="__codelineno-28-32"></a>    {
-<a id="__codelineno-28-33" name="__codelineno-28-33"></a>        "marié": "non",
-<a id="__codelineno-28-34" name="__codelineno-28-34"></a>        "enfants": 2,
-<a id="__codelineno-28-35" name="__codelineno-28-35"></a>        "salaire": 100000,
-<a id="__codelineno-28-36" name="__codelineno-28-36"></a>        "impôt": 19884,
-<a id="__codelineno-28-37" name="__codelineno-28-37"></a>        "surcôte": 4480,
-<a id="__codelineno-28-38" name="__codelineno-28-38"></a>        "décôte": 0,
-<a id="__codelineno-28-39" name="__codelineno-28-39"></a>        "réduction": 0,
-<a id="__codelineno-28-40" name="__codelineno-28-40"></a>        "taux": 0.41
-<a id="__codelineno-28-41" name="__codelineno-28-41"></a>    },
-<a id="__codelineno-28-42" name="__codelineno-28-42"></a>    {
-<a id="__codelineno-28-43" name="__codelineno-28-43"></a>        "marié": "non",
-<a id="__codelineno-28-44" name="__codelineno-28-44"></a>        "enfants": 3,
-<a id="__codelineno-28-45" name="__codelineno-28-45"></a>        "salaire": 100000,
-<a id="__codelineno-28-46" name="__codelineno-28-46"></a>        "impôt": 16782,
-<a id="__codelineno-28-47" name="__codelineno-28-47"></a>        "surcôte": 7176,
-<a id="__codelineno-28-48" name="__codelineno-28-48"></a>        "décôte": 0,
-<a id="__codelineno-28-49" name="__codelineno-28-49"></a>        "réduction": 0,
-<a id="__codelineno-28-50" name="__codelineno-28-50"></a>        "taux": 0.41
-<a id="__codelineno-28-51" name="__codelineno-28-51"></a>    },
-<a id="__codelineno-28-52" name="__codelineno-28-52"></a>    {
-<a id="__codelineno-28-53" name="__codelineno-28-53"></a>        "marié": "oui",
-<a id="__codelineno-28-54" name="__codelineno-28-54"></a>        "enfants": 3,
-<a id="__codelineno-28-55" name="__codelineno-28-55"></a>        "salaire": 100000,
-<a id="__codelineno-28-56" name="__codelineno-28-56"></a>        "impôt": 9200,
-<a id="__codelineno-28-57" name="__codelineno-28-57"></a>        "surcôte": 2180,
-<a id="__codelineno-28-58" name="__codelineno-28-58"></a>        "décôte": 0,
-<a id="__codelineno-28-59" name="__codelineno-28-59"></a>        "réduction": 0,
-<a id="__codelineno-28-60" name="__codelineno-28-60"></a>        "taux": 0.3
-<a id="__codelineno-28-61" name="__codelineno-28-61"></a>    },
-<a id="__codelineno-28-62" name="__codelineno-28-62"></a>    {
-<a id="__codelineno-28-63" name="__codelineno-28-63"></a>        "marié": "oui",
-<a id="__codelineno-28-64" name="__codelineno-28-64"></a>        "enfants": 5,
-<a id="__codelineno-28-65" name="__codelineno-28-65"></a>        "salaire": 100000,
-<a id="__codelineno-28-66" name="__codelineno-28-66"></a>        "impôt": 4230,
-<a id="__codelineno-28-67" name="__codelineno-28-67"></a>        "surcôte": 0,
-<a id="__codelineno-28-68" name="__codelineno-28-68"></a>        "décôte": 0,
-<a id="__codelineno-28-69" name="__codelineno-28-69"></a>        "réduction": 0,
-<a id="__codelineno-28-70" name="__codelineno-28-70"></a>        "taux": 0.14
-<a id="__codelineno-28-71" name="__codelineno-28-71"></a>    },
-<a id="__codelineno-28-72" name="__codelineno-28-72"></a>    {
-<a id="__codelineno-28-73" name="__codelineno-28-73"></a>        "marié": "non",
-<a id="__codelineno-28-74" name="__codelineno-28-74"></a>        "enfants": 0,
-<a id="__codelineno-28-75" name="__codelineno-28-75"></a>        "salaire": 100000,
-<a id="__codelineno-28-76" name="__codelineno-28-76"></a>        "impôt": 22986,
-<a id="__codelineno-28-77" name="__codelineno-28-77"></a>        "surcôte": 0,
-<a id="__codelineno-28-78" name="__codelineno-28-78"></a>        "décôte": 0,
-<a id="__codelineno-28-79" name="__codelineno-28-79"></a>        "réduction": 0,
-<a id="__codelineno-28-80" name="__codelineno-28-80"></a>        "taux": 0.41
-<a id="__codelineno-28-81" name="__codelineno-28-81"></a>    },
-<a id="__codelineno-28-82" name="__codelineno-28-82"></a>    {
-<a id="__codelineno-28-83" name="__codelineno-28-83"></a>        "marié": "oui",
-<a id="__codelineno-28-84" name="__codelineno-28-84"></a>        "enfants": 2,
-<a id="__codelineno-28-85" name="__codelineno-28-85"></a>        "salaire": 30000,
-<a id="__codelineno-28-86" name="__codelineno-28-86"></a>        "impôt": 0,
-<a id="__codelineno-28-87" name="__codelineno-28-87"></a>        "surcôte": 0,
-<a id="__codelineno-28-88" name="__codelineno-28-88"></a>        "décôte": 0,
-<a id="__codelineno-28-89" name="__codelineno-28-89"></a>        "réduction": 0,
-<a id="__codelineno-28-90" name="__codelineno-28-90"></a>        "taux": 0.0
-<a id="__codelineno-28-91" name="__codelineno-28-91"></a>    },
-<a id="__codelineno-28-92" name="__codelineno-28-92"></a>    {
-<a id="__codelineno-28-93" name="__codelineno-28-93"></a>        "marié": "non",
-<a id="__codelineno-28-94" name="__codelineno-28-94"></a>        "enfants": 0,
-<a id="__codelineno-28-95" name="__codelineno-28-95"></a>        "salaire": 200000,
-<a id="__codelineno-28-96" name="__codelineno-28-96"></a>        "impôt": 64210,
-<a id="__codelineno-28-97" name="__codelineno-28-97"></a>        "surcôte": 7498,
-<a id="__codelineno-28-98" name="__codelineno-28-98"></a>        "décôte": 0,
-<a id="__codelineno-28-99" name="__codelineno-28-99"></a>        "réduction": 0,
-<a id="__codelineno-28-100" name="__codelineno-28-100"></a>        "taux": 0.45
-<a id="__codelineno-28-101" name="__codelineno-28-101"></a>    },
-<a id="__codelineno-28-102" name="__codelineno-28-102"></a>    {
-<a id="__codelineno-28-103" name="__codelineno-28-103"></a>        "marié": "oui",
-<a id="__codelineno-28-104" name="__codelineno-28-104"></a>        "enfants": 3,
-<a id="__codelineno-28-105" name="__codelineno-28-105"></a>        "salaire": 200000,
-<a id="__codelineno-28-106" name="__codelineno-28-106"></a>        "impôt": 42842,
-<a id="__codelineno-28-107" name="__codelineno-28-107"></a>        "surcôte": 17283,
-<a id="__codelineno-28-108" name="__codelineno-28-108"></a>        "décôte": 0,
-<a id="__codelineno-28-109" name="__codelineno-28-109"></a>        "réduction": 0,
-<a id="__codelineno-28-110" name="__codelineno-28-110"></a>        "taux": 0.41
-<a id="__codelineno-28-111" name="__codelineno-28-111"></a>    }
-<a id="__codelineno-28-112" name="__codelineno-28-112"></a>]
+<span class="normal"><a href="#__codelineno-28-112">112</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="p">[</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-28-3" name="__codelineno-28-3"></a><span class="w">        </span><span class="nt">"marié"</span><span class="p">:</span><span class="w"> </span><span class="s2">"oui"</span><span class="p">,</span>
+<a id="__codelineno-28-4" name="__codelineno-28-4"></a><span class="w">        </span><span class="nt">"enfants"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<a id="__codelineno-28-5" name="__codelineno-28-5"></a><span class="w">        </span><span class="nt">"salaire"</span><span class="p">:</span><span class="w"> </span><span class="mi">55555</span><span class="p">,</span>
+<a id="__codelineno-28-6" name="__codelineno-28-6"></a><span class="w">        </span><span class="nt">"impôt"</span><span class="p">:</span><span class="w"> </span><span class="mi">2814</span><span class="p">,</span>
+<a id="__codelineno-28-7" name="__codelineno-28-7"></a><span class="w">        </span><span class="nt">"surcôte"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-28-8" name="__codelineno-28-8"></a><span class="w">        </span><span class="nt">"décôte"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-28-9" name="__codelineno-28-9"></a><span class="w">        </span><span class="nt">"réduction"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-28-10" name="__codelineno-28-10"></a><span class="w">        </span><span class="nt">"taux"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.14</span>
+<a id="__codelineno-28-11" name="__codelineno-28-11"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-28-12" name="__codelineno-28-12"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-28-13" name="__codelineno-28-13"></a><span class="w">        </span><span class="nt">"marié"</span><span class="p">:</span><span class="w"> </span><span class="s2">"oui"</span><span class="p">,</span>
+<a id="__codelineno-28-14" name="__codelineno-28-14"></a><span class="w">        </span><span class="nt">"enfants"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<a id="__codelineno-28-15" name="__codelineno-28-15"></a><span class="w">        </span><span class="nt">"salaire"</span><span class="p">:</span><span class="w"> </span><span class="mi">50000</span><span class="p">,</span>
+<a id="__codelineno-28-16" name="__codelineno-28-16"></a><span class="w">        </span><span class="nt">"impôt"</span><span class="p">:</span><span class="w"> </span><span class="mi">1384</span><span class="p">,</span>
+<a id="__codelineno-28-17" name="__codelineno-28-17"></a><span class="w">        </span><span class="nt">"surcôte"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-28-18" name="__codelineno-28-18"></a><span class="w">        </span><span class="nt">"décôte"</span><span class="p">:</span><span class="w"> </span><span class="mi">384</span><span class="p">,</span>
+<a id="__codelineno-28-19" name="__codelineno-28-19"></a><span class="w">        </span><span class="nt">"réduction"</span><span class="p">:</span><span class="w"> </span><span class="mi">347</span><span class="p">,</span>
+<a id="__codelineno-28-20" name="__codelineno-28-20"></a><span class="w">        </span><span class="nt">"taux"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.14</span>
+<a id="__codelineno-28-21" name="__codelineno-28-21"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-28-22" name="__codelineno-28-22"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-28-23" name="__codelineno-28-23"></a><span class="w">        </span><span class="nt">"marié"</span><span class="p">:</span><span class="w"> </span><span class="s2">"oui"</span><span class="p">,</span>
+<a id="__codelineno-28-24" name="__codelineno-28-24"></a><span class="w">        </span><span class="nt">"enfants"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<a id="__codelineno-28-25" name="__codelineno-28-25"></a><span class="w">        </span><span class="nt">"salaire"</span><span class="p">:</span><span class="w"> </span><span class="mi">50000</span><span class="p">,</span>
+<a id="__codelineno-28-26" name="__codelineno-28-26"></a><span class="w">        </span><span class="nt">"impôt"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-28-27" name="__codelineno-28-27"></a><span class="w">        </span><span class="nt">"surcôte"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-28-28" name="__codelineno-28-28"></a><span class="w">        </span><span class="nt">"décôte"</span><span class="p">:</span><span class="w"> </span><span class="mi">720</span><span class="p">,</span>
+<a id="__codelineno-28-29" name="__codelineno-28-29"></a><span class="w">        </span><span class="nt">"réduction"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-28-30" name="__codelineno-28-30"></a><span class="w">        </span><span class="nt">"taux"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.14</span>
+<a id="__codelineno-28-31" name="__codelineno-28-31"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-28-32" name="__codelineno-28-32"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-28-33" name="__codelineno-28-33"></a><span class="w">        </span><span class="nt">"marié"</span><span class="p">:</span><span class="w"> </span><span class="s2">"non"</span><span class="p">,</span>
+<a id="__codelineno-28-34" name="__codelineno-28-34"></a><span class="w">        </span><span class="nt">"enfants"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<a id="__codelineno-28-35" name="__codelineno-28-35"></a><span class="w">        </span><span class="nt">"salaire"</span><span class="p">:</span><span class="w"> </span><span class="mi">100000</span><span class="p">,</span>
+<a id="__codelineno-28-36" name="__codelineno-28-36"></a><span class="w">        </span><span class="nt">"impôt"</span><span class="p">:</span><span class="w"> </span><span class="mi">19884</span><span class="p">,</span>
+<a id="__codelineno-28-37" name="__codelineno-28-37"></a><span class="w">        </span><span class="nt">"surcôte"</span><span class="p">:</span><span class="w"> </span><span class="mi">4480</span><span class="p">,</span>
+<a id="__codelineno-28-38" name="__codelineno-28-38"></a><span class="w">        </span><span class="nt">"décôte"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-28-39" name="__codelineno-28-39"></a><span class="w">        </span><span class="nt">"réduction"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-28-40" name="__codelineno-28-40"></a><span class="w">        </span><span class="nt">"taux"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.41</span>
+<a id="__codelineno-28-41" name="__codelineno-28-41"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-28-42" name="__codelineno-28-42"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-28-43" name="__codelineno-28-43"></a><span class="w">        </span><span class="nt">"marié"</span><span class="p">:</span><span class="w"> </span><span class="s2">"non"</span><span class="p">,</span>
+<a id="__codelineno-28-44" name="__codelineno-28-44"></a><span class="w">        </span><span class="nt">"enfants"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<a id="__codelineno-28-45" name="__codelineno-28-45"></a><span class="w">        </span><span class="nt">"salaire"</span><span class="p">:</span><span class="w"> </span><span class="mi">100000</span><span class="p">,</span>
+<a id="__codelineno-28-46" name="__codelineno-28-46"></a><span class="w">        </span><span class="nt">"impôt"</span><span class="p">:</span><span class="w"> </span><span class="mi">16782</span><span class="p">,</span>
+<a id="__codelineno-28-47" name="__codelineno-28-47"></a><span class="w">        </span><span class="nt">"surcôte"</span><span class="p">:</span><span class="w"> </span><span class="mi">7176</span><span class="p">,</span>
+<a id="__codelineno-28-48" name="__codelineno-28-48"></a><span class="w">        </span><span class="nt">"décôte"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-28-49" name="__codelineno-28-49"></a><span class="w">        </span><span class="nt">"réduction"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-28-50" name="__codelineno-28-50"></a><span class="w">        </span><span class="nt">"taux"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.41</span>
+<a id="__codelineno-28-51" name="__codelineno-28-51"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-28-52" name="__codelineno-28-52"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-28-53" name="__codelineno-28-53"></a><span class="w">        </span><span class="nt">"marié"</span><span class="p">:</span><span class="w"> </span><span class="s2">"oui"</span><span class="p">,</span>
+<a id="__codelineno-28-54" name="__codelineno-28-54"></a><span class="w">        </span><span class="nt">"enfants"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<a id="__codelineno-28-55" name="__codelineno-28-55"></a><span class="w">        </span><span class="nt">"salaire"</span><span class="p">:</span><span class="w"> </span><span class="mi">100000</span><span class="p">,</span>
+<a id="__codelineno-28-56" name="__codelineno-28-56"></a><span class="w">        </span><span class="nt">"impôt"</span><span class="p">:</span><span class="w"> </span><span class="mi">9200</span><span class="p">,</span>
+<a id="__codelineno-28-57" name="__codelineno-28-57"></a><span class="w">        </span><span class="nt">"surcôte"</span><span class="p">:</span><span class="w"> </span><span class="mi">2180</span><span class="p">,</span>
+<a id="__codelineno-28-58" name="__codelineno-28-58"></a><span class="w">        </span><span class="nt">"décôte"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-28-59" name="__codelineno-28-59"></a><span class="w">        </span><span class="nt">"réduction"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-28-60" name="__codelineno-28-60"></a><span class="w">        </span><span class="nt">"taux"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.3</span>
+<a id="__codelineno-28-61" name="__codelineno-28-61"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-28-62" name="__codelineno-28-62"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-28-63" name="__codelineno-28-63"></a><span class="w">        </span><span class="nt">"marié"</span><span class="p">:</span><span class="w"> </span><span class="s2">"oui"</span><span class="p">,</span>
+<a id="__codelineno-28-64" name="__codelineno-28-64"></a><span class="w">        </span><span class="nt">"enfants"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+<a id="__codelineno-28-65" name="__codelineno-28-65"></a><span class="w">        </span><span class="nt">"salaire"</span><span class="p">:</span><span class="w"> </span><span class="mi">100000</span><span class="p">,</span>
+<a id="__codelineno-28-66" name="__codelineno-28-66"></a><span class="w">        </span><span class="nt">"impôt"</span><span class="p">:</span><span class="w"> </span><span class="mi">4230</span><span class="p">,</span>
+<a id="__codelineno-28-67" name="__codelineno-28-67"></a><span class="w">        </span><span class="nt">"surcôte"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-28-68" name="__codelineno-28-68"></a><span class="w">        </span><span class="nt">"décôte"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-28-69" name="__codelineno-28-69"></a><span class="w">        </span><span class="nt">"réduction"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-28-70" name="__codelineno-28-70"></a><span class="w">        </span><span class="nt">"taux"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.14</span>
+<a id="__codelineno-28-71" name="__codelineno-28-71"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-28-72" name="__codelineno-28-72"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-28-73" name="__codelineno-28-73"></a><span class="w">        </span><span class="nt">"marié"</span><span class="p">:</span><span class="w"> </span><span class="s2">"non"</span><span class="p">,</span>
+<a id="__codelineno-28-74" name="__codelineno-28-74"></a><span class="w">        </span><span class="nt">"enfants"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-28-75" name="__codelineno-28-75"></a><span class="w">        </span><span class="nt">"salaire"</span><span class="p">:</span><span class="w"> </span><span class="mi">100000</span><span class="p">,</span>
+<a id="__codelineno-28-76" name="__codelineno-28-76"></a><span class="w">        </span><span class="nt">"impôt"</span><span class="p">:</span><span class="w"> </span><span class="mi">22986</span><span class="p">,</span>
+<a id="__codelineno-28-77" name="__codelineno-28-77"></a><span class="w">        </span><span class="nt">"surcôte"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-28-78" name="__codelineno-28-78"></a><span class="w">        </span><span class="nt">"décôte"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-28-79" name="__codelineno-28-79"></a><span class="w">        </span><span class="nt">"réduction"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-28-80" name="__codelineno-28-80"></a><span class="w">        </span><span class="nt">"taux"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.41</span>
+<a id="__codelineno-28-81" name="__codelineno-28-81"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-28-82" name="__codelineno-28-82"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-28-83" name="__codelineno-28-83"></a><span class="w">        </span><span class="nt">"marié"</span><span class="p">:</span><span class="w"> </span><span class="s2">"oui"</span><span class="p">,</span>
+<a id="__codelineno-28-84" name="__codelineno-28-84"></a><span class="w">        </span><span class="nt">"enfants"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<a id="__codelineno-28-85" name="__codelineno-28-85"></a><span class="w">        </span><span class="nt">"salaire"</span><span class="p">:</span><span class="w"> </span><span class="mi">30000</span><span class="p">,</span>
+<a id="__codelineno-28-86" name="__codelineno-28-86"></a><span class="w">        </span><span class="nt">"impôt"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-28-87" name="__codelineno-28-87"></a><span class="w">        </span><span class="nt">"surcôte"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-28-88" name="__codelineno-28-88"></a><span class="w">        </span><span class="nt">"décôte"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-28-89" name="__codelineno-28-89"></a><span class="w">        </span><span class="nt">"réduction"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-28-90" name="__codelineno-28-90"></a><span class="w">        </span><span class="nt">"taux"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span>
+<a id="__codelineno-28-91" name="__codelineno-28-91"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-28-92" name="__codelineno-28-92"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-28-93" name="__codelineno-28-93"></a><span class="w">        </span><span class="nt">"marié"</span><span class="p">:</span><span class="w"> </span><span class="s2">"non"</span><span class="p">,</span>
+<a id="__codelineno-28-94" name="__codelineno-28-94"></a><span class="w">        </span><span class="nt">"enfants"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-28-95" name="__codelineno-28-95"></a><span class="w">        </span><span class="nt">"salaire"</span><span class="p">:</span><span class="w"> </span><span class="mi">200000</span><span class="p">,</span>
+<a id="__codelineno-28-96" name="__codelineno-28-96"></a><span class="w">        </span><span class="nt">"impôt"</span><span class="p">:</span><span class="w"> </span><span class="mi">64210</span><span class="p">,</span>
+<a id="__codelineno-28-97" name="__codelineno-28-97"></a><span class="w">        </span><span class="nt">"surcôte"</span><span class="p">:</span><span class="w"> </span><span class="mi">7498</span><span class="p">,</span>
+<a id="__codelineno-28-98" name="__codelineno-28-98"></a><span class="w">        </span><span class="nt">"décôte"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-28-99" name="__codelineno-28-99"></a><span class="w">        </span><span class="nt">"réduction"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-28-100" name="__codelineno-28-100"></a><span class="w">        </span><span class="nt">"taux"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.45</span>
+<a id="__codelineno-28-101" name="__codelineno-28-101"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-28-102" name="__codelineno-28-102"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-28-103" name="__codelineno-28-103"></a><span class="w">        </span><span class="nt">"marié"</span><span class="p">:</span><span class="w"> </span><span class="s2">"oui"</span><span class="p">,</span>
+<a id="__codelineno-28-104" name="__codelineno-28-104"></a><span class="w">        </span><span class="nt">"enfants"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<a id="__codelineno-28-105" name="__codelineno-28-105"></a><span class="w">        </span><span class="nt">"salaire"</span><span class="p">:</span><span class="w"> </span><span class="mi">200000</span><span class="p">,</span>
+<a id="__codelineno-28-106" name="__codelineno-28-106"></a><span class="w">        </span><span class="nt">"impôt"</span><span class="p">:</span><span class="w"> </span><span class="mi">42842</span><span class="p">,</span>
+<a id="__codelineno-28-107" name="__codelineno-28-107"></a><span class="w">        </span><span class="nt">"surcôte"</span><span class="p">:</span><span class="w"> </span><span class="mi">17283</span><span class="p">,</span>
+<a id="__codelineno-28-108" name="__codelineno-28-108"></a><span class="w">        </span><span class="nt">"décôte"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-28-109" name="__codelineno-28-109"></a><span class="w">        </span><span class="nt">"réduction"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-28-110" name="__codelineno-28-110"></a><span class="w">        </span><span class="nt">"taux"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.41</span>
+<a id="__codelineno-28-111" name="__codelineno-28-111"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-28-112" name="__codelineno-28-112"></a><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
 <p>On notera que le contribuable n° 2 du fichier <em>[taxpayersdata.json]</em>, dont le nombre d&#x27;enfants était la chaîne &quot;2&quot;, a dans les résultats le nombre d&#x27;enfants 2 (ligne 14) : la chaîne a été convertie en entier par la couche <em>[dao]</em>. Ces résultats sont conformes à ceux de la version 4.</p>
 <h2 id="135-tests-phpunit">13.5. <span style="color: #2e74b5">Tests <em>[PHPUnit]</em></span></h2>

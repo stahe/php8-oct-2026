@@ -2490,10 +2490,10 @@
 <span class="normal"><a href="#__codelineno-13-2">2</a></span>
 <span class="normal"><a href="#__codelineno-13-3">3</a></span>
 <span class="normal"><a href="#__codelineno-13-4">4</a></span>
-<span class="normal"><a href="#__codelineno-13-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="k">&gt; </span><span class="ge">php classes-05.php</span>
+<span class="normal"><a href="#__codelineno-13-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>&gt; php classes-05.php
 <a id="__codelineno-13-2" name="__codelineno-13-2"></a>.../php8-oct-2026/scripts-console/classes/Personne.php
 <a id="__codelineno-13-3" name="__codelineno-13-3"></a>Exemple1, personne=[Paul,Langevin,48]
-<a id="__codelineno-13-4" name="__codelineno-13-4"></a>Exemple2, erreur : Exemples\Personne::__construct(): Argument <span class="ni">#3</span> ($age) must be of type int, string given, called in .../php8-oct-2026/scripts-console/classes/classes-05.php on line 21
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a>Exemple2, erreur : Exemples\Personne::__construct(): Argument #3 ($age) must be of type int, string given, called in .../php8-oct-2026/scripts-console/classes/classes-05.php on line 21
 <a id="__codelineno-13-5" name="__codelineno-13-5"></a>Exemple3, erreur : Le prénom doit être non vide
 </code></pre></div></td></tr></table></div>
 <p>Commentaires</p>
@@ -2526,18 +2526,18 @@
 <span class="normal"><a href="#__codelineno-14-80">80</a></span>
 <span class="normal"><a href="#__codelineno-14-81">81</a></span>
 <span class="normal"><a href="#__codelineno-14-82">82</a></span>
-<span class="normal"><a href="#__codelineno-14-83">83</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-72" name="__codelineno-14-72"></a>    <span class="n">public</span> <span class="n">function</span> <span class="n">initWithPersonne</span><span class="p">(</span><span class="n">Personne</span> <span class="err">$</span><span class="n">p</span><span class="p">):</span> <span class="n">void</span>
-<a id="__codelineno-14-73" name="__codelineno-14-73"></a>    <span class="p">{</span>
-<a id="__codelineno-14-74" name="__codelineno-14-74"></a>        <span class="o">//</span> <span class="n">initialise</span> <span class="n">l</span><span class="s1">'objet courant avec une personne $p</span>
-<a id="__codelineno-14-75" name="__codelineno-14-75"></a>        <span class="err">$</span><span class="n">this</span><span class="o">-&gt;</span><span class="n">__construct</span><span class="p">(</span><span class="err">$</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">prenom</span><span class="p">,</span> <span class="err">$</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">nom</span><span class="p">,</span> <span class="err">$</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">age</span><span class="p">);</span>
-<a id="__codelineno-14-76" name="__codelineno-14-76"></a>    <span class="p">}</span>
+<span class="normal"><a href="#__codelineno-14-83">83</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-72" name="__codelineno-14-72"></a><span class="x">    public function initWithPersonne(Personne $p): void</span>
+<a id="__codelineno-14-73" name="__codelineno-14-73"></a><span class="x">    {</span>
+<a id="__codelineno-14-74" name="__codelineno-14-74"></a><span class="x">        // initialise l'objet courant avec une personne $p</span>
+<a id="__codelineno-14-75" name="__codelineno-14-75"></a><span class="x">        $this-&gt;__construct($p-&gt;prenom, $p-&gt;nom, $p-&gt;age);</span>
+<a id="__codelineno-14-76" name="__codelineno-14-76"></a><span class="x">    }</span>
 <a id="__codelineno-14-77" name="__codelineno-14-77"></a>
-<a id="__codelineno-14-78" name="__codelineno-14-78"></a>    <span class="o">//</span> <span class="n">méthode</span> <span class="n">statique</span> <span class="n">de</span> <span class="n">fabrication</span> <span class="p">(</span><span class="n">constructeur</span> <span class="n">nommé</span><span class="p">)</span>
-<a id="__codelineno-14-79" name="__codelineno-14-79"></a>    <span class="n">public</span> <span class="n">static</span> <span class="n">function</span> <span class="n">fromPersonne</span><span class="p">(</span><span class="n">Personne</span> <span class="err">$</span><span class="n">p</span><span class="p">):</span> <span class="bp">self</span>
-<a id="__codelineno-14-80" name="__codelineno-14-80"></a>    <span class="p">{</span>
-<a id="__codelineno-14-81" name="__codelineno-14-81"></a>        <span class="o">//</span> <span class="n">crée</span> <span class="n">une</span> <span class="n">nouvelle</span> <span class="n">personne</span> <span class="n">copie</span> <span class="n">de</span> <span class="n">la</span> <span class="n">personne</span> <span class="err">$</span><span class="n">p</span>
-<a id="__codelineno-14-82" name="__codelineno-14-82"></a>        <span class="k">return</span> <span class="n">new</span> <span class="bp">self</span><span class="p">(</span><span class="err">$</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">prenom</span><span class="p">,</span> <span class="err">$</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">nom</span><span class="p">,</span> <span class="err">$</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">age</span><span class="p">);</span>
-<a id="__codelineno-14-83" name="__codelineno-14-83"></a>    <span class="p">}</span>
+<a id="__codelineno-14-78" name="__codelineno-14-78"></a><span class="x">    // méthode statique de fabrication (constructeur nommé)</span>
+<a id="__codelineno-14-79" name="__codelineno-14-79"></a><span class="x">    public static function fromPersonne(Personne $p): self</span>
+<a id="__codelineno-14-80" name="__codelineno-14-80"></a><span class="x">    {</span>
+<a id="__codelineno-14-81" name="__codelineno-14-81"></a><span class="x">        // crée une nouvelle personne copie de la personne $p</span>
+<a id="__codelineno-14-82" name="__codelineno-14-82"></a><span class="x">        return new self($p-&gt;prenom, $p-&gt;nom, $p-&gt;age);</span>
+<a id="__codelineno-14-83" name="__codelineno-14-83"></a><span class="x">    }</span>
 </code></pre></div></td></tr></table></div>
 <p>Commentaires</p>
 <ul>
@@ -2965,11 +2965,11 @@
 <span class="normal"><a href="#__codelineno-20-2">2</a></span>
 <span class="normal"><a href="#__codelineno-20-3">3</a></span>
 <span class="normal"><a href="#__codelineno-20-4">4</a></span>
-<span class="normal"><a href="#__codelineno-20-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="o">&gt;</span> <span class="n">php</span> <span class="n">classes</span><span class="o">-</span><span class="mf">24.</span><span class="n">php</span>
-<a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="n">Paul</span> <span class="n">Langevin</span> <span class="p">:</span> <span class="mi">70</span> <span class="n">euros</span>
-<a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="n">Erreur</span> <span class="p">:</span> <span class="n">Cannot</span> <span class="n">modify</span> <span class="n">private</span><span class="p">(</span><span class="nb">set</span><span class="p">)</span> <span class="nb">property</span> <span class="n">CompteBancaire</span><span class="p">::</span><span class="err">$</span><span class="n">solde</span> <span class="kn">from</span><span class="w"> </span><span class="nn">global</span> <span class="n">scope</span>
-<a id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="n">Erreur</span> <span class="p">:</span> <span class="n">Retrait</span> <span class="n">de</span> <span class="mi">500</span> <span class="n">impossible</span>
-<a id="__codelineno-20-5" name="__codelineno-20-5"></a><span class="n">Paul</span> <span class="n">Langevin</span> <span class="p">:</span> <span class="mi">70</span> <span class="n">euros</span>
+<span class="normal"><a href="#__codelineno-20-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a>&gt; php classes-24.php
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a>Paul Langevin : 70 euros
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a>Erreur : Cannot modify private(set) property CompteBancaire::$solde from global scope
+<a id="__codelineno-20-4" name="__codelineno-20-4"></a>Erreur : Retrait de 500 impossible
+<a id="__codelineno-20-5" name="__codelineno-20-5"></a>Paul Langevin : 70 euros
 </code></pre></div></td></tr></table></div>
 <p>Commentaires</p>
 <ul>
@@ -4468,37 +4468,37 @@
 <span class="normal"><a href="#__codelineno-50-28">28</a></span>
 <span class="normal"><a href="#__codelineno-50-29">29</a></span>
 <span class="normal"><a href="#__codelineno-50-30">30</a></span>
-<span class="normal"><a href="#__codelineno-50-31">31</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1"></a><span class="o">&gt;</span> <span class="n">php</span> <span class="n">classes</span><span class="o">-</span><span class="mf">19.</span><span class="n">php</span>
-<a id="__codelineno-50-2" name="__codelineno-50-2"></a><span class="o">---------------------------</span><span class="n">test1</span>
-<a id="__codelineno-50-3" name="__codelineno-50-3"></a><span class="n">parent</span> <span class="p">:</span>
-<a id="__codelineno-50-4" name="__codelineno-50-4"></a><span class="nb">object</span><span class="p">(</span><span class="n">SomeParent</span><span class="p">)</span><span class="c1">#1 (1) {</span>
-<a id="__codelineno-50-5" name="__codelineno-50-5"></a>  <span class="p">[</span><span class="s2">"attributeOfParent"</span><span class="p">:</span><span class="s2">"SomeParent"</span><span class="p">:</span><span class="n">private</span><span class="p">]</span><span class="o">=&gt;</span>
-<a id="__codelineno-50-6" name="__codelineno-50-6"></a>  <span class="nb">int</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-<a id="__codelineno-50-7" name="__codelineno-50-7"></a><span class="p">}</span>
-<a id="__codelineno-50-8" name="__codelineno-50-8"></a><span class="n">parent</span> <span class="p">:</span> <span class="n">attributeOfParent</span><span class="o">=</span><span class="mi">4</span>
+<span class="normal"><a href="#__codelineno-50-31">31</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1"></a>&gt; php classes-19.php
+<a id="__codelineno-50-2" name="__codelineno-50-2"></a>---------------------------test1
+<a id="__codelineno-50-3" name="__codelineno-50-3"></a>parent :
+<a id="__codelineno-50-4" name="__codelineno-50-4"></a>object(SomeParent)#1 (1) {
+<a id="__codelineno-50-5" name="__codelineno-50-5"></a>  ["attributeOfParent":"SomeParent":private]=&gt;
+<a id="__codelineno-50-6" name="__codelineno-50-6"></a>  int(4)
+<a id="__codelineno-50-7" name="__codelineno-50-7"></a>}
+<a id="__codelineno-50-8" name="__codelineno-50-8"></a>parent : attributeOfParent=4
 <a id="__codelineno-50-9" name="__codelineno-50-9"></a>
-<a id="__codelineno-50-10" name="__codelineno-50-10"></a><span class="ne">Warning</span><span class="p">:</span> <span class="n">Undefined</span> <span class="nb">property</span><span class="p">:</span> <span class="n">SomeParent</span><span class="p">::</span><span class="err">$</span><span class="n">attributeOfChild</span> <span class="ow">in</span> <span class="o">.../</span><span class="n">php8</span><span class="o">-</span><span class="nb">oct</span><span class="o">-</span><span class="mi">2026</span><span class="o">/</span><span class="n">scripts</span><span class="o">-</span><span class="n">console</span><span class="o">/</span><span class="n">classes</span><span class="o">/</span><span class="n">classes</span><span class="o">-</span><span class="mf">19.</span><span class="n">php</span> <span class="n">on</span> <span class="n">line</span> <span class="mi">19</span>
-<a id="__codelineno-50-11" name="__codelineno-50-11"></a><span class="n">parent</span> <span class="p">:</span> <span class="n">attributeOfChild</span><span class="o">=</span>
-<a id="__codelineno-50-12" name="__codelineno-50-12"></a><span class="o">---------------------------</span><span class="n">test2</span>
+<a id="__codelineno-50-10" name="__codelineno-50-10"></a>Warning: Undefined property: SomeParent::$attributeOfChild in .../php8-oct-2026/scripts-console/classes/classes-19.php on line 19
+<a id="__codelineno-50-11" name="__codelineno-50-11"></a>parent : attributeOfChild=
+<a id="__codelineno-50-12" name="__codelineno-50-12"></a>---------------------------test2
 <a id="__codelineno-50-13" name="__codelineno-50-13"></a>
-<a id="__codelineno-50-14" name="__codelineno-50-14"></a><span class="ne">Warning</span><span class="p">:</span> <span class="n">Undefined</span> <span class="nb">property</span><span class="p">:</span> <span class="n">SomeChild</span><span class="p">::</span><span class="err">$</span><span class="n">attributeOfParent</span> <span class="ow">in</span> <span class="o">.../</span><span class="n">php8</span><span class="o">-</span><span class="nb">oct</span><span class="o">-</span><span class="mi">2026</span><span class="o">/</span><span class="n">scripts</span><span class="o">-</span><span class="n">console</span><span class="o">/</span><span class="n">classes</span><span class="o">/</span><span class="n">classes</span><span class="o">-</span><span class="mf">19.</span><span class="n">php</span> <span class="n">on</span> <span class="n">line</span> <span class="mi">33</span>
-<a id="__codelineno-50-15" name="__codelineno-50-15"></a><span class="n">child</span> <span class="p">:</span> <span class="n">attributeOfParent</span><span class="o">=</span>
-<a id="__codelineno-50-16" name="__codelineno-50-16"></a><span class="n">child</span> <span class="p">:</span> <span class="n">attributeOfChild</span><span class="o">=</span><span class="mi">14</span>
-<a id="__codelineno-50-17" name="__codelineno-50-17"></a><span class="n">parent</span> <span class="p">:</span>
-<a id="__codelineno-50-18" name="__codelineno-50-18"></a><span class="nb">object</span><span class="p">(</span><span class="n">SomeChild</span><span class="p">)</span><span class="c1">#1 (2) {</span>
-<a id="__codelineno-50-19" name="__codelineno-50-19"></a>  <span class="p">[</span><span class="s2">"attributeOfParent"</span><span class="p">:</span><span class="s2">"SomeParent"</span><span class="p">:</span><span class="n">private</span><span class="p">]</span><span class="o">=&gt;</span>
-<a id="__codelineno-50-20" name="__codelineno-50-20"></a>  <span class="nb">int</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-<a id="__codelineno-50-21" name="__codelineno-50-21"></a>  <span class="p">[</span><span class="s2">"attributeOfChild"</span><span class="p">:</span><span class="s2">"SomeChild"</span><span class="p">:</span><span class="n">private</span><span class="p">]</span><span class="o">=&gt;</span>
-<a id="__codelineno-50-22" name="__codelineno-50-22"></a>  <span class="nb">int</span><span class="p">(</span><span class="mi">14</span><span class="p">)</span>
-<a id="__codelineno-50-23" name="__codelineno-50-23"></a><span class="p">}</span>
-<a id="__codelineno-50-24" name="__codelineno-50-24"></a><span class="n">parent</span> <span class="p">:</span> <span class="n">attributeOfParent</span><span class="o">=</span><span class="mi">4</span>
+<a id="__codelineno-50-14" name="__codelineno-50-14"></a>Warning: Undefined property: SomeChild::$attributeOfParent in .../php8-oct-2026/scripts-console/classes/classes-19.php on line 33
+<a id="__codelineno-50-15" name="__codelineno-50-15"></a>child : attributeOfParent=
+<a id="__codelineno-50-16" name="__codelineno-50-16"></a>child : attributeOfChild=14
+<a id="__codelineno-50-17" name="__codelineno-50-17"></a>parent :
+<a id="__codelineno-50-18" name="__codelineno-50-18"></a>object(SomeChild)#1 (2) {
+<a id="__codelineno-50-19" name="__codelineno-50-19"></a>  ["attributeOfParent":"SomeParent":private]=&gt;
+<a id="__codelineno-50-20" name="__codelineno-50-20"></a>  int(4)
+<a id="__codelineno-50-21" name="__codelineno-50-21"></a>  ["attributeOfChild":"SomeChild":private]=&gt;
+<a id="__codelineno-50-22" name="__codelineno-50-22"></a>  int(14)
+<a id="__codelineno-50-23" name="__codelineno-50-23"></a>}
+<a id="__codelineno-50-24" name="__codelineno-50-24"></a>parent : attributeOfParent=4
 <a id="__codelineno-50-25" name="__codelineno-50-25"></a>
-<a id="__codelineno-50-26" name="__codelineno-50-26"></a><span class="n">Fatal</span> <span class="n">error</span><span class="p">:</span> <span class="n">Uncaught</span> <span class="n">Error</span><span class="p">:</span> <span class="n">Cannot</span> <span class="n">access</span> <span class="n">private</span> <span class="nb">property</span> <span class="n">SomeChild</span><span class="p">::</span><span class="err">$</span><span class="n">attributeOfChild</span> <span class="ow">in</span> <span class="o">.../</span><span class="n">php8</span><span class="o">-</span><span class="nb">oct</span><span class="o">-</span><span class="mi">2026</span><span class="o">/</span><span class="n">scripts</span><span class="o">-</span><span class="n">console</span><span class="o">/</span><span class="n">classes</span><span class="o">/</span><span class="n">classes</span><span class="o">-</span><span class="mf">19.</span><span class="n">php</span><span class="p">:</span><span class="mi">19</span>
-<a id="__codelineno-50-27" name="__codelineno-50-27"></a><span class="n">Stack</span> <span class="n">trace</span><span class="p">:</span>
-<a id="__codelineno-50-28" name="__codelineno-50-28"></a><span class="c1">#0 .../php8-oct-2026/scripts-console/classes/classes-19.php(36): SomeParent-&gt;doTest()</span>
-<a id="__codelineno-50-29" name="__codelineno-50-29"></a><span class="c1">#1 .../php8-oct-2026/scripts-console/classes/classes-19.php(44): SomeChild-&gt;doTest()</span>
-<a id="__codelineno-50-30" name="__codelineno-50-30"></a><span class="c1">#2 {main}</span>
-<a id="__codelineno-50-31" name="__codelineno-50-31"></a>  <span class="n">thrown</span> <span class="ow">in</span> <span class="o">.../</span><span class="n">php8</span><span class="o">-</span><span class="nb">oct</span><span class="o">-</span><span class="mi">2026</span><span class="o">/</span><span class="n">scripts</span><span class="o">-</span><span class="n">console</span><span class="o">/</span><span class="n">classes</span><span class="o">/</span><span class="n">classes</span><span class="o">-</span><span class="mf">19.</span><span class="n">php</span> <span class="n">on</span> <span class="n">line</span> <span class="mi">19</span>
+<a id="__codelineno-50-26" name="__codelineno-50-26"></a>Fatal error: Uncaught Error: Cannot access private property SomeChild::$attributeOfChild in .../php8-oct-2026/scripts-console/classes/classes-19.php:19
+<a id="__codelineno-50-27" name="__codelineno-50-27"></a>Stack trace:
+<a id="__codelineno-50-28" name="__codelineno-50-28"></a>#0 .../php8-oct-2026/scripts-console/classes/classes-19.php(36): SomeParent-&gt;doTest()
+<a id="__codelineno-50-29" name="__codelineno-50-29"></a>#1 .../php8-oct-2026/scripts-console/classes/classes-19.php(44): SomeChild-&gt;doTest()
+<a id="__codelineno-50-30" name="__codelineno-50-30"></a>#2 {main}
+<a id="__codelineno-50-31" name="__codelineno-50-31"></a>  thrown in .../php8-oct-2026/scripts-console/classes/classes-19.php on line 19
 </code></pre></div></td></tr></table></div>
 <p>Commentaires</p>
 <ul>
@@ -4633,35 +4633,35 @@
 <span class="normal"><a href="#__codelineno-52-26">26</a></span>
 <span class="normal"><a href="#__codelineno-52-27">27</a></span>
 <span class="normal"><a href="#__codelineno-52-28">28</a></span>
-<span class="normal"><a href="#__codelineno-52-29">29</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1"></a><span class="o">&gt;</span> <span class="n">php</span> <span class="n">classes</span><span class="o">-</span><span class="mf">20.</span><span class="n">php</span>
-<a id="__codelineno-52-2" name="__codelineno-52-2"></a><span class="o">---------------------------</span><span class="n">test1</span>
-<a id="__codelineno-52-3" name="__codelineno-52-3"></a><span class="n">parent</span> <span class="p">:</span>
-<a id="__codelineno-52-4" name="__codelineno-52-4"></a><span class="nb">object</span><span class="p">(</span><span class="n">SomeParent</span><span class="p">)</span><span class="c1">#1 (1) {</span>
-<a id="__codelineno-52-5" name="__codelineno-52-5"></a>  <span class="p">[</span><span class="s2">"attributeOfParent"</span><span class="p">:</span><span class="n">protected</span><span class="p">]</span><span class="o">=&gt;</span>
-<a id="__codelineno-52-6" name="__codelineno-52-6"></a>  <span class="nb">int</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-<a id="__codelineno-52-7" name="__codelineno-52-7"></a><span class="p">}</span>
-<a id="__codelineno-52-8" name="__codelineno-52-8"></a><span class="n">parent</span> <span class="p">:</span> <span class="n">attributeOfParent</span><span class="o">=</span><span class="mi">4</span>
+<span class="normal"><a href="#__codelineno-52-29">29</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1"></a>&gt; php classes-20.php
+<a id="__codelineno-52-2" name="__codelineno-52-2"></a>---------------------------test1
+<a id="__codelineno-52-3" name="__codelineno-52-3"></a>parent :
+<a id="__codelineno-52-4" name="__codelineno-52-4"></a>object(SomeParent)#1 (1) {
+<a id="__codelineno-52-5" name="__codelineno-52-5"></a>  ["attributeOfParent":protected]=&gt;
+<a id="__codelineno-52-6" name="__codelineno-52-6"></a>  int(4)
+<a id="__codelineno-52-7" name="__codelineno-52-7"></a>}
+<a id="__codelineno-52-8" name="__codelineno-52-8"></a>parent : attributeOfParent=4
 <a id="__codelineno-52-9" name="__codelineno-52-9"></a>
-<a id="__codelineno-52-10" name="__codelineno-52-10"></a><span class="ne">Warning</span><span class="p">:</span> <span class="n">Undefined</span> <span class="nb">property</span><span class="p">:</span> <span class="n">SomeParent</span><span class="p">::</span><span class="err">$</span><span class="n">attributeOfChild</span> <span class="ow">in</span> <span class="o">.../</span><span class="n">php8</span><span class="o">-</span><span class="nb">oct</span><span class="o">-</span><span class="mi">2026</span><span class="o">/</span><span class="n">scripts</span><span class="o">-</span><span class="n">console</span><span class="o">/</span><span class="n">classes</span><span class="o">/</span><span class="n">classes</span><span class="o">-</span><span class="mf">20.</span><span class="n">php</span> <span class="n">on</span> <span class="n">line</span> <span class="mi">19</span>
-<a id="__codelineno-52-11" name="__codelineno-52-11"></a><span class="n">parent</span> <span class="p">:</span> <span class="n">attributeOfChild</span><span class="o">=</span>
-<a id="__codelineno-52-12" name="__codelineno-52-12"></a><span class="o">---------------------------</span><span class="n">test2</span>
-<a id="__codelineno-52-13" name="__codelineno-52-13"></a><span class="n">child</span> <span class="p">:</span> <span class="n">attributeOfParent</span><span class="o">=</span><span class="mi">4</span>
-<a id="__codelineno-52-14" name="__codelineno-52-14"></a><span class="n">child</span> <span class="p">:</span> <span class="n">attributeOfChild</span><span class="o">=</span><span class="mi">14</span>
-<a id="__codelineno-52-15" name="__codelineno-52-15"></a><span class="n">parent</span> <span class="p">:</span>
-<a id="__codelineno-52-16" name="__codelineno-52-16"></a><span class="nb">object</span><span class="p">(</span><span class="n">SomeChild</span><span class="p">)</span><span class="c1">#1 (2) {</span>
-<a id="__codelineno-52-17" name="__codelineno-52-17"></a>  <span class="p">[</span><span class="s2">"attributeOfParent"</span><span class="p">:</span><span class="n">protected</span><span class="p">]</span><span class="o">=&gt;</span>
-<a id="__codelineno-52-18" name="__codelineno-52-18"></a>  <span class="nb">int</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-<a id="__codelineno-52-19" name="__codelineno-52-19"></a>  <span class="p">[</span><span class="s2">"attributeOfChild"</span><span class="p">:</span><span class="s2">"SomeChild"</span><span class="p">:</span><span class="n">private</span><span class="p">]</span><span class="o">=&gt;</span>
-<a id="__codelineno-52-20" name="__codelineno-52-20"></a>  <span class="nb">int</span><span class="p">(</span><span class="mi">14</span><span class="p">)</span>
-<a id="__codelineno-52-21" name="__codelineno-52-21"></a><span class="p">}</span>
-<a id="__codelineno-52-22" name="__codelineno-52-22"></a><span class="n">parent</span> <span class="p">:</span> <span class="n">attributeOfParent</span><span class="o">=</span><span class="mi">4</span>
+<a id="__codelineno-52-10" name="__codelineno-52-10"></a>Warning: Undefined property: SomeParent::$attributeOfChild in .../php8-oct-2026/scripts-console/classes/classes-20.php on line 19
+<a id="__codelineno-52-11" name="__codelineno-52-11"></a>parent : attributeOfChild=
+<a id="__codelineno-52-12" name="__codelineno-52-12"></a>---------------------------test2
+<a id="__codelineno-52-13" name="__codelineno-52-13"></a>child : attributeOfParent=4
+<a id="__codelineno-52-14" name="__codelineno-52-14"></a>child : attributeOfChild=14
+<a id="__codelineno-52-15" name="__codelineno-52-15"></a>parent :
+<a id="__codelineno-52-16" name="__codelineno-52-16"></a>object(SomeChild)#1 (2) {
+<a id="__codelineno-52-17" name="__codelineno-52-17"></a>  ["attributeOfParent":protected]=&gt;
+<a id="__codelineno-52-18" name="__codelineno-52-18"></a>  int(4)
+<a id="__codelineno-52-19" name="__codelineno-52-19"></a>  ["attributeOfChild":"SomeChild":private]=&gt;
+<a id="__codelineno-52-20" name="__codelineno-52-20"></a>  int(14)
+<a id="__codelineno-52-21" name="__codelineno-52-21"></a>}
+<a id="__codelineno-52-22" name="__codelineno-52-22"></a>parent : attributeOfParent=4
 <a id="__codelineno-52-23" name="__codelineno-52-23"></a>
-<a id="__codelineno-52-24" name="__codelineno-52-24"></a><span class="n">Fatal</span> <span class="n">error</span><span class="p">:</span> <span class="n">Uncaught</span> <span class="n">Error</span><span class="p">:</span> <span class="n">Cannot</span> <span class="n">access</span> <span class="n">private</span> <span class="nb">property</span> <span class="n">SomeChild</span><span class="p">::</span><span class="err">$</span><span class="n">attributeOfChild</span> <span class="ow">in</span> <span class="o">.../</span><span class="n">php8</span><span class="o">-</span><span class="nb">oct</span><span class="o">-</span><span class="mi">2026</span><span class="o">/</span><span class="n">scripts</span><span class="o">-</span><span class="n">console</span><span class="o">/</span><span class="n">classes</span><span class="o">/</span><span class="n">classes</span><span class="o">-</span><span class="mf">20.</span><span class="n">php</span><span class="p">:</span><span class="mi">19</span>
-<a id="__codelineno-52-25" name="__codelineno-52-25"></a><span class="n">Stack</span> <span class="n">trace</span><span class="p">:</span>
-<a id="__codelineno-52-26" name="__codelineno-52-26"></a><span class="c1">#0 .../php8-oct-2026/scripts-console/classes/classes-20.php(36): SomeParent-&gt;doTest()</span>
-<a id="__codelineno-52-27" name="__codelineno-52-27"></a><span class="c1">#1 .../php8-oct-2026/scripts-console/classes/classes-20.php(44): SomeChild-&gt;doTest()</span>
-<a id="__codelineno-52-28" name="__codelineno-52-28"></a><span class="c1">#2 {main}</span>
-<a id="__codelineno-52-29" name="__codelineno-52-29"></a>  <span class="n">thrown</span> <span class="ow">in</span> <span class="o">.../</span><span class="n">php8</span><span class="o">-</span><span class="nb">oct</span><span class="o">-</span><span class="mi">2026</span><span class="o">/</span><span class="n">scripts</span><span class="o">-</span><span class="n">console</span><span class="o">/</span><span class="n">classes</span><span class="o">/</span><span class="n">classes</span><span class="o">-</span><span class="mf">20.</span><span class="n">php</span> <span class="n">on</span> <span class="n">line</span> <span class="mi">19</span>
+<a id="__codelineno-52-24" name="__codelineno-52-24"></a>Fatal error: Uncaught Error: Cannot access private property SomeChild::$attributeOfChild in .../php8-oct-2026/scripts-console/classes/classes-20.php:19
+<a id="__codelineno-52-25" name="__codelineno-52-25"></a>Stack trace:
+<a id="__codelineno-52-26" name="__codelineno-52-26"></a>#0 .../php8-oct-2026/scripts-console/classes/classes-20.php(36): SomeParent-&gt;doTest()
+<a id="__codelineno-52-27" name="__codelineno-52-27"></a>#1 .../php8-oct-2026/scripts-console/classes/classes-20.php(44): SomeChild-&gt;doTest()
+<a id="__codelineno-52-28" name="__codelineno-52-28"></a>#2 {main}
+<a id="__codelineno-52-29" name="__codelineno-52-29"></a>  thrown in .../php8-oct-2026/scripts-console/classes/classes-20.php on line 19
 </code></pre></div></td></tr></table></div>
 <p>Commentaires</p>
 <ul>
@@ -4780,29 +4780,29 @@
 <span class="normal"><a href="#__codelineno-54-20">20</a></span>
 <span class="normal"><a href="#__codelineno-54-21">21</a></span>
 <span class="normal"><a href="#__codelineno-54-22">22</a></span>
-<span class="normal"><a href="#__codelineno-54-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1"></a><span class="o">&gt;</span> <span class="n">php</span> <span class="n">classes</span><span class="o">-</span><span class="mf">21.</span><span class="n">php</span>
-<a id="__codelineno-54-2" name="__codelineno-54-2"></a><span class="o">---------------------------</span><span class="n">test1</span>
-<a id="__codelineno-54-3" name="__codelineno-54-3"></a><span class="n">parent</span> <span class="p">:</span>
-<a id="__codelineno-54-4" name="__codelineno-54-4"></a><span class="nb">object</span><span class="p">(</span><span class="n">SomeParent</span><span class="p">)</span><span class="c1">#1 (1) {</span>
-<a id="__codelineno-54-5" name="__codelineno-54-5"></a>  <span class="p">[</span><span class="s2">"attributeOfParent"</span><span class="p">:</span><span class="n">protected</span><span class="p">]</span><span class="o">=&gt;</span>
-<a id="__codelineno-54-6" name="__codelineno-54-6"></a>  <span class="nb">int</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-<a id="__codelineno-54-7" name="__codelineno-54-7"></a><span class="p">}</span>
-<a id="__codelineno-54-8" name="__codelineno-54-8"></a><span class="n">parent</span> <span class="p">:</span> <span class="n">attributeOfParent</span><span class="o">=</span><span class="mi">4</span>
+<span class="normal"><a href="#__codelineno-54-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1"></a>&gt; php classes-21.php
+<a id="__codelineno-54-2" name="__codelineno-54-2"></a>---------------------------test1
+<a id="__codelineno-54-3" name="__codelineno-54-3"></a>parent :
+<a id="__codelineno-54-4" name="__codelineno-54-4"></a>object(SomeParent)#1 (1) {
+<a id="__codelineno-54-5" name="__codelineno-54-5"></a>  ["attributeOfParent":protected]=&gt;
+<a id="__codelineno-54-6" name="__codelineno-54-6"></a>  int(4)
+<a id="__codelineno-54-7" name="__codelineno-54-7"></a>}
+<a id="__codelineno-54-8" name="__codelineno-54-8"></a>parent : attributeOfParent=4
 <a id="__codelineno-54-9" name="__codelineno-54-9"></a>
-<a id="__codelineno-54-10" name="__codelineno-54-10"></a><span class="ne">Warning</span><span class="p">:</span> <span class="n">Undefined</span> <span class="nb">property</span><span class="p">:</span> <span class="n">SomeParent</span><span class="p">::</span><span class="err">$</span><span class="n">attributeOfChild</span> <span class="ow">in</span> <span class="o">.../</span><span class="n">php8</span><span class="o">-</span><span class="nb">oct</span><span class="o">-</span><span class="mi">2026</span><span class="o">/</span><span class="n">scripts</span><span class="o">-</span><span class="n">console</span><span class="o">/</span><span class="n">classes</span><span class="o">/</span><span class="n">classes</span><span class="o">-</span><span class="mf">21.</span><span class="n">php</span> <span class="n">on</span> <span class="n">line</span> <span class="mi">19</span>
-<a id="__codelineno-54-11" name="__codelineno-54-11"></a><span class="n">parent</span> <span class="p">:</span> <span class="n">attributeOfChild</span><span class="o">=</span>
-<a id="__codelineno-54-12" name="__codelineno-54-12"></a><span class="o">---------------------------</span><span class="n">test2</span>
-<a id="__codelineno-54-13" name="__codelineno-54-13"></a><span class="n">child</span> <span class="p">:</span> <span class="n">attributeOfParent</span><span class="o">=</span><span class="mi">4</span>
-<a id="__codelineno-54-14" name="__codelineno-54-14"></a><span class="n">child</span> <span class="p">:</span> <span class="n">attributeOfChild</span><span class="o">=</span><span class="mi">14</span>
-<a id="__codelineno-54-15" name="__codelineno-54-15"></a><span class="n">parent</span> <span class="p">:</span>
-<a id="__codelineno-54-16" name="__codelineno-54-16"></a><span class="nb">object</span><span class="p">(</span><span class="n">SomeChild</span><span class="p">)</span><span class="c1">#1 (2) {</span>
-<a id="__codelineno-54-17" name="__codelineno-54-17"></a>  <span class="p">[</span><span class="s2">"attributeOfParent"</span><span class="p">:</span><span class="n">protected</span><span class="p">]</span><span class="o">=&gt;</span>
-<a id="__codelineno-54-18" name="__codelineno-54-18"></a>  <span class="nb">int</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-<a id="__codelineno-54-19" name="__codelineno-54-19"></a>  <span class="p">[</span><span class="s2">"attributeOfChild"</span><span class="p">:</span><span class="n">protected</span><span class="p">]</span><span class="o">=&gt;</span>
-<a id="__codelineno-54-20" name="__codelineno-54-20"></a>  <span class="nb">int</span><span class="p">(</span><span class="mi">14</span><span class="p">)</span>
-<a id="__codelineno-54-21" name="__codelineno-54-21"></a><span class="p">}</span>
-<a id="__codelineno-54-22" name="__codelineno-54-22"></a><span class="n">parent</span> <span class="p">:</span> <span class="n">attributeOfParent</span><span class="o">=</span><span class="mi">4</span>
-<a id="__codelineno-54-23" name="__codelineno-54-23"></a><span class="n">parent</span> <span class="p">:</span> <span class="n">attributeOfChild</span><span class="o">=</span><span class="mi">14</span>
+<a id="__codelineno-54-10" name="__codelineno-54-10"></a>Warning: Undefined property: SomeParent::$attributeOfChild in .../php8-oct-2026/scripts-console/classes/classes-21.php on line 19
+<a id="__codelineno-54-11" name="__codelineno-54-11"></a>parent : attributeOfChild=
+<a id="__codelineno-54-12" name="__codelineno-54-12"></a>---------------------------test2
+<a id="__codelineno-54-13" name="__codelineno-54-13"></a>child : attributeOfParent=4
+<a id="__codelineno-54-14" name="__codelineno-54-14"></a>child : attributeOfChild=14
+<a id="__codelineno-54-15" name="__codelineno-54-15"></a>parent :
+<a id="__codelineno-54-16" name="__codelineno-54-16"></a>object(SomeChild)#1 (2) {
+<a id="__codelineno-54-17" name="__codelineno-54-17"></a>  ["attributeOfParent":protected]=&gt;
+<a id="__codelineno-54-18" name="__codelineno-54-18"></a>  int(4)
+<a id="__codelineno-54-19" name="__codelineno-54-19"></a>  ["attributeOfChild":protected]=&gt;
+<a id="__codelineno-54-20" name="__codelineno-54-20"></a>  int(14)
+<a id="__codelineno-54-21" name="__codelineno-54-21"></a>}
+<a id="__codelineno-54-22" name="__codelineno-54-22"></a>parent : attributeOfParent=4
+<a id="__codelineno-54-23" name="__codelineno-54-23"></a>parent : attributeOfChild=14
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 23 : cette fois-ci, à l&#x27;intérieur du parent, <strong><em>[$this]</em></strong> de type <em>[SomeChild]</em> (lignes 16-21) voit l&#x27;attribut protégé <em>[$attributeOfChild]</em> de sa propre classe <em>[SomeChild]</em>.</li>
@@ -4995,17 +4995,17 @@
 <span class="normal"><a href="#__codelineno-57-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-57-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-57-10">10</a></span>
-<span class="normal"><a href="#__codelineno-57-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1"></a><span class="o">&gt;</span> <span class="n">php</span> <span class="n">classes</span><span class="o">-</span><span class="mf">26.</span><span class="n">php</span>
-<a id="__codelineno-57-2" name="__codelineno-57-2"></a><span class="n">Monsieur</span> <span class="n">Paul</span> <span class="n">Langevin</span>
-<a id="__codelineno-57-3" name="__codelineno-57-3"></a><span class="n">Madame</span> <span class="n">Sylvie</span> <span class="n">Lefur</span>
-<a id="__codelineno-57-4" name="__codelineno-57-4"></a><span class="n">nom</span><span class="o">=</span><span class="n">Femme</span><span class="p">,</span> <span class="n">valeur</span><span class="o">=</span><span class="n">F</span>
-<a id="__codelineno-57-5" name="__codelineno-57-5"></a><span class="n">p1</span> <span class="n">est</span> <span class="n">un</span> <span class="n">homme</span> <span class="p">:</span> <span class="n">true</span>
-<a id="__codelineno-57-6" name="__codelineno-57-6"></a><span class="n">Femme</span> <span class="p">(</span><span class="n">F</span><span class="p">)</span> <span class="p">:</span> <span class="n">Madame</span>
-<a id="__codelineno-57-7" name="__codelineno-57-7"></a><span class="n">Homme</span> <span class="p">(</span><span class="n">H</span><span class="p">)</span> <span class="p">:</span> <span class="n">Monsieur</span>
-<a id="__codelineno-57-8" name="__codelineno-57-8"></a><span class="n">from</span><span class="p">(</span><span class="s1">'F'</span><span class="p">)</span> <span class="p">:</span> <span class="n">Femme</span>
-<a id="__codelineno-57-9" name="__codelineno-57-9"></a><span class="n">tryFrom</span><span class="p">(</span><span class="s1">'X'</span><span class="p">)</span> <span class="p">:</span> <span class="n">NULL</span>
-<a id="__codelineno-57-10" name="__codelineno-57-10"></a><span class="n">Erreur</span> <span class="p">:</span> <span class="s2">"X"</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">a</span> <span class="n">valid</span> <span class="n">backing</span> <span class="n">value</span> <span class="k">for</span> <span class="n">enum</span> <span class="n">Exemples</span>\<span class="n">Genre</span>
-<a id="__codelineno-57-11" name="__codelineno-57-11"></a><span class="n">Erreur</span> <span class="p">:</span> <span class="n">Personne</span><span class="p">::</span><span class="n">__construct</span><span class="p">():</span> <span class="n">Argument</span> <span class="c1">#3 ($genre) must be of type Exemples\Genre, string given, called in .../php8-oct-2026/scripts-console/classes/classes-26.php on line 47</span>
+<span class="normal"><a href="#__codelineno-57-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1"></a>&gt; php classes-26.php
+<a id="__codelineno-57-2" name="__codelineno-57-2"></a>Monsieur Paul Langevin
+<a id="__codelineno-57-3" name="__codelineno-57-3"></a>Madame Sylvie Lefur
+<a id="__codelineno-57-4" name="__codelineno-57-4"></a>nom=Femme, valeur=F
+<a id="__codelineno-57-5" name="__codelineno-57-5"></a>p1 est un homme : true
+<a id="__codelineno-57-6" name="__codelineno-57-6"></a>Femme (F) : Madame
+<a id="__codelineno-57-7" name="__codelineno-57-7"></a>Homme (H) : Monsieur
+<a id="__codelineno-57-8" name="__codelineno-57-8"></a>from('F') : Femme
+<a id="__codelineno-57-9" name="__codelineno-57-9"></a>tryFrom('X') : NULL
+<a id="__codelineno-57-10" name="__codelineno-57-10"></a>Erreur : "X" is not a valid backing value for enum Exemples\Genre
+<a id="__codelineno-57-11" name="__codelineno-57-11"></a>Erreur : Personne::__construct(): Argument #3 ($genre) must be of type Exemples\Genre, string given, called in .../php8-oct-2026/scripts-console/classes/classes-26.php on line 47
 </code></pre></div></td></tr></table></div>
 <p>Commentaires</p>
 <ul>
@@ -5527,24 +5527,24 @@
 <span class="normal"><a href="#__codelineno-62-63">63</a></span>
 <span class="normal"><a href="#__codelineno-62-64">64</a></span>
 <span class="normal"><a href="#__codelineno-62-65">65</a></span>
-<span class="normal"><a href="#__codelineno-62-66">66</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-62-49" name="__codelineno-62-49"></a>    // __toString
-<a id="__codelineno-62-50" name="__codelineno-62-50"></a>    public function __toString(): string
-<a id="__codelineno-62-51" name="__codelineno-62-51"></a>    {
-<a id="__codelineno-62-52" name="__codelineno-62-52"></a>        // on récupère les attributs de l'objet
-<a id="__codelineno-62-53" name="__codelineno-62-53"></a>        $attributes = $this-&gt;getAttributes();
-<a id="__codelineno-62-54" name="__codelineno-62-54"></a>        $enfants = $attributes["enfants"];
-<a id="__codelineno-62-55" name="__codelineno-62-55"></a>        if ($enfants !== null) {
-<a id="__codelineno-62-56" name="__codelineno-62-56"></a>            $attributes["enfants"] = [$enfants[0]-&gt;getAttributes(), $enfants[1]-&gt;getAttributes()];
-<a id="__codelineno-62-57" name="__codelineno-62-57"></a>        }
-<a id="__codelineno-62-58" name="__codelineno-62-58"></a>        // on rend la chaîne jSON des attributs
-<a id="__codelineno-62-59" name="__codelineno-62-59"></a>        return \json_encode($attributes, JSON_UNESCAPED_UNICODE);
-<a id="__codelineno-62-60" name="__codelineno-62-60"></a>    }
+<span class="normal"><a href="#__codelineno-62-66">66</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-62-49" name="__codelineno-62-49"></a><span class="x">    // __toString</span>
+<a id="__codelineno-62-50" name="__codelineno-62-50"></a><span class="x">    public function __toString(): string</span>
+<a id="__codelineno-62-51" name="__codelineno-62-51"></a><span class="x">    {</span>
+<a id="__codelineno-62-52" name="__codelineno-62-52"></a><span class="x">        // on récupère les attributs de l'objet</span>
+<a id="__codelineno-62-53" name="__codelineno-62-53"></a><span class="x">        $attributes = $this-&gt;getAttributes();</span>
+<a id="__codelineno-62-54" name="__codelineno-62-54"></a><span class="x">        $enfants = $attributes["enfants"];</span>
+<a id="__codelineno-62-55" name="__codelineno-62-55"></a><span class="x">        if ($enfants !== null) {</span>
+<a id="__codelineno-62-56" name="__codelineno-62-56"></a><span class="x">            $attributes["enfants"] = [$enfants[0]-&gt;getAttributes(), $enfants[1]-&gt;getAttributes()];</span>
+<a id="__codelineno-62-57" name="__codelineno-62-57"></a><span class="x">        }</span>
+<a id="__codelineno-62-58" name="__codelineno-62-58"></a><span class="x">        // on rend la chaîne jSON des attributs</span>
+<a id="__codelineno-62-59" name="__codelineno-62-59"></a><span class="x">        return \json_encode($attributes, JSON_UNESCAPED_UNICODE);</span>
+<a id="__codelineno-62-60" name="__codelineno-62-60"></a><span class="x">    }</span>
 <a id="__codelineno-62-61" name="__codelineno-62-61"></a>
-<a id="__codelineno-62-62" name="__codelineno-62-62"></a>    public function getAttributes(): array
-<a id="__codelineno-62-63" name="__codelineno-62-63"></a>    {
-<a id="__codelineno-62-64" name="__codelineno-62-64"></a>        return \get_object_vars($this);
-<a id="__codelineno-62-65" name="__codelineno-62-65"></a>    }
-<a id="__codelineno-62-66" name="__codelineno-62-66"></a>}
+<a id="__codelineno-62-62" name="__codelineno-62-62"></a><span class="x">    public function getAttributes(): array</span>
+<a id="__codelineno-62-63" name="__codelineno-62-63"></a><span class="x">    {</span>
+<a id="__codelineno-62-64" name="__codelineno-62-64"></a><span class="x">        return \get_object_vars($this);</span>
+<a id="__codelineno-62-65" name="__codelineno-62-65"></a><span class="x">    }</span>
+<a id="__codelineno-62-66" name="__codelineno-62-66"></a><span class="x">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Commentaires</p>
 <ul>
@@ -5699,69 +5699,69 @@
 <span class="normal"><a href="#__codelineno-65-108">108</a></span>
 <span class="normal"><a href="#__codelineno-65-109">109</a></span>
 <span class="normal"><a href="#__codelineno-65-110">110</a></span>
-<span class="normal"><a href="#__codelineno-65-111">111</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-65-49" name="__codelineno-65-49"></a>    // __toString
-<a id="__codelineno-65-50" name="__codelineno-65-50"></a>    public function __toString(): string
-<a id="__codelineno-65-51" name="__codelineno-65-51"></a>    {
-<a id="__codelineno-65-52" name="__codelineno-65-52"></a>        // on rend la chaîne jSON des attributs
-<a id="__codelineno-65-53" name="__codelineno-65-53"></a>        $attributes = [];
-<a id="__codelineno-65-54" name="__codelineno-65-54"></a>        $this-&gt;getRecursiveAttributes($attributes, $this, []);
-<a id="__codelineno-65-55" name="__codelineno-65-55"></a>        // chaîne jSON des attributs
-<a id="__codelineno-65-56" name="__codelineno-65-56"></a>        return \json_encode($attributes, JSON_UNESCAPED_UNICODE);
-<a id="__codelineno-65-57" name="__codelineno-65-57"></a>    }
+<span class="normal"><a href="#__codelineno-65-111">111</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-65-49" name="__codelineno-65-49"></a><span class="x">    // __toString</span>
+<a id="__codelineno-65-50" name="__codelineno-65-50"></a><span class="x">    public function __toString(): string</span>
+<a id="__codelineno-65-51" name="__codelineno-65-51"></a><span class="x">    {</span>
+<a id="__codelineno-65-52" name="__codelineno-65-52"></a><span class="x">        // on rend la chaîne jSON des attributs</span>
+<a id="__codelineno-65-53" name="__codelineno-65-53"></a><span class="x">        $attributes = [];</span>
+<a id="__codelineno-65-54" name="__codelineno-65-54"></a><span class="x">        $this-&gt;getRecursiveAttributes($attributes, $this, []);</span>
+<a id="__codelineno-65-55" name="__codelineno-65-55"></a><span class="x">        // chaîne jSON des attributs</span>
+<a id="__codelineno-65-56" name="__codelineno-65-56"></a><span class="x">        return \json_encode($attributes, JSON_UNESCAPED_UNICODE);</span>
+<a id="__codelineno-65-57" name="__codelineno-65-57"></a><span class="x">    }</span>
 <a id="__codelineno-65-58" name="__codelineno-65-58"></a>
-<a id="__codelineno-65-59" name="__codelineno-65-59"></a>    public function getAttributes(): array
-<a id="__codelineno-65-60" name="__codelineno-65-60"></a>    {
-<a id="__codelineno-65-61" name="__codelineno-65-61"></a>        return \get_object_vars($this);
-<a id="__codelineno-65-62" name="__codelineno-65-62"></a>    }
+<a id="__codelineno-65-59" name="__codelineno-65-59"></a><span class="x">    public function getAttributes(): array</span>
+<a id="__codelineno-65-60" name="__codelineno-65-60"></a><span class="x">    {</span>
+<a id="__codelineno-65-61" name="__codelineno-65-61"></a><span class="x">        return \get_object_vars($this);</span>
+<a id="__codelineno-65-62" name="__codelineno-65-62"></a><span class="x">    }</span>
 <a id="__codelineno-65-63" name="__codelineno-65-63"></a>
-<a id="__codelineno-65-64" name="__codelineno-65-64"></a>    private function getRecursiveAttributes(array &amp;$attributes, mixed $value, array $keys): void
-<a id="__codelineno-65-65" name="__codelineno-65-65"></a>    {
-<a id="__codelineno-65-66" name="__codelineno-65-66"></a>        // analyse de la valeur [$value]
-<a id="__codelineno-65-67" name="__codelineno-65-67"></a>        // $keys est un tableau [key1, key2, .., keyn]
-<a id="__codelineno-65-68" name="__codelineno-65-68"></a>        // $value=$attributes[key1][key2]...[keyn]
-<a id="__codelineno-65-69" name="__codelineno-65-69"></a>        // si [$value] est un objet on utilise sa méthode [getAttributes]
-<a id="__codelineno-65-70" name="__codelineno-65-70"></a>        if (\is_object($value)) {
-<a id="__codelineno-65-71" name="__codelineno-65-71"></a>            // attributs de l'objet [$value]
-<a id="__codelineno-65-72" name="__codelineno-65-72"></a>            $objectAttributes = $value-&gt;getAttributes();
-<a id="__codelineno-65-73" name="__codelineno-65-73"></a>            // y a-t-il des clés ?
-<a id="__codelineno-65-74" name="__codelineno-65-74"></a>            if ($keys) {
-<a id="__codelineno-65-75" name="__codelineno-65-75"></a>                // dans [$attributes], on va remplacer $value par le tableau de ses attributs
-<a id="__codelineno-65-76" name="__codelineno-65-76"></a>                // il faut construire l'élément $attributes[key1][key2]...[keyn]
-<a id="__codelineno-65-77" name="__codelineno-65-77"></a>                // où $keys est le tableau [key1, key2, .., keyn]
-<a id="__codelineno-65-78" name="__codelineno-65-78"></a>                // on prend la référence du tableau [$attributes]
-<a id="__codelineno-65-79" name="__codelineno-65-79"></a>                $attribute = &amp;$attributes;
-<a id="__codelineno-65-80" name="__codelineno-65-80"></a>                // on scanne le tableau des clés
-<a id="__codelineno-65-81" name="__codelineno-65-81"></a>                foreach ($keys as $key) {
-<a id="__codelineno-65-82" name="__codelineno-65-82"></a>                    // on prend la référence de l'attribut
-<a id="__codelineno-65-83" name="__codelineno-65-83"></a>                    $attribute = &amp;$attribute[$key];
-<a id="__codelineno-65-84" name="__codelineno-65-84"></a>                }
-<a id="__codelineno-65-85" name="__codelineno-65-85"></a>                // ici $attribute et $attributes[key1][key2]...[keyn] sont identiques
-<a id="__codelineno-65-86" name="__codelineno-65-86"></a>                // ils partagent le même emplacement mémoire
-<a id="__codelineno-65-87" name="__codelineno-65-87"></a>                // l'objet [$value] est remplacé par son tableau d'attributs :
-<a id="__codelineno-65-88" name="__codelineno-65-88"></a>                // il faut écrire $attributes[key1][key2]...[keyn]=$objectAttributes
-<a id="__codelineno-65-89" name="__codelineno-65-89"></a>                // ce qui équivaut à $attribute = $objectAttributes
-<a id="__codelineno-65-90" name="__codelineno-65-90"></a>                $attribute = $objectAttributes;
-<a id="__codelineno-65-91" name="__codelineno-65-91"></a>            } else {
-<a id="__codelineno-65-92" name="__codelineno-65-92"></a>                // pas de clés - on est au début de l'exploration de l'objet
-<a id="__codelineno-65-93" name="__codelineno-65-93"></a>                // $objectAttributes représente les attributs de 1er niveau de la classe
-<a id="__codelineno-65-94" name="__codelineno-65-94"></a>                $attributes += $objectAttributes;
-<a id="__codelineno-65-95" name="__codelineno-65-95"></a>            }
-<a id="__codelineno-65-96" name="__codelineno-65-96"></a>            // peut-être que dans [$objectAttributes] il y a encore des objets
-<a id="__codelineno-65-97" name="__codelineno-65-97"></a>            // on explore les attributs de [$objectAttributes]
-<a id="__codelineno-65-98" name="__codelineno-65-98"></a>            $this-&gt;getRecursiveAttributes($attributes, $objectAttributes, $keys);
-<a id="__codelineno-65-99" name="__codelineno-65-99"></a>        } elseif (\is_array($value)) {
-<a id="__codelineno-65-100" name="__codelineno-65-100"></a>            // on a un tableau - on analyse chacun de ses éléments
-<a id="__codelineno-65-101" name="__codelineno-65-101"></a>            foreach ($value as $key =&gt; $élément) {
-<a id="__codelineno-65-102" name="__codelineno-65-102"></a>                // on rajoute la clé courante au tableau $keys
-<a id="__codelineno-65-103" name="__codelineno-65-103"></a>                $keys[] = $key;
-<a id="__codelineno-65-104" name="__codelineno-65-104"></a>                // on analyse $élément
-<a id="__codelineno-65-105" name="__codelineno-65-105"></a>                $this-&gt;getRecursiveAttributes($attributes, $élément, $keys);
-<a id="__codelineno-65-106" name="__codelineno-65-106"></a>                // on enlève du tableau $keys la clé qui vient d'être analysée
-<a id="__codelineno-65-107" name="__codelineno-65-107"></a>                \array_pop($keys);
-<a id="__codelineno-65-108" name="__codelineno-65-108"></a>            }
-<a id="__codelineno-65-109" name="__codelineno-65-109"></a>        }
-<a id="__codelineno-65-110" name="__codelineno-65-110"></a>    }
-<a id="__codelineno-65-111" name="__codelineno-65-111"></a>}
+<a id="__codelineno-65-64" name="__codelineno-65-64"></a><span class="x">    private function getRecursiveAttributes(array &amp;$attributes, mixed $value, array $keys): void</span>
+<a id="__codelineno-65-65" name="__codelineno-65-65"></a><span class="x">    {</span>
+<a id="__codelineno-65-66" name="__codelineno-65-66"></a><span class="x">        // analyse de la valeur [$value]</span>
+<a id="__codelineno-65-67" name="__codelineno-65-67"></a><span class="x">        // $keys est un tableau [key1, key2, .., keyn]</span>
+<a id="__codelineno-65-68" name="__codelineno-65-68"></a><span class="x">        // $value=$attributes[key1][key2]...[keyn]</span>
+<a id="__codelineno-65-69" name="__codelineno-65-69"></a><span class="x">        // si [$value] est un objet on utilise sa méthode [getAttributes]</span>
+<a id="__codelineno-65-70" name="__codelineno-65-70"></a><span class="x">        if (\is_object($value)) {</span>
+<a id="__codelineno-65-71" name="__codelineno-65-71"></a><span class="x">            // attributs de l'objet [$value]</span>
+<a id="__codelineno-65-72" name="__codelineno-65-72"></a><span class="x">            $objectAttributes = $value-&gt;getAttributes();</span>
+<a id="__codelineno-65-73" name="__codelineno-65-73"></a><span class="x">            // y a-t-il des clés ?</span>
+<a id="__codelineno-65-74" name="__codelineno-65-74"></a><span class="x">            if ($keys) {</span>
+<a id="__codelineno-65-75" name="__codelineno-65-75"></a><span class="x">                // dans [$attributes], on va remplacer $value par le tableau de ses attributs</span>
+<a id="__codelineno-65-76" name="__codelineno-65-76"></a><span class="x">                // il faut construire l'élément $attributes[key1][key2]...[keyn]</span>
+<a id="__codelineno-65-77" name="__codelineno-65-77"></a><span class="x">                // où $keys est le tableau [key1, key2, .., keyn]</span>
+<a id="__codelineno-65-78" name="__codelineno-65-78"></a><span class="x">                // on prend la référence du tableau [$attributes]</span>
+<a id="__codelineno-65-79" name="__codelineno-65-79"></a><span class="x">                $attribute = &amp;$attributes;</span>
+<a id="__codelineno-65-80" name="__codelineno-65-80"></a><span class="x">                // on scanne le tableau des clés</span>
+<a id="__codelineno-65-81" name="__codelineno-65-81"></a><span class="x">                foreach ($keys as $key) {</span>
+<a id="__codelineno-65-82" name="__codelineno-65-82"></a><span class="x">                    // on prend la référence de l'attribut</span>
+<a id="__codelineno-65-83" name="__codelineno-65-83"></a><span class="x">                    $attribute = &amp;$attribute[$key];</span>
+<a id="__codelineno-65-84" name="__codelineno-65-84"></a><span class="x">                }</span>
+<a id="__codelineno-65-85" name="__codelineno-65-85"></a><span class="x">                // ici $attribute et $attributes[key1][key2]...[keyn] sont identiques</span>
+<a id="__codelineno-65-86" name="__codelineno-65-86"></a><span class="x">                // ils partagent le même emplacement mémoire</span>
+<a id="__codelineno-65-87" name="__codelineno-65-87"></a><span class="x">                // l'objet [$value] est remplacé par son tableau d'attributs :</span>
+<a id="__codelineno-65-88" name="__codelineno-65-88"></a><span class="x">                // il faut écrire $attributes[key1][key2]...[keyn]=$objectAttributes</span>
+<a id="__codelineno-65-89" name="__codelineno-65-89"></a><span class="x">                // ce qui équivaut à $attribute = $objectAttributes</span>
+<a id="__codelineno-65-90" name="__codelineno-65-90"></a><span class="x">                $attribute = $objectAttributes;</span>
+<a id="__codelineno-65-91" name="__codelineno-65-91"></a><span class="x">            } else {</span>
+<a id="__codelineno-65-92" name="__codelineno-65-92"></a><span class="x">                // pas de clés - on est au début de l'exploration de l'objet</span>
+<a id="__codelineno-65-93" name="__codelineno-65-93"></a><span class="x">                // $objectAttributes représente les attributs de 1er niveau de la classe</span>
+<a id="__codelineno-65-94" name="__codelineno-65-94"></a><span class="x">                $attributes += $objectAttributes;</span>
+<a id="__codelineno-65-95" name="__codelineno-65-95"></a><span class="x">            }</span>
+<a id="__codelineno-65-96" name="__codelineno-65-96"></a><span class="x">            // peut-être que dans [$objectAttributes] il y a encore des objets</span>
+<a id="__codelineno-65-97" name="__codelineno-65-97"></a><span class="x">            // on explore les attributs de [$objectAttributes]</span>
+<a id="__codelineno-65-98" name="__codelineno-65-98"></a><span class="x">            $this-&gt;getRecursiveAttributes($attributes, $objectAttributes, $keys);</span>
+<a id="__codelineno-65-99" name="__codelineno-65-99"></a><span class="x">        } elseif (\is_array($value)) {</span>
+<a id="__codelineno-65-100" name="__codelineno-65-100"></a><span class="x">            // on a un tableau - on analyse chacun de ses éléments</span>
+<a id="__codelineno-65-101" name="__codelineno-65-101"></a><span class="x">            foreach ($value as $key =&gt; $élément) {</span>
+<a id="__codelineno-65-102" name="__codelineno-65-102"></a><span class="x">                // on rajoute la clé courante au tableau $keys</span>
+<a id="__codelineno-65-103" name="__codelineno-65-103"></a><span class="x">                $keys[] = $key;</span>
+<a id="__codelineno-65-104" name="__codelineno-65-104"></a><span class="x">                // on analyse $élément</span>
+<a id="__codelineno-65-105" name="__codelineno-65-105"></a><span class="x">                $this-&gt;getRecursiveAttributes($attributes, $élément, $keys);</span>
+<a id="__codelineno-65-106" name="__codelineno-65-106"></a><span class="x">                // on enlève du tableau $keys la clé qui vient d'être analysée</span>
+<a id="__codelineno-65-107" name="__codelineno-65-107"></a><span class="x">                \array_pop($keys);</span>
+<a id="__codelineno-65-108" name="__codelineno-65-108"></a><span class="x">            }</span>
+<a id="__codelineno-65-109" name="__codelineno-65-109"></a><span class="x">        }</span>
+<a id="__codelineno-65-110" name="__codelineno-65-110"></a><span class="x">    }</span>
+<a id="__codelineno-65-111" name="__codelineno-65-111"></a><span class="x">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Commentaires</p>
 <ul>
